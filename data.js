@@ -4,6 +4,7 @@
 
 // What's New（トップページと各ページ下部に表示）
 const WHATS_NEW = [
+ { date: "2026-11-03", label: "note", text: "開発日誌「生成AIでグルーブボックスのWebアプリができちゃった！」を公開しました。", url: "https://note.com/rich_pipit1325/n/n57a539feefe2" },
  { date: "2026-11-03", label: "studio", text: "scatter flutterを公開しました。", url: "studio.html" }
 ];
 
@@ -15,12 +16,12 @@ const STUDIO_ITEMS = [
   url: "app/scatter-flutter/",
   tag: "web app",
 },
-  {
-    title: "note",
-    desc: "機材や本についての話やWebアプリの開発記録など。",
-    url: "#",           // ← 公開したらnote記事のURLに差し替える
-    tag: "noteなど",
-  },
+ {
+  title: "生成AIでグルーブボックスのWebアプリができちゃった！",
+  desc: "scatter flutterの製作記。Notebookに集めた機材情報をもとに、Geminiへ指示して作った過程をnoteに書きました。",
+  url: "https://note.com/rich_pipit1325/n/n57a539feefe2",
+  tag: "note",
+},
 ];
 
 // share の紹介リスト（みんなの棚）
