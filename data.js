@@ -5,7 +5,7 @@
 // What's New（トップページと各ページ下部に表示）
 const WHATS_NEW = [
  { date: "2026-11-03", label: "note", text: "開発日誌「生成AIでグルーヴボックスのWebアプリができちゃった！」を公開しました。", url: "https://note.com/rich_pipit1325/n/n57a539feefe2" },
- { date: "2026-11-03", label: "studio", text: "グルーヴボックスのWebアプリ「scatter flutter」を公開しました。", url: "studio.html" }
+ { date: "2026-11-03", label: "web app", text: "グルーヴボックスのWebアプリ「scatter flutter」を公開しました。", url: "studio.html" }
 ];
 
 // studio の作品・リンク集（アプリ、動画、note記事など）
