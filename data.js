@@ -4,7 +4,8 @@
 
 // What's New（トップページと各ページ下部に表示）
 const WHATS_NEW = [
- { date: "2026-11-03", label: "studio", text: "scatter flutterを公開しました。", url: "studio.html" },
+ { date: "2026-11-03", label: "studio", text: "scatter flutterを公開しました。", url: "studio.html" }
+];
 
 // studio の作品・リンク集（アプリ、動画、note記事など）
 const STUDIO_ITEMS = [
