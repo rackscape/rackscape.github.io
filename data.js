@@ -10,7 +10,7 @@ const WHATS_NEW = [
 // studio の作品・リンク集（アプリ、動画、note記事など）
 const STUDIO_ITEMS = [
  {
-  title: "scatter flutter（ブラウザで鳴るウェブアプリ）",
+  title: "scatter flutter",
   desc: "生成AIに指示して作った、ブラウザでそのまま弾けるグルーヴボックス。無料・非公式のファンメイドです。",
   url: "app/scatter-flutter/",
   tag: "web app",
