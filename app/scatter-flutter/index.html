@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>scatter flutter - Web Groovebox</title>
+<title>scatter flutter - Web Synthesis Groovebox</title>
 <style>
   :root {
     --bg-dark: #121316;
@@ -33,7 +33,7 @@
   }
   .header {
     display: flex; justify-content: space-between; align-items: center;
-    border-bottom: 2px solid #323640; padding-bottom: 10px; margin-bottom: 12px;
+    border-bottom: 2px solid #323640; padding-bottom: 10px; margin-bottom: 8px;
     flex-wrap: wrap; gap: 12px;
   }
   .brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
@@ -48,12 +48,6 @@
   }
   .ver-badge:hover { background: #182b3a; box-shadow: 0 0 8px rgba(0,229,255,0.4); }
   .brand span.sub-tag { font-size: 11px; color: var(--text-dim); letter-spacing: 1.5px; }
-  .disclaimer-banner {
-    width: 100%; background: #15181e; border: 1px solid #2d3340; border-radius: 7px;
-    padding: 6px 12px; margin-bottom: 12px; font-size: 11px; color: #9aa3b5;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
-  }
-  .disclaimer-banner strong { color: #80d8ff; }
 
   .header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .btn-manual {
@@ -63,7 +57,7 @@
   .btn-manual:hover { background: #2c475c; }
   .display-box {
     background: #0a0d0e; border: 2px solid #3b424c; border-radius: 6px;
-    padding: 6px 16px; min-width: 240px; text-align: center;
+    padding: 6px 16px; min-width: 255px; text-align: center;
     box-shadow: inset 0 0 10px rgba(0,229,255,0.15);
   }
   .lcd-text {
@@ -71,6 +65,14 @@
     color: #00f0ff; letter-spacing: 3px; text-shadow: 0 0 8px rgba(0,240,255,0.6);
   }
   .lcd-sub { font-size: 10px; color: #5c7a84; letter-spacing: 1px; margin-top: 2px; }
+
+  /* Disclaimer Banner */
+  .disclaimer-banner {
+    background: #17191e; border: 1px solid #2e333d; border-radius: 6px;
+    padding: 5px 12px; margin-bottom: 10px; font-size: 11px; color: #8c92a0;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+  }
+  .disclaimer-banner strong { color: #b0b8c8; }
 
   /* Export Studio Bar */
   .export-bar {
@@ -82,11 +84,32 @@
   }
   .export-group { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
   .btn-export-midi { background: #2b2547; border-color: #654ea3; color: #e1bee7; }
-  .btn-export-midi:hover { background: #3b3263; }
+  .btn-export-midi:hover:not(:disabled) { background: #3b3263; }
   .btn-export-wav { background: #173f35; border-color: #26896d; color: #a7ffeb; }
-  .btn-export-wav:hover { background: #1f5447; }
+  .btn-export-wav:hover:not(:disabled) { background: #1f5447; }
   .btn-export-master { background: #4a2c11; border-color: #a66321; color: #ffe082; font-weight: 800; }
-  .btn-export-master:hover { background: #613915; }
+  .btn-export-master:hover:not(:disabled) { background: #613915; }
+  .export-status-pill {
+    font-family: 'Courier New', monospace; font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 5px; background: #0d1318;
+    border: 1px solid #2b4558; color: #80d8ff; min-width: 220px; text-align: center;
+  }
+  .export-status-pill.busy {
+    background: #332400; border-color: var(--led-amber); color: #ffe082;
+    box-shadow: 0 0 10px rgba(255, 171, 0, 0.35);
+  }
+  .export-status-pill.done {
+    background: #0b2e1c; border-color: var(--led-green); color: #b9f6ca;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.35);
+  }
+  .export-status-pill.error {
+    background: #3b1119; border-color: var(--led-red); color: #ff8a80;
+    box-shadow: 0 0 10px rgba(255, 42, 85, 0.45);
+  }
+  .export-note {
+    width: 100%; font-size: 10px; color: #90a4ae; margin-top: -2px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;
+  }
 
   .top-row {
     display: grid; grid-template-columns: 1.25fr 2fr 1fr; gap: 12px; margin-bottom: 14px;
@@ -201,46 +224,71 @@
     box-shadow: 0 0 7px var(--led-amber);
   }
 
-  /* LIVE PERFORMANCE FX Bar */
+  /* LIVE FX (Momentary Performance Pads) */
   .live-fx-bar {
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 8px;
     background: var(--panel);
-    border: 1px solid #363a45; border-radius: 10px;
-    padding: 10px 14px; margin-bottom: 14px;
+    border: 1px solid #363a45;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .live-fx-title {
-    font-size: 11px; font-weight: 700; color: var(--text-dim); letter-spacing: 1.1px;
-    display: flex; align-items: center; gap: 6px; white-space: nowrap;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
   }
-  .live-fx-btns {
-    display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; flex: 1; min-width: 560px;
+  .live-fx-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    flex: 1;
+    min-width: 560px;
   }
-  @media (max-width: 820px) {
-    .live-fx-btns { grid-template-columns: repeat(4, 1fr); min-width: 100%; }
+  @media (max-width: 780px) {
+    .live-fx-grid { grid-template-columns: repeat(4, 1fr); min-width: 100%; }
   }
   .fx-pad {
-    background: #252232; border: 1.5px solid #4a4166; border-radius: 7px;
-    padding: 6px 4px; color: #e2dcf0; font-size: 11px; font-weight: 800;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 2px; cursor: pointer; transition: 0.06s; position: relative;
-    touch-action: none;
+    background: #231f2e;
+    border: 1.5px solid #4a3e66;
+    border-radius: 7px;
+    padding: 6px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    cursor: pointer;
+    transition: 0.06s;
+    user-select: none;
+    -webkit-user-select: none;
   }
-  .fx-pad:hover { background: #312c42; border-color: #6b5d94; }
+  .fx-pad:hover { border-color: #7c68ab; background: #2c263b; }
+  .fx-pad .fx-name { font-size: 11px; font-weight: 800; color: #ede7f6; letter-spacing: 0.4px; }
+  .fx-pad .fx-desc { font-size: 8px; color: #9fa8da; }
   .fx-pad .fx-key {
-    font-family: monospace; font-size: 9px; font-weight: 700;
-    color: #b39ddb; background: #15121e; padding: 1px 5px; border-radius: 3px;
-    border: 1px solid #352e4a; pointer-events: none;
+    font-size: 9px; font-family: monospace; font-weight: bold;
+    color: #ea80fc; background: #14101c; padding: 1px 6px;
+    border-radius: 3px; border: 1px solid #3c2f54; margin-top: 1px;
   }
-  .fx-pad span { pointer-events: none; }
   .fx-pad.active {
-    background: var(--led-purple); color: #fff; border-color: #ff80ab;
-    box-shadow: 0 0 14px rgba(213, 0, 249, 0.7);
+    background: #d500f9;
+    border-color: #fff;
+    box-shadow: 0 0 14px rgba(213, 0, 249, 0.8);
     transform: translateY(1px);
   }
-  .fx-pad.active .fx-key {
-    background: #380046; color: #fff; border-color: #ea80fc;
-  }
+  .fx-pad.active .fx-name,
+  .fx-pad.active .fx-desc { color: #fff; }
+  .fx-pad.active .fx-key { background: #2a0033; color: #fff; border-color: #ff80ab; }
 
   /* VARIATION A / B / C / D Bar */
   .variation-bar {
@@ -361,6 +409,56 @@
     background: var(--accent); color: #041216;
   }
 
+  /* Snapshot & Reset Bar */
+  .snapshot-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 6px; margin-top: 8px; padding-top: 8px; border-top: 1px solid #343844;
+    flex-wrap: wrap;
+  }
+  .snap-group { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .btn-snap-mode {
+    background: #2b253a; border-color: #6a4c93; color: #e1bee7;
+    padding: 4px 8px; font-size: 11px; font-weight: 800;
+  }
+  .btn-snap-mode.save-active {
+    background: var(--led-red); color: #fff; border-color: #ff8a80;
+    box-shadow: 0 0 10px var(--led-red);
+  }
+  .btn-snap-slot {
+    min-width: 34px; padding: 4px 7px; font-size: 11px; font-family: monospace;
+    font-weight: 800; background: #1e2129; border: 1px solid #3e4454; color: #8c92a0;
+    position: relative;
+  }
+  .btn-snap-slot.has-data {
+    background: #1a333d; border-color: #287a94; color: #80e5ff;
+    box-shadow: inset 0 0 6px rgba(0, 229, 255, 0.2);
+  }
+  .btn-snap-slot.save-target:hover {
+    border-color: var(--led-red); color: #ff8a80;
+  }
+  .btn-reset-init {
+    background: #3a2226; border-color: #6e353e; color: #ffab91;
+    padding: 4px 8px; font-size: 11px;
+  }
+
+  /* Custom Confirm Modal */
+  .confirm-modal-box {
+    background: #1d2028; border: 2px solid #4e5668; border-radius: 10px;
+    width: 90%; max-width: 420px; padding: 18px 20px; color: var(--text);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.9);
+  }
+  .confirm-title {
+    font-size: 14px; font-weight: 800; color: var(--led-amber);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+  }
+  .confirm-msg {
+    font-size: 12px; line-height: 1.6; color: #cfd6e3; margin-bottom: 16px;
+    white-space: pre-line;
+  }
+  .confirm-actions {
+    display: flex; justify-content: flex-end; gap: 8px;
+  }
+
   /* Manual Modal */
   .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -382,6 +480,10 @@
   .manual-body h3 { font-size: 14px; color: #ffd54f; margin-top: 18px; margin-bottom: 6px; border-left: 3px solid #ffd54f; padding-left: 8px; }
   .manual-body p, .manual-body li { font-size: 13px; line-height: 1.65; color: #c5ccd9; }
   .manual-body ul { padding-left: 20px; margin: 6px 0; }
+  .disclaimer-box {
+    background: #12151a; border: 1px solid #343b48; border-radius: 8px;
+    padding: 12px; margin-top: 16px; font-size: 12px; color: #9aa3b5;
+  }
 </style>
 </head>
 <body>
@@ -390,48 +492,70 @@
 <div class="modal-overlay" id="manualModal">
   <div class="modal-content">
     <div class="modal-header">
-      <h2>📘 scatter flutter ユーザーガイド＆免責事項</h2>
+      <h2>📘 scatter flutter 操作ガイド＆チュートリアル</h2>
       <button id="btnCloseManual" class="btn-danger">✕ 閉じる</button>
     </div>
     <div class="manual-body">
-      <h3>⚠️ 免責事項・ご利用上の注意 (Disclaimer)</h3>
+      <div class="disclaimer-box">
+        <strong>【免責事項 / Disclaimer】</strong><br>
+        本アプリケーション「scatter flutter」は、Web Audio APIを用いたリアルタイム音声合成によって構築された<strong>個人制作のオリジナルWebグルーヴボックス（非公式・独立開発アプリ）</strong>です。特定の楽器メーカーや既存のハードウェア製品の公式シミュレーター・ライセンス製品ではありません。<br>
+        また、ローカル音声・動画読み込み機能をご使用の際は、第三者の著作権を侵害するファイルの違法なアップロードや配布・共有を行わないよう十分ご注意ください。
+      </div>
+
+      <h3>1. 基本の再生とサウンドキット切替</h3>
       <ul>
-        <li><strong>非公式・オリジナルWebアプリ</strong>: 本アプリケーション「scatter flutter」は、Web Audio APIを用いて独自に開発された個人制作のブラウザ型グルーヴボックス（インスパイア・シミュレーター）です。特定の楽器メーカーや既存のハードウェア製品の公式アプリ・ライセンス品ではありません。</li>
-        <li><strong>サンプル音源読み込みに関するご注意</strong>: 端末から音声・動画ファイルを読み込む機能は、ブラウザ内（ローカル環境）での個人セッション向けに提供されています。第三者の著作権を侵害する音源の不正利用や無断配布・共有を行わないようご注意ください。</li>
-      </ul>
-      <h3>1. 基本操作とサウンドキットの切り替え</h3>
-      <ul>
-        <li>画面左上の <strong>▶ PLAY</strong> ボタン（またはスペースキー）を押すと、内蔵されているリズムパターンが再生されます。</li>
-        <li><strong>SOUND KIT切替</strong>: 中央パネル右上の「KIT」メニュー（<code>Sub-80s Kit</code> / <code>Tech-90s Kit</code> / <code>Vintage PCM Kit</code> / <code>Crunch Box Kit</code> 等）を選ぶと、全パートのシンセサイズ音色が一括で切り替わります。</li>
+        <li>画面左上の <strong>▶ PLAY</strong> ボタンを押すと、内蔵された8種類のミニマル・テクノ／ハウス系プリセットパターンが再生されます。</li>
+        <li><strong>KIT選択</strong>: 中央パネル「SOUND CONTROL」右上のプルダウンから、<code>Sub-80s Kit</code> / <code>Tech-90s Kit</code> / <code>Vintage PCM Kit</code> / <code>Crunch Box Kit</code> など7種類のオリジナル・サウンドキットを瞬時に切り替えられます。</li>
       </ul>
       <h3>2. ダイレクト・ボリュームミキサー ＆ ON / M (MUTE) / S (SOLO)</h3>
       <ul>
-        <li>下部に並ぶトラックカード（<code>BD1</code>〜<code>BASS</code>）内の <strong>VOLスライダー</strong> で、操作中のパートを切り替えずに各パートの音量を直接ミキシングできます。</li>
-        <li>カード下部の <strong>ON</strong>・<strong>M (MUTE)</strong>・<strong>S (SOLO)</strong> ボタンで、リアルタイムにパート別の消音やソロ再生（複数同時ソロ可）を行えます。</li>
+        <li>11個のトラックカード（<code>BD1</code>〜<code>BASS</code>）の中にある <strong>VOLスライダー</strong> で、選択トラックを切り替えずに直接音量バランスをミキシングできます。</li>
+        <li>各カード下部の <strong>ON</strong>・<strong>M (MUTE)</strong>・<strong>S (SOLO)</strong> ボタンで、リアルタイムにパートごとの消音（M）やソロ再生（S：複数同時ソロ対応）が可能です。上部の <strong>🔇 一斉MUTE</strong> / <strong>🔊 全解除</strong> で全体の抜き差しも行えます。</li>
       </ul>
-      <h3>3. バリエーション展開 (A / B / C / D) と FILL機能</h3>
+      <h3>3. ⚡ LIVE FX (Z〜Mキー / マウス押下中のみ効くライブエフェクト)</h3>
       <ul>
-        <li>各トラックに独立して <strong>A / B / C / D</strong> 4種類の16ステップシーケンスを保存できます。</li>
-        <li><strong>⏭ 次ループ頭で切替</strong>: 再生中にA〜Dを選択すると点滅待機となり、現在の小節が終わり次第、次の1拍目でスムーズにパターンが移行します（連続再生Chain設定中もそのまま維持されます）。</li>
-        <li><strong>🔥 FILL差し込み</strong>: 有効にしてA〜Dを押すと、その瞬間から一時的にフィルインパターンへ切り替わり、次の小節頭で自動的に元のパターンへ復帰します。</li>
+        <li>TRACK SELECTのすぐ下にある <strong>LIVE FX</strong> パネルは、ボタン（またはキーボードの <code>Z</code> <code>X</code> <code>C</code> <code>V</code> <code>B</code> <code>N</code> <code>M</code> キー）を押している間だけリアルタイムに効果が発動し、離すと瞬時に元の状態へ戻ります（複数同時押し対応）。</li>
+        <li><strong>SWEEP ↓ [Z] / SWEEP ↑ [X]</strong>: マスターフィルターを閉じる（ローパス）／開く（ハイパス）スイープ効果。</li>
+        <li><strong>STUTTER [C]</strong>: 押している間だけ1/32の高速ゲート（スタッター）をかけます。</li>
+        <li><strong>STRIP [V]</strong>: キック（<code>BD1</code>/<code>BD2</code>）、クローズドハット（<code>CH</code>）、テクスチャー（<code>LP</code>）のみを残し、他のパートを一時カットします。</li>
+        <li><strong>BREAK [B]</strong>: キック（<code>BD1</code>/<code>BD2</code>）とタム（<code>TT</code>）を抜いて即座にブレイクを作ります。</li>
+        <li><strong>DELAY THROW [N] / DIRT [M]</strong>: 押している間だけディレイのフィードバック＆センド量、またはマスターのオーバードライブ（歪み）を強力にブーストします。</li>
       </ul>
-      <h3>4. ⚡ LIVE FX（キーボード＆マウスホールド演奏）</h3>
+      <h3>4. バリエーション (A / B / C / D) と FILLイン</h3>
       <ul>
-        <li>TRACK SELECTのすぐ下に配置された7つのパッドは、<strong>押している間だけ効く（モーメンタリー動作）ライブ用エフェクター</strong>です。PCキーボードの <code>Z</code> <code>X</code> <code>C</code> <code>V</code> <code>B</code> <code>N</code> <code>M</code> キーにも対応しており、VARIATION連続再生（Chain）中や複数キー同時押しでも常時機能します。</li>
-        <li><strong>SWEEP ↓ [Z] / SWEEP ↑ [X]</strong>: マスターフィルターを閉じてこもらせる（ローパス・スイープ）／開いて低域を削る（ハイパス・スイープ）効果をかけます（両方同時押しでバンドパスフィルター効果になります）。</li>
-        <li><strong>STUTTER [C]</strong>: 押している間だけテンポ同期の1/32高速スライスゲートをかけます。</li>
-        <li><strong>STRIP [V]</strong>: キック（<code>BD1/BD2</code>）、クローズドハット（<code>CH</code>）、テクスチャー（<code>LP</code>）だけを残し、他のパートを一時的にカットします。</li>
-        <li><strong>BREAK [B]</strong>: 押している間だけキック（<code>BD1/BD2</code>）とタム（<code>TT</code>）を抜いてブレイクを作ります。</li>
-        <li><strong>DELAY THROW [N] / DIRT [M]</strong>: 押している間だけディレイのセンド＆フィードバックを強めて飛ばす／マスターのオーバードライブ歪みを強めます。</li>
+        <li>各トラックに <strong>A / B / C / D</strong> の4種類の16ステップパターンを記憶できます。</li>
+        <li><strong>⏭ 次ループ頭で切替</strong>: 再生中にA〜Dを押すと点滅して待機し、現在の16ステップが最後まで再生された次の1拍目でスムーズに切り替わります。</li>
+        <li><strong>🔥 FILL差し込み</strong>: 有効にしてA〜D（特にDにはフィルインが初期設定されています）を押すと、即座におかず（FILL）に切り替わり、小節の終わりで元のバリエーションへ自動復帰します。</li>
       </ul>
       <h3>5. ローカル音源・動画ファイル (.wav / .mp3 / .mp4) の読み込み</h3>
       <ul>
         <li>トラック6〜10（<code>OH</code>, <code>TT</code>, <code>RS</code>, <code>PC</code>, <code>LP</code>）などを選択すると、SOUND CONTROL右上に <strong>📂 音源/動画読込 (WAV/MP3/MP4)</strong> ボタンが表示されます。お使いの端末内のオーディオや動画ファイル（音声トラックを自動抽出）をロードしてシーケンサー上で演奏できます。</li>
+        <li>※<strong>ご注意</strong>: 読み込んだ音源ファイル自体は保存されません。再度開いたときは読み込み直してください。</li>
       </ul>
       <h3>6. MIDI（ノート＋全CC）＆ WAV（個別Stems / 2MIX）書き出し</h3>
       <ul>
         <li>上部の <strong>📤 EXPORT STUDIO</strong> から、制作したパターンのMIDIファイル（サブステップ展開＆全ノブCC情報付き）や、48kHz/16bitの高音質WAVファイルをワンクリックでダウンロードできます。</li>
+        <li><strong>進捗・完了表示の保持</strong>: 書き出し中は右上のメインLCDおよびEXPORTバー内のステータスピルに進捗（例: <code>STEM 2/6</code> や <code>MIXING 2MIX</code>）が表示され続け、完了・エラー表示は次の操作を行うまで（最低10秒間）保持されます。</li>
+        <li><strong>複数ファイルのダウンロード許可について</strong>: <code>WAV (全Trk個別Stems)</code> では有効なトラック分のWAVファイルを約650ms間隔で順番に保存します。ブラウザ側で「複数ファイルのダウンロードを許可しますか？」という確認バーが出た場合は「許可」を選択してください（ノートが1つもない空トラックやミュート中のトラックは自動スキップされ、完了時に <code>STEMS DONE! (6 FILES / 5 SKIP)</code> のように内訳が表示されます）。</li>
       </ul>
+      <h3>7. 自動保存（オートセーブ）／スナップショット／初期化リセット</h3>
+      <ul>
+        <li><strong>自動保存（Auto-Save）</strong>: ステップ入力、音色ノブ、KIT選択、BPM、マスターノブ（DRIFT / SWING / DELAY / REVERB）、Undo/Redoなどの操作を行うたびに、ブラウザの <code>localStorage</code> へ全状態が自動保存され、次回ページを開き直した際にも前回の続きから再開できます。</li>
+        <li><strong>スナップショット（SNAPSHOT 1〜4）</strong>: 左上「PATTERN &amp; TRANSPORT」内の <strong>📸 SAVE</strong> ボタンを押して点灯させた状態でスロット <code>1</code>〜<code>4</code> を押すと、気に入った状態を最大4つまで手動キープできます（通常時に <code>1</code>〜<code>4</code> を押すと即座に呼び出します）。</li>
+        <li><strong>初期化（RESET）</strong>: <strong>🔄 RESET</strong> ボタンを押して確認ダイアログで実行すると、自動保存データを消去して工場出荷時のデモパターン状態へ戻します（※あなたが保存したスナップショット1〜4の作品データは消えずにそのまま残ります）。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRMATION MODAL (for Snapshot Overwrite & Factory Reset) -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="confirm-modal-box">
+    <div class="confirm-title" id="confirmModalTitle">⚠️ 確認</div>
+    <div class="confirm-msg" id="confirmModalMsg"></div>
+    <div class="confirm-actions">
+      <button id="btnConfirmCancel">キャンセル</button>
+      <button id="btnConfirmOk" class="btn-danger">OK (実行)</button>
     </div>
   </div>
 </div>
@@ -441,7 +565,7 @@
   <div class="header">
     <div class="brand">
       <h1>scatter flutter</h1>
-      <div class="ver-badge" id="verBadge" title="クリックでビルド表示を切替">BUILD v1.5.3</div>
+      <div class="ver-badge" id="verBadge" title="クリックでビルド表示を切替">BUILD v1.6.0</div>
       <span class="sub-tag">WEB SYNTHESIS GROOVEBOX</span>
     </div>
     <div class="header-right">
@@ -471,13 +595,17 @@
           <option value="4" selected>4 Bars (64 Steps / Chain対応)</option>
         </select>
       </label>
+      <div id="exportStatusPill" class="export-status-pill" title="書き出しの進行状況・完了件数・エラー詳細を表示します">READY TO EXPORT</div>
     </div>
     <div class="export-group">
       <button id="btnExportTrackMidi" class="btn-export-midi" title="選択中トラックのノート・サブステップ・各ノブのCC情報を含むMIDIファイルを出力">🎹 MIDI (選択Trk+CC)</button>
       <button id="btnExportAllMidi" class="btn-export-midi" title="全トラック分のマルチトラックMIDI(SMF Format 1, ノート&全CC付き)を一括出力">🎹 MIDI (全Trk一括+CC)</button>
       <button id="btnExportTrackWav" class="btn-export-wav" title="選択中トラックのソロWAV(48kHz/16bit)を高速レンダリング出力">🔊 WAV (選択Trk単体)</button>
-      <button id="btnExportAllStemsWav" class="btn-export-wav" title="有効な全トラックの個別WAVファイル(パラアウトStems)を連続出力">🔊 WAV (全Trk個別Stems)</button>
+      <button id="btnExportAllStemsWav" class="btn-export-wav" title="有効な全トラックの個別WAVファイル(パラアウトStems)を順番に出力">🔊 WAV (全Trk個別Stems)</button>
       <button id="btnExportMasterWav" class="btn-export-master" title="全体の2MIXマスターWAV(エフェクト込み・48kHz/16bit Stereo)を出力">💿 WAV (全体2MIX Master)</button>
+    </div>
+    <div class="export-note">
+      <span>💡 「WAV (全Trk個別Stems)」実行時、ブラウザから「複数ファイルの自動ダウンロード許可」を求められた場合は許可してください（空トラック・MUTE中トラックは自動スキップされます）。</span>
     </div>
   </div>
 
@@ -505,8 +633,20 @@
         </div>
 
         <div class="inline-form">
-          <input type="text" id="newPtnName" placeholder="新規パターン名 (例: MY.MCR)" style="flex:1; min-width:105px;">
+          <input type="text" id="newPtnName" placeholder="新規パターン名 (例: MY.LOOP)" style="flex:1; min-width:105px;">
           <button id="btnSaveNewPtn" class="btn-accent">＋ パターン追加</button>
+        </div>
+
+        <div class="snapshot-bar">
+          <div class="snap-group">
+            <span style="font-size:10px; font-weight:800; color:var(--text-dim); letter-spacing:0.5px;">SNAPSHOT:</span>
+            <button id="btnSnapSaveMode" class="btn-snap-mode" title="押して点灯させてからスロット1〜4をクリックすると現在の全状態を保存します">📸 SAVE</button>
+            <button class="btn-snap-slot" data-slot="0" title="Slot 1: 通常クリックで呼出 / SAVE点灯時は保存">1</button>
+            <button class="btn-snap-slot" data-slot="1" title="Slot 2: 通常クリックで呼出 / SAVE点灯時は保存">2</button>
+            <button class="btn-snap-slot" data-slot="2" title="Slot 3: 通常クリックで呼出 / SAVE点灯時は保存">3</button>
+            <button class="btn-snap-slot" data-slot="3" title="Slot 4: 通常クリックで呼出 / SAVE点灯時は保存">4</button>
+          </div>
+          <button id="btnFactoryReset" class="btn-reset-init" title="自動保存データを削除して工場出荷時の初期状態に戻します（スナップショット1〜4は保持されます）">🔄 RESET</button>
         </div>
       </div>
     </div>
@@ -524,12 +664,12 @@
               <option value="lmd">03: Vintage PCM Kit (Crisp Drum)</option>
               <option value="dxm">04: Crunch Box Kit (Retro Beat)</option>
               <option value="ragga">05: Island Rim Kit (Dancehall)</option>
-              <option value="modular">06: Modular Lab Kit (FM/Perc)</option>
+              <option value="modular">06: Modular Lab Kit (FM / Glitch)</option>
               <option value="dub">07: Deep Dub Kit (Warm Chord)</option>
             </select>
           </label>
           <span id="wavUploadArea" style="display:none;">
-            <label class="btn-accent" style="padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px;" title="※著作権を侵害しないオーディオ/動画ファイルをご使用ください（ブラウザ内でのみ処理されます）">
+            <label class="btn-accent" style="padding:3px 8px; border-radius:4px; cursor:pointer; font-size:11px;" title="ご自身のローカル音声/動画ファイルを読み込みます（※著作権侵害ファイルの利用にご注意ください）">
               📂 音源/動画読込 (WAV/MP3/MP4)
               <input type="file" id="wavFileInput" accept="audio/*,video/*,.wav,.mp3,.mp4,.m4a,.ogg" style="display:none;">
             </label>
@@ -572,12 +712,12 @@
   </div>
 
   <!-- TRACK SELECTOR & DIRECT LEVEL MIXER BAR -->
-  <div class="section-box" style="margin-bottom: 14px;">
+  <div class="section-box" style="margin-bottom: 10px;">
     <div class="section-title">
-      <span>TRACK SELECT & LEVEL MIXER (ON / M: MUTE / S: SOLO 併用可)</span>
+      <span>TRACK SELECT & LEVEL MIXER (ON / MUTE / SOLO 対応)</span>
       <div class="inline-form">
-        <button id="btnAllMute" class="btn-danger" style="padding:4px 8px; font-size:11px;" title="全トラックを一斉にMUTEします">🔇 一斉MUTE</button>
-        <button id="btnAllUnmute" class="btn-accent" style="padding:4px 8px; font-size:11px;" title="全トラックのMUTE/SOLOを一括解除します">🔊 全解除 (Unmute)</button>
+        <button id="btnAllMute" class="btn-danger" style="padding:3px 8px; font-size:11px;" title="全トラックを一斉にMUTEします">🔇 一斉MUTE</button>
+        <button id="btnAllUnmute" class="btn-accent" style="padding:3px 8px; font-size:11px;" title="全トラックのMUTE/SOLOを解除します">🔊 全解除 (Unmute)</button>
         <select id="insertPosSelect" style="padding:3px 6px; font-size:11px;">
           <option value="after05">06の位置に追加 (06以降へ挿入)</option>
           <option value="end">末尾に追加 (12以降へ追加)</option>
@@ -597,39 +737,46 @@
     <div class="tracks-container" id="tracksBar"></div>
   </div>
 
-  <!-- LIVE PERFORMANCE FX BAR -->
+  <!-- LIVE PERFORMANCE FX BAR (MOMENTARY HOLD) -->
   <div class="live-fx-bar">
     <div class="live-fx-title">
       <span>⚡ LIVE FX:</span>
     </div>
-    <div class="live-fx-btns">
-      <div class="fx-pad" data-fx="sweepDown" title="押している間フィルターを閉じるローパススイープ (Key: Z)">
-        <span>SWEEP ↓</span>
-        <span class="fx-key">[Z] LPF</span>
+    <div class="live-fx-grid">
+      <div class="fx-pad" data-fx="sweepDown" data-key="z" title="押している間だけローパスフィルターを閉じます (Key: Z)">
+        <span class="fx-name">SWEEP ↓</span>
+        <span class="fx-desc">LPF Close</span>
+        <span class="fx-key">[Z]</span>
       </div>
-      <div class="fx-pad" data-fx="sweepUp" title="押している間フィルターを開くハイパススイープ (Key: X)">
-        <span>SWEEP ↑</span>
-        <span class="fx-key">[X] HPF</span>
+      <div class="fx-pad" data-fx="sweepUp" data-key="x" title="押している間だけハイパスフィルターを開きます (Key: X)">
+        <span class="fx-name">SWEEP ↑</span>
+        <span class="fx-desc">HPF Open</span>
+        <span class="fx-key">[X]</span>
       </div>
-      <div class="fx-pad" data-fx="stutter" title="押している間だけ1/32で高速ゲートをかけます (Key: C)">
-        <span>STUTTER</span>
-        <span class="fx-key">[C] 1/32 GATE</span>
+      <div class="fx-pad" data-fx="stutter" data-key="c" title="押している間だけ1/32でゲートをかけます (Key: C)">
+        <span class="fx-name">STUTTER</span>
+        <span class="fx-desc">1/32 Gate</span>
+        <span class="fx-key">[C]</span>
       </div>
-      <div class="fx-pad" data-fx="strip" title="押している間キック・クローズドハット・テクスチャー(LP)だけ残します (Key: V)">
-        <span>STRIP</span>
-        <span class="fx-key">[V] BD/CH/LP</span>
+      <div class="fx-pad" data-fx="strip" data-key="v" title="押している間だけキック(BD1/BD2)、ハット(CH)、テクスチャー(LP)のみ残します (Key: V)">
+        <span class="fx-name">STRIP</span>
+        <span class="fx-desc">BD+CH+LP Only</span>
+        <span class="fx-key">[V]</span>
       </div>
-      <div class="fx-pad" data-fx="break" title="押している間キック(BD1/BD2)とタム(TT)を抜きます (Key: B)">
-        <span>BREAK</span>
-        <span class="fx-key">[B] NO BD/TT</span>
+      <div class="fx-pad" data-fx="break" data-key="b" title="押している間だけキック(BD1/BD2)とタム(TT)を抜きます (Key: B)">
+        <span class="fx-name">BREAK</span>
+        <span class="fx-desc">Drop BD & TT</span>
+        <span class="fx-key">[B]</span>
       </div>
-      <div class="fx-pad" data-fx="delayThrow" title="押している間だけディレイセンドとフィードバックを強めます (Key: N)">
-        <span>DELAY THROW</span>
-        <span class="fx-key">[N] DUB SEND</span>
+      <div class="fx-pad" data-fx="delayThrow" data-key="n" title="押している間だけディレイのセンド＆フィードバックを強めます (Key: N)">
+        <span class="fx-name">DELAY THROW</span>
+        <span class="fx-desc">Dub Echo Boost</span>
+        <span class="fx-key">[N]</span>
       </div>
-      <div class="fx-pad" data-fx="dirt" title="押している間だけマスタードライブ(歪み)を強めます (Key: M)">
-        <span>DIRT</span>
-        <span class="fx-key">[M] OVERDRIVE</span>
+      <div class="fx-pad" data-fx="dirt" data-key="m" title="押している間だけマスターのドライブ(歪み)を強めます (Key: M)">
+        <span class="fx-name">DIRT</span>
+        <span class="fx-desc">Overdrive</span>
+        <span class="fx-key">[M]</span>
       </div>
     </div>
   </div>
@@ -737,11 +884,22 @@
 const VAR_NAMES = ['A', 'B', 'C', 'D'];
 
 const VERSION_LIST = [
-  { badge: 'BUILD v1.5.3', lcd: 'VER 1.5.3', desc: 'APP BUILD VERSION' },
+  { badge: 'BUILD v1.6.0', lcd: 'VER 1.6.0', desc: 'APP BUILD VERSION' },
   { badge: 'SYNTH v2.0',   lcd: 'ENG 2.0.0', desc: 'WEB AUDIO ENGINE' },
   { badge: 'BANKS v1.1',   lcd: 'BNK 1.1.0', desc: 'FACTORY SOUND BANK' }
 ];
 let currentVerIdx = 0;
+
+const STORAGE_KEY_AUTOSAVE = 'scatter_flutter_autosave_v1';
+const STORAGE_KEY_SNAPSHOTS = 'scatter_flutter_snapshots_v1';
+const STORAGE_DATA_VERSION = 1;
+
+const DEFAULT_MASTER_KNOBS = {
+  feel: 25,
+  swing: 54,
+  delay: 20,
+  reverb: 18
+};
 
 const DEFAULT_TRACK_SPECS = [
   { id: 'BD1',  name: 'BD1',  color: '#ff4f9a', type: 'BD',   knobs: ['Select Sound','Tune','Tone','Pitch Mod','Attack','Decay','Level'] },
@@ -761,7 +919,7 @@ let tracks = JSON.parse(JSON.stringify(DEFAULT_TRACK_SPECS));
 
 const SOUND_KITS = {
   '8x8': {
-    name: 'Sub-80s Kit',
+    name: 'Sub-80s Kit (Warm Analog)',
     character: { bdClick: 0.2, sdBody: 190, hhFreq: 6200, ttBase: 115, rsFreq: 1650, pcFm: 1.414, bassQ: 7 },
     params: {
       BD1:  [20, 44, 40, 22, 10, 74, 88],
@@ -778,7 +936,7 @@ const SOUND_KITS = {
     }
   },
   '9x9': {
-    name: 'Tech-90s Kit',
+    name: 'Tech-90s Kit (Punchy Club)',
     character: { bdClick: 0.85, sdBody: 235, hhFreq: 4800, ttBase: 140, rsFreq: 1950, pcFm: 1.65, bassQ: 11 },
     params: {
       BD1:  [80, 54, 82, 65, 25, 52, 90],
@@ -795,7 +953,7 @@ const SOUND_KITS = {
     }
   },
   'lmd': {
-    name: 'Vintage PCM Kit',
+    name: 'Vintage PCM Kit (Crisp Drum)',
     character: { bdClick: 0.55, sdBody: 210, hhFreq: 5400, ttBase: 130, rsFreq: 1450, pcFm: 1.25, bassQ: 5 },
     params: {
       BD1:  [55, 48, 60, 38, 15, 42, 86],
@@ -812,7 +970,7 @@ const SOUND_KITS = {
     }
   },
   'dxm': {
-    name: 'Crunch Box Kit',
+    name: 'Crunch Box Kit (Retro Beat)',
     character: { bdClick: 0.95, sdBody: 250, hhFreq: 4500, ttBase: 150, rsFreq: 2100, pcFm: 1.85, bassQ: 9 },
     params: {
       BD1:  [90, 42, 88, 70, 30, 40, 90],
@@ -829,7 +987,7 @@ const SOUND_KITS = {
     }
   },
   'ragga': {
-    name: 'Island Rim Kit',
+    name: 'Island Rim Kit (Dancehall)',
     character: { bdClick: 0.4, sdBody: 280, hhFreq: 6800, ttBase: 165, rsFreq: 2350, pcFm: 2.1, bassQ: 4 },
     params: {
       BD1:  [40, 40, 52, 45, 12, 68, 92],
@@ -846,7 +1004,7 @@ const SOUND_KITS = {
     }
   },
   'modular': {
-    name: 'Modular Lab Kit',
+    name: 'Modular Lab Kit (FM / Glitch)',
     character: { bdClick: 0.7, sdBody: 310, hhFreq: 7500, ttBase: 190, rsFreq: 2600, pcFm: 2.73, bassQ: 14 },
     params: {
       BD1:  [65, 58, 90, 80, 20, 46, 88],
@@ -863,7 +1021,7 @@ const SOUND_KITS = {
     }
   },
   'dub': {
-    name: 'Deep Dub Kit',
+    name: 'Deep Dub Kit (Warm Chord)',
     character: { bdClick: 0.15, sdBody: 175, hhFreq: 5200, ttBase: 105, rsFreq: 1400, pcFm: 1.33, bassQ: 5 },
     params: {
       BD1:  [15, 38, 30, 18,  8, 78, 90],
@@ -882,6 +1040,17 @@ const SOUND_KITS = {
 };
 
 let currentKitId = '8x8';
+
+// --- LIVE FX State ---
+const liveFxState = {
+  sweepDown: false,
+  sweepUp: false,
+  stutter: false,
+  strip: false,
+  break: false,
+  delayThrow: false,
+  dirt: false
+};
 
 function createEmptySteps() {
   return Array.from({ length: 16 }, () => ({ on: false, acc: 0, note: 0, sub: 0 }));
@@ -911,13 +1080,13 @@ function createEmptyTrackState(specId = 'BD1') {
 function buildPresetPatterns() {
   const presets = [
     { name: '001 AC.TRP (Acid Trip)', bpm: 130, genre: 'acid' },
-    { name: '002 K.PULSE (Hypno Pulse)', bpm: 127, genre: 'minimal' },
+    { name: '002 K.PULSE (Kinetic Pulse)', bpm: 127, genre: 'minimal' },
     { name: '003 DB.CHRD (Dub Chord)', bpm: 124, genre: 'dub' },
-    { name: '004 M.GROOV (Micro House)', bpm: 125, genre: 'house' },
-    { name: '005 FLW.MOD (Flow State)', bpm: 128, genre: 'flow' },
-    { name: '006 SFT.TEK (Softic Deep)', bpm: 126, genre: 'softic' },
-    { name: '007 SCL.SUB (Social Sub)', bpm: 129, genre: 'social' },
-    { name: '008 VLT.134 (Berlin Vault)', bpm: 134, genre: 'tresor' }
+    { name: '004 M.GROOV (Micro Groove)', bpm: 125, genre: 'house' },
+    { name: '005 FLW.MOD (Flow Mod)', bpm: 128, genre: 'flow' },
+    { name: '006 SFT.TEK (Soft Tek)', bpm: 126, genre: 'softic' },
+    { name: '007 SCL.SUB (Scale Sub)', bpm: 129, genre: 'social' },
+    { name: '008 VLT.134 (Vault 134)', bpm: 134, genre: 'tresor' }
   ];
 
   return presets.map((p) => {
@@ -1039,17 +1208,6 @@ let varClickMode = 'queue';
 let currentOctave = 0;
 let selectedSemitone = 0;
 
-// LIVE PERFORMANCE FX 状態管理（複数同時押し完全対応）
-const liveFxState = {
-  sweepDown: false,
-  sweepUp: false,
-  stutter: false,
-  strip: false,
-  break: false,
-  delayThrow: false,
-  dirt: false
-};
-
 function getEditingSteps(st) { return st.variations[st.editVar]; }
 function getPlayingSteps(st) { return st.variations[st.activeVar]; }
 
@@ -1059,29 +1217,25 @@ function getVarIndexForBar(st, barIndex) {
   return st.activeVar;
 }
 
-// トラックが発音可能か判定（MUTE / SOLO の共存 + LIVE FX の STRIP / BREAK の非排他重ねがけ対応）
 function isTrackAudible(ptn, trkIdx, applyLiveFx = true) {
   const st = ptn.trackStates[trkIdx];
   const spec = tracks[trkIdx];
   if (!st || !spec) return false;
 
   if (applyLiveFx) {
-    // STRIP (V): キック(BD)、クローズドハット(CH)、テクスチャー(LP)だけ残す
     if (liveFxState.strip) {
-      const keep = (spec.type === 'BD' || spec.id === 'CH' || spec.type === 'LP');
-      if (!keep) return false;
+      const keepStrip = (spec.type === 'BD' || spec.id === 'CH' || spec.type === 'LP' || spec.id === 'LP');
+      if (!keepStrip) return false;
     }
-    // BREAK (B): キック(BD)とタム(TT)を抜く
     if (liveFxState.break) {
-      if (spec.type === 'BD' || spec.type === 'TT' || spec.id === 'TT') return false;
+      const dropBreak = (spec.type === 'BD' || spec.type === 'TT' || spec.id === 'TT');
+      if (dropBreak) return false;
     }
   }
 
-  // MUTE が ON の場合は常に消音、SOLO がある場合は SOLO かつ非MUTEのトラックを発音
-  if (st.muted) return false;
   const anySolo = ptn.trackStates.some(t => t.solo);
   if (anySolo) return Boolean(st.solo);
-  return true;
+  return !st.muted;
 }
 
 // --- UNDO / REDO 履歴管理 ---
@@ -1089,15 +1243,151 @@ const undoStack = [];
 const redoStack = [];
 const MAX_HISTORY = 50;
 
-function createStateSnapshot() {
-  return JSON.stringify({
-    tracks,
-    patterns,
+function getSanitizedTracksForStorage() {
+  const defaultMap = {};
+  DEFAULT_TRACK_SPECS.forEach(s => { defaultMap[s.id] = s.name; });
+  return tracks.map((t, idx) => {
+    const copy = JSON.parse(JSON.stringify(t));
+    if (customSamples[idx] || (defaultMap[copy.id] && copy.name !== defaultMap[copy.id])) {
+      if (defaultMap[copy.id]) {
+        copy.name = defaultMap[copy.id];
+      } else {
+        copy.name = `${copy.type || 'TRK'}+`;
+      }
+    }
+    return copy;
+  });
+}
+
+function getMasterKnobValues() {
+  return {
+    feel: Number(document.getElementById('feelKnob')?.value ?? DEFAULT_MASTER_KNOBS.feel),
+    swing: Number(document.getElementById('swingKnob')?.value ?? DEFAULT_MASTER_KNOBS.swing),
+    delay: Number(document.getElementById('delayKnob')?.value ?? DEFAULT_MASTER_KNOBS.delay),
+    reverb: Number(document.getElementById('reverbKnob')?.value ?? DEFAULT_MASTER_KNOBS.reverb)
+  };
+}
+
+function applyMasterKnobValues(masterObj) {
+  const m = masterObj || DEFAULT_MASTER_KNOBS;
+  const clamp = (val, min, max, fallback) => {
+    const n = Number(val);
+    return Number.isFinite(n) ? Math.max(min, Math.min(max, n)) : fallback;
+  };
+  const feel = clamp(m.feel, 0, 100, DEFAULT_MASTER_KNOBS.feel);
+  const swing = clamp(m.swing, 50, 75, DEFAULT_MASTER_KNOBS.swing);
+  const delay = clamp(m.delay, 0, 100, DEFAULT_MASTER_KNOBS.delay);
+  const reverb = clamp(m.reverb, 0, 100, DEFAULT_MASTER_KNOBS.reverb);
+
+  const feelEl = document.getElementById('feelKnob');
+  const swingEl = document.getElementById('swingKnob');
+  const delayEl = document.getElementById('delayKnob');
+  const reverbEl = document.getElementById('reverbKnob');
+
+  if (feelEl) feelEl.value = feel;
+  if (swingEl) swingEl.value = swing;
+  if (delayEl) delayEl.value = delay;
+  if (reverbEl) reverbEl.value = reverb;
+
+  const feelValEl = document.getElementById('feelVal');
+  const swingValEl = document.getElementById('swingVal');
+  const delayValEl = document.getElementById('delayVal');
+  const reverbValEl = document.getElementById('reverbVal');
+
+  if (feelValEl) feelValEl.textContent = `${feel}%`;
+  if (swingValEl) swingValEl.textContent = `${swing}%`;
+  if (delayValEl) delayValEl.textContent = `${delay}%`;
+  if (reverbValEl) reverbValEl.textContent = `${reverb}%`;
+
+  if (delayMixGain && !liveFxState.delayThrow) {
+    delayMixGain.gain.value = (delay / 100) * 0.6;
+  }
+  if (reverbMixGain) {
+    reverbMixGain.gain.value = (reverb / 100) * 0.6;
+  }
+}
+
+function createExtendedStateObject(sanitizeSampleNames = false) {
+  return {
+    tracks: sanitizeSampleNames ? getSanitizedTracksForStorage() : JSON.parse(JSON.stringify(tracks)),
+    patterns: JSON.parse(JSON.stringify(patterns)),
     currentPtnIdx,
     selectedTrackIdx,
     currentKitId,
-    bpm: Number(document.getElementById('bpmInput').value) || 128
+    bpm: Number(document.getElementById('bpmInput')?.value) || 128,
+    masterKnobs: getMasterKnobValues()
+  };
+}
+
+function createStateSnapshot() {
+  return JSON.stringify(createExtendedStateObject(false));
+}
+
+function isValidStateObject(data) {
+  if (!data || typeof data !== 'object') return false;
+  if (!Array.isArray(data.tracks) || data.tracks.length === 0) return false;
+  if (!Array.isArray(data.patterns) || data.patterns.length === 0) return false;
+  if (typeof data.currentPtnIdx !== 'number' || typeof data.selectedTrackIdx !== 'number') return false;
+  for (let i = 0; i < data.tracks.length; i++) {
+    const t = data.tracks[i];
+    if (!t || typeof t.id !== 'string' || typeof t.name !== 'string' || !Array.isArray(t.knobs)) return false;
+  }
+  for (let p = 0; p < data.patterns.length; p++) {
+    const pt = data.patterns[p];
+    if (!pt || typeof pt.name !== 'string' || !Array.isArray(pt.trackStates)) return false;
+    if (pt.trackStates.length !== data.tracks.length) return false;
+    for (let ti = 0; ti < pt.trackStates.length; ti++) {
+      const ts = pt.trackStates[ti];
+      if (!ts || !Array.isArray(ts.params) || ts.params.length < 7 || !Array.isArray(ts.variations) || ts.variations.length !== 4) {
+        return false;
+      }
+      for (let vi = 0; vi < 4; vi++) {
+        if (!Array.isArray(ts.variations[vi]) || ts.variations[vi].length !== 16) return false;
+      }
+    }
+  }
+  return true;
+}
+
+function sanitizeTrackNamesAgainstDefaults(trackList) {
+  const defaultMap = {};
+  DEFAULT_TRACK_SPECS.forEach(s => { defaultMap[s.id] = s.name; });
+  trackList.forEach((t, idx) => {
+    if (!customSamples[idx]) {
+      if (defaultMap[t.id]) {
+        t.name = defaultMap[t.id];
+      } else if (t.type) {
+        t.name = `${t.type}+`;
+      }
+    }
   });
+}
+
+let autoSaveTimerId = null;
+
+function saveAutoSaveNow() {
+  if (autoSaveTimerId) {
+    clearTimeout(autoSaveTimerId);
+    autoSaveTimerId = null;
+  }
+  try {
+    const payload = {
+      version: STORAGE_DATA_VERSION,
+      savedAt: new Date().toISOString(),
+      state: createExtendedStateObject(true)
+    };
+    localStorage.setItem(STORAGE_KEY_AUTOSAVE, JSON.stringify(payload));
+  } catch (err) {
+    console.error('Auto-save failed:', err);
+    showTempLCD('SAVE ERROR');
+  }
+}
+
+function scheduleAutoSave(delayMs = 600) {
+  if (autoSaveTimerId) clearTimeout(autoSaveTimerId);
+  autoSaveTimerId = setTimeout(() => {
+    saveAutoSaveNow();
+  }, delayMs);
 }
 
 function saveHistoryState() {
@@ -1105,37 +1395,284 @@ function saveHistoryState() {
   if (undoStack.length > MAX_HISTORY) undoStack.shift();
   redoStack.length = 0;
   updateHistoryButtons();
+  scheduleAutoSave(600);
+}
+
+function applyStateObject(data, sanitizeSampleNames = false) {
+  tracks = JSON.parse(JSON.stringify(data.tracks));
+  if (sanitizeSampleNames) {
+    sanitizeTrackNamesAgainstDefaults(tracks);
+  }
+  patterns = JSON.parse(JSON.stringify(data.patterns));
+  currentPtnIdx = Math.max(0, Math.min(data.currentPtnIdx, patterns.length - 1));
+  selectedTrackIdx = Math.max(0, Math.min(data.selectedTrackIdx, tracks.length - 1));
+  if (data.currentKitId && SOUND_KITS[data.currentKitId]) {
+    currentKitId = data.currentKitId;
+  } else {
+    currentKitId = '8x8';
+  }
+  const kitSel = document.getElementById('kitSelect');
+  if (kitSel) kitSel.value = currentKitId;
+
+  const safeBpm = Number.isFinite(Number(data.bpm)) ? Math.max(60, Math.min(200, Number(data.bpm))) : 128;
+  const bpmEl = document.getElementById('bpmInput');
+  if (bpmEl) bpmEl.value = safeBpm;
+
+  applyMasterKnobValues(data.masterKnobs || DEFAULT_MASTER_KNOBS);
 }
 
 function applySnapshot(snapshotStr, statusLabel) {
-  const data = JSON.parse(snapshotStr);
-  tracks = data.tracks;
-  patterns = data.patterns;
-  currentPtnIdx = Math.min(data.currentPtnIdx, patterns.length - 1);
-  selectedTrackIdx = Math.min(data.selectedTrackIdx, tracks.length - 1);
-  if (data.currentKitId) {
-    currentKitId = data.currentKitId;
-    document.getElementById('kitSelect').value = currentKitId;
+  try {
+    const data = JSON.parse(snapshotStr);
+    if (!isValidStateObject(data)) throw new Error('Invalid state');
+    applyStateObject(data, false);
+
+    renderPatternSelect();
+    renderTracksBar();
+    renderVariationBar();
+    renderKnobs();
+    renderSteps();
+    updateLCD();
+    updateHistoryButtons();
+
+    if (statusLabel) showTempLCD(statusLabel);
+    scheduleAutoSave(400);
+  } catch (err) {
+    console.error('applySnapshot error:', err);
+    showTempLCD('LOAD ERROR');
   }
-  document.getElementById('bpmInput').value = data.bpm;
-
-  renderPatternSelect();
-  renderTracksBar();
-  renderVariationBar();
-  renderKnobs();
-  renderSteps();
-  updateLCD();
-  updateHistoryButtons();
-
-  showTempLCD(statusLabel);
 }
 
+function tryRestoreAutoSaveOnBoot() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_AUTOSAVE);
+    if (!raw) return false;
+    const parsed = JSON.parse(raw);
+    if (!parsed || parsed.version !== STORAGE_DATA_VERSION || !isValidStateObject(parsed.state)) {
+      console.warn('Invalid or outdated autosave data found; discarding and booting factory defaults.');
+      localStorage.removeItem(STORAGE_KEY_AUTOSAVE);
+      return false;
+    }
+    applyStateObject(parsed.state, true);
+    return true;
+  } catch (err) {
+    console.warn('Failed to restore autosave; booting factory defaults:', err);
+    try { localStorage.removeItem(STORAGE_KEY_AUTOSAVE); } catch (_) {}
+    return false;
+  }
+}
+
+// --- スナップショット（4スロット）& 初期化リセット管理 ---
+let snapSaveMode = false;
+let confirmCallback = null;
+
+function askUserConfirm(title, message, onConfirm) {
+  confirmCallback = onConfirm;
+  document.getElementById('confirmModalTitle').textContent = title;
+  document.getElementById('confirmModalMsg').textContent = message;
+  document.getElementById('confirmModal').classList.add('open');
+}
+
+function closeUserConfirm() {
+  document.getElementById('confirmModal').classList.remove('open');
+  confirmCallback = null;
+}
+
+document.getElementById('btnConfirmCancel').addEventListener('click', closeUserConfirm);
+document.getElementById('btnConfirmOk').addEventListener('click', () => {
+  const cb = confirmCallback;
+  closeUserConfirm();
+  if (typeof cb === 'function') cb();
+});
+document.getElementById('confirmModal').addEventListener('click', (e) => {
+  if (e.target.id === 'confirmModal') closeUserConfirm();
+});
+
+function loadSnapshotsFromStorage() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_SNAPSHOTS);
+    if (!raw) return [null, null, null, null];
+    const parsed = JSON.parse(raw);
+    if (!parsed || parsed.version !== STORAGE_DATA_VERSION || !Array.isArray(parsed.slots) || parsed.slots.length !== 4) {
+      return [null, null, null, null];
+    }
+    return parsed.slots.map(slot => {
+      if (!slot || slot.version !== STORAGE_DATA_VERSION || !isValidStateObject(slot.state)) return null;
+      return slot;
+    });
+  } catch (err) {
+    console.warn('Failed to read snapshots from localStorage:', err);
+    return [null, null, null, null];
+  }
+}
+
+function saveSnapshotsToStorage(slotsArray) {
+  try {
+    const payload = {
+      version: STORAGE_DATA_VERSION,
+      savedAt: new Date().toISOString(),
+      slots: slotsArray
+    };
+    localStorage.setItem(STORAGE_KEY_SNAPSHOTS, JSON.stringify(payload));
+    return true;
+  } catch (err) {
+    console.error('Failed to save snapshot:', err);
+    showTempLCD('SAVE ERROR');
+    return false;
+  }
+}
+
+function renderSnapshotButtons() {
+  const slots = loadSnapshotsFromStorage();
+  const saveBtn = document.getElementById('btnSnapSaveMode');
+  if (saveBtn) saveBtn.classList.toggle('save-active', snapSaveMode);
+
+  document.querySelectorAll('.btn-snap-slot').forEach(btn => {
+    const idx = Number(btn.dataset.slot);
+    const slotData = slots[idx];
+    const hasData = Boolean(slotData);
+    btn.classList.toggle('has-data', hasData);
+    btn.classList.toggle('save-target', snapSaveMode);
+    const timeStr = hasData && slotData.savedAt ? new Date(slotData.savedAt).toLocaleString() : 'EMPTY';
+    btn.title = `Slot ${idx + 1} (${timeStr}): 通常クリックで呼出 / SAVE点灯時は保存`;
+  });
+}
+
+function handleSnapshotSlotClick(slotIdx) {
+  const slots = loadSnapshotsFromStorage();
+  const slotNum = slotIdx + 1;
+
+  if (snapSaveMode) {
+    const performSlotSave = () => {
+      const freshSlots = loadSnapshotsFromStorage();
+      freshSlots[slotIdx] = {
+        version: STORAGE_DATA_VERSION,
+        savedAt: new Date().toISOString(),
+        state: createExtendedStateObject(true)
+      };
+      const ok = saveSnapshotsToStorage(freshSlots);
+      snapSaveMode = false;
+      renderSnapshotButtons();
+      if (ok) {
+        showTempLCD(`SNAP ${slotNum} SAVED`);
+      }
+    };
+
+    if (slots[slotIdx]) {
+      askUserConfirm(
+        `📸 スナップショット ${slotNum} の上書き確認`,
+        `スロット ${slotNum} には既にデータが保存されています。\n現在の状態で上書き保存しますか？`,
+        performSlotSave
+      );
+    } else {
+      performSlotSave();
+    }
+  } else {
+    const target = slots[slotIdx];
+    if (!target || !isValidStateObject(target.state)) {
+      showTempLCD('EMPTY');
+      return;
+    }
+    saveHistoryState();
+    Object.keys(customSamples).forEach(k => delete customSamples[k]);
+    applyStateObject(target.state, true);
+    renderPatternSelect();
+    renderTracksBar();
+    renderVariationBar();
+    renderKnobs();
+    renderSteps();
+    updateLCD();
+    saveAutoSaveNow();
+    showTempLCD(`SNAP ${slotNum} LOADED`);
+  }
+}
+
+function performFactoryReset() {
+  askUserConfirm(
+    '🔄 初期状態へのリセット確認',
+    '初期状態に戻しますか？\n（自動保存データは削除され、工場出荷時のプリセット状態に戻ります。スナップショット 1〜4 に保存したあなたの作品は消えずに残ります。）',
+    () => {
+      if (autoSaveTimerId) {
+        clearTimeout(autoSaveTimerId);
+        autoSaveTimerId = null;
+      }
+      try {
+        localStorage.removeItem(STORAGE_KEY_AUTOSAVE);
+      } catch (err) {
+        console.warn('Failed to remove autosave key:', err);
+      }
+
+      Object.keys(customSamples).forEach(k => delete customSamples[k]);
+      currentKitId = '8x8';
+      const kitSel = document.getElementById('kitSelect');
+      if (kitSel) kitSel.value = currentKitId;
+
+      tracks = JSON.parse(JSON.stringify(DEFAULT_TRACK_SPECS));
+      patterns = buildPresetPatterns();
+      currentPtnIdx = 0;
+      selectedTrackIdx = 0;
+      document.getElementById('bpmInput').value = patterns[0].bpm;
+
+      applyMasterKnobValues(DEFAULT_MASTER_KNOBS);
+
+      undoStack.length = 0;
+      redoStack.length = 0;
+      snapSaveMode = false;
+
+      renderPatternSelect();
+      renderTracksBar();
+      renderVariationBar();
+      renderKnobs();
+      renderSteps();
+      renderSnapshotButtons();
+      updateLCD();
+      updateHistoryButtons();
+
+      showTempLCD('INITIALIZED');
+    }
+  );
+}
+
+// --- LCD & EXPORT ステータス持続表示管理 ---
 let lcdTimerId = null;
-function showTempLCD(msg) {
+let isExporting = false;
+let stickyStatus = null;
+
+function setExportStatus(state, mainText, subText, pillText, holdMs = 0) {
+  if (lcdTimerId) {
+    clearTimeout(lcdTimerId);
+    lcdTimerId = null;
+  }
+  const until = holdMs > 0 ? (Date.now() + holdMs) : Infinity;
+  stickyStatus = { main: mainText, sub: subText, pill: pillText || subText || mainText, state, until };
+
+  const lcdMain = document.getElementById('lcdMain');
+  const lcdSub = document.getElementById('lcdSub');
+  const pillEl = document.getElementById('exportStatusPill');
+
+  if (lcdMain && mainText) lcdMain.textContent = mainText;
+  if (lcdSub && subText) lcdSub.textContent = subText;
+  if (pillEl) {
+    pillEl.textContent = stickyStatus.pill;
+    pillEl.className = `export-status-pill ${state}`;
+  }
+}
+
+function clearStickyStatusIfExpired(force = false) {
+  if (!stickyStatus) return;
+  if (isExporting && !force) return;
+  if (force || Date.now() >= stickyStatus.until) {
+    stickyStatus = null;
+    updateLCD();
+  }
+}
+
+function showTempLCD(msg, durationMs = 1200) {
+  if (isExporting) return;
   const lcdMain = document.getElementById('lcdMain');
   lcdMain.textContent = msg;
   if (lcdTimerId) clearTimeout(lcdTimerId);
-  lcdTimerId = setTimeout(() => updateLCD(), 900);
+  lcdTimerId = setTimeout(() => updateLCD(), durationMs);
 }
 
 function performUndo() {
@@ -1156,22 +1693,26 @@ function updateHistoryButtons() {
 }
 
 // --- Web Audio API ---
-let audioCtx = null, masterGain = null, delayNode = null, delayFeedback = null, delayMixGain = null, reverbNode = null, reverbMixGain = null;
+let audioCtx = null;
+let masterGain = null, delayNode = null, delayFeedback = null, delayMixGain = null, reverbNode = null, reverbMixGain = null;
 let liveLpfNode = null, liveHpfNode = null, liveDirtShaper = null, liveStutterGain = null;
-let stutterIntervalId = null;
+let stutterIntervalId = null, stutterPhase = true;
 const customSamples = {};
 
 function makeDistortionCurve(amount = 0) {
-  const nSamples = 4096;
-  const curve = new Float32Array(nSamples);
-  const k = amount;
-  for (let i = 0; i < nSamples; i++) {
-    const x = (i * 2) / nSamples - 1;
-    if (k <= 0.001) {
-      curve[i] = x;
-    } else {
-      curve[i] = ((1 + k) * x) / (1 + k * Math.abs(x));
+  const n_samples = 4096;
+  const curve = new Float32Array(n_samples);
+  if (amount <= 0) {
+    for (let i = 0; i < n_samples; i++) {
+      curve[i] = (i * 2) / n_samples - 1;
     }
+    return curve;
+  }
+  const k = amount;
+  const deg = Math.PI / 180;
+  for (let i = 0; i < n_samples; i++) {
+    const x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
 }
@@ -1205,12 +1746,20 @@ function setupAudioGraph(ctx, delayPct, reverbPct) {
   dNode.connect(dMix);
   dMix.connect(mGain);
 
-  const rNode = ctx.createConvolver();
-  rNode.buffer = createReverbImpulse(ctx);
-  const rMix = ctx.createGain();
-  rMix.gain.value = (reverbPct / 100) * 0.6;
-  rNode.connect(rMix);
-  rMix.connect(mGain);
+  let rNode = null;
+  let rMix = null;
+  try {
+    rNode = ctx.createConvolver();
+    rNode.buffer = createReverbImpulse(ctx);
+    rMix = ctx.createGain();
+    rMix.gain.value = (reverbPct / 100) * 0.6;
+    rNode.connect(rMix);
+    rMix.connect(mGain);
+  } catch (err) {
+    console.warn('Convolver fallback:', err);
+    rNode = null;
+    rMix = null;
+  }
 
   const lpf = ctx.createBiquadFilter();
   lpf.type = 'lowpass';
@@ -1224,7 +1773,7 @@ function setupAudioGraph(ctx, delayPct, reverbPct) {
 
   const shaper = ctx.createWaveShaper();
   shaper.curve = makeDistortionCurve(0);
-  shaper.oversample = '2x';
+  shaper.oversample = 'none';
 
   const stutGain = ctx.createGain();
   stutGain.gain.value = 1.0;
@@ -1250,116 +1799,120 @@ function setupAudioGraph(ctx, delayPct, reverbPct) {
 }
 
 function initAudio() {
-  if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 48000 });
-    const delayPct = Number(document.getElementById('delayKnob').value);
-    const reverbPct = Number(document.getElementById('reverbKnob').value);
-    const bus = setupAudioGraph(audioCtx, delayPct, reverbPct);
-    masterGain = bus.masterGain;
-    delayNode = bus.delayNode;
-    delayFeedback = bus.delayFeedback;
-    delayMixGain = bus.delayMixGain;
-    reverbNode = bus.reverbNode;
-    reverbMixGain = bus.reverbMixGain;
-    liveLpfNode = bus.liveLpfNode;
-    liveHpfNode = bus.liveHpfNode;
-    liveDirtShaper = bus.liveDirtShaper;
-    liveStutterGain = bus.liveStutterGain;
-  }
-  if (audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
+  if (audioCtx) return;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 48000 });
+  const delayPct = Number(document.getElementById('delayKnob').value);
+  const reverbPct = Number(document.getElementById('reverbKnob').value);
+  const bus = setupAudioGraph(audioCtx, delayPct, reverbPct);
+  masterGain = bus.masterGain;
+  delayNode = bus.delayNode;
+  delayFeedback = bus.delayFeedback;
+  delayMixGain = bus.delayMixGain;
+  reverbNode = bus.reverbNode;
+  reverbMixGain = bus.reverbMixGain;
+  liveLpfNode = bus.liveLpfNode;
+  liveHpfNode = bus.liveHpfNode;
+  liveDirtShaper = bus.liveDirtShaper;
+  liveStutterGain = bus.liveStutterGain;
 }
 
-function startStutterTimer() {
-  if (stutterIntervalId) {
-    clearInterval(stutterIntervalId);
-    stutterIntervalId = null;
-  }
-  const bpm = Number(document.getElementById('bpmInput').value) || 128;
-  const halfPeriodMs = Math.max(18, (60 / bpm / 8) * 1000 * 0.5);
-  let gateOpen = false;
-  stutterIntervalId = setInterval(() => {
-    if (!audioCtx || !liveStutterGain || !liveFxState.stutter) return;
-    gateOpen = !gateOpen;
-    liveStutterGain.gain.setTargetAtTime(gateOpen ? 1.0 : 0.02, audioCtx.currentTime, 0.003);
-  }, halfPeriodMs);
-}
+// --- LIVE FX Real-time Audio & UI Updater ---
+function updateLiveFxAudioAndUI() {
+  document.querySelectorAll('.fx-pad').forEach(pad => {
+    const fxName = pad.dataset.fx;
+    pad.classList.toggle('active', Boolean(liveFxState[fxName]));
+  });
 
-// LIVE PERFORMANCE FX のトリガー・解除制御（複数同時押し・連続再生中も常時有効）
-function setLiveFx(fxName, isDown) {
-  if (liveFxState[fxName] === isDown) return;
-  initAudio();
-  liveFxState[fxName] = isDown;
+  renderTracksBar();
+  updateLCD();
 
-  const pad = document.querySelector(`.fx-pad[data-fx="${fxName}"]`);
-  if (pad) pad.classList.toggle('active', isDown);
-
+  if (!audioCtx) return;
   const now = audioCtx.currentTime;
 
-  if (fxName === 'sweepDown' && liveLpfNode) {
+  if (liveLpfNode) {
     liveLpfNode.frequency.cancelScheduledValues(now);
     liveLpfNode.Q.cancelScheduledValues(now);
-    if (isDown) {
-      liveLpfNode.Q.setTargetAtTime(5.0, now, 0.04);
-      liveLpfNode.frequency.setTargetAtTime(210, now, 0.12);
+    if (liveFxState.sweepDown) {
+      liveLpfNode.Q.setTargetAtTime(6.0, now, 0.02);
+      liveLpfNode.frequency.setTargetAtTime(240, now, 0.08);
     } else {
-      liveLpfNode.Q.setTargetAtTime(1.0, now, 0.05);
-      liveLpfNode.frequency.setTargetAtTime(20000, now, 0.06);
-    }
-  } else if (fxName === 'sweepUp' && liveHpfNode) {
-    liveHpfNode.frequency.cancelScheduledValues(now);
-    liveHpfNode.Q.cancelScheduledValues(now);
-    if (isDown) {
-      liveHpfNode.Q.setTargetAtTime(4.5, now, 0.04);
-      liveHpfNode.frequency.setTargetAtTime(2400, now, 0.12);
-    } else {
-      liveHpfNode.Q.setTargetAtTime(1.0, now, 0.05);
-      liveHpfNode.frequency.setTargetAtTime(20, now, 0.06);
-    }
-  } else if (fxName === 'stutter' && liveStutterGain) {
-    if (isDown) {
-      startStutterTimer();
-    } else {
-      if (stutterIntervalId) {
-        clearInterval(stutterIntervalId);
-        stutterIntervalId = null;
-      }
-      liveStutterGain.gain.cancelScheduledValues(now);
-      liveStutterGain.gain.setTargetAtTime(1.0, now, 0.005);
-    }
-  } else if (fxName === 'strip' || fxName === 'break') {
-    renderTracksBar();
-  } else if (fxName === 'delayThrow' && delayMixGain && delayFeedback) {
-    const baseDelayPct = Number(document.getElementById('delayKnob').value);
-    const baseMix = (baseDelayPct / 100) * 0.6;
-    delayMixGain.gain.cancelScheduledValues(now);
-    delayFeedback.gain.cancelScheduledValues(now);
-    if (isDown) {
-      delayMixGain.gain.setTargetAtTime(0.82, now, 0.03);
-      delayFeedback.gain.setTargetAtTime(0.78, now, 0.03);
-    } else {
-      delayMixGain.gain.setTargetAtTime(baseMix, now, 0.08);
-      delayFeedback.gain.setTargetAtTime(0.42, now, 0.08);
-    }
-  } else if (fxName === 'dirt' && liveDirtShaper && masterGain) {
-    if (isDown) {
-      liveDirtShaper.curve = makeDistortionCurve(14);
-      masterGain.gain.setTargetAtTime(1.0, now, 0.02);
-    } else {
-      liveDirtShaper.curve = makeDistortionCurve(0);
-      masterGain.gain.setTargetAtTime(0.85, now, 0.04);
+      liveLpfNode.Q.setTargetAtTime(1.0, now, 0.02);
+      liveLpfNode.frequency.setTargetAtTime(20000, now, 0.05);
     }
   }
 
-  updateLCD();
+  if (liveHpfNode) {
+    liveHpfNode.frequency.cancelScheduledValues(now);
+    liveHpfNode.Q.cancelScheduledValues(now);
+    if (liveFxState.sweepUp) {
+      liveHpfNode.Q.setTargetAtTime(5.0, now, 0.02);
+      liveHpfNode.frequency.setTargetAtTime(1400, now, 0.08);
+    } else {
+      liveHpfNode.Q.setTargetAtTime(1.0, now, 0.02);
+      liveHpfNode.frequency.setTargetAtTime(20, now, 0.05);
+    }
+  }
+
+  if (delayMixGain && delayFeedback) {
+    const baseDelayPct = Number(document.getElementById('delayKnob').value);
+    delayMixGain.gain.cancelScheduledValues(now);
+    delayFeedback.gain.cancelScheduledValues(now);
+    if (liveFxState.delayThrow) {
+      delayMixGain.gain.setTargetAtTime(0.85, now, 0.02);
+      delayFeedback.gain.setTargetAtTime(0.78, now, 0.02);
+    } else {
+      delayMixGain.gain.setTargetAtTime((baseDelayPct / 100) * 0.6, now, 0.04);
+      delayFeedback.gain.setTargetAtTime(0.42, now, 0.04);
+    }
+  }
+
+  if (liveDirtShaper && masterGain) {
+    masterGain.gain.cancelScheduledValues(now);
+    if (liveFxState.dirt) {
+      liveDirtShaper.curve = makeDistortionCurve(85);
+      masterGain.gain.setTargetAtTime(0.65, now, 0.015);
+    } else {
+      liveDirtShaper.curve = makeDistortionCurve(0);
+      masterGain.gain.setTargetAtTime(0.85, now, 0.02);
+    }
+  }
+
+  if (liveFxState.stutter) {
+    if (!stutterIntervalId) {
+      const bpm = Number(document.getElementById('bpmInput').value) || 128;
+      const intervalMs = Math.max(18, (60 / bpm / 8) * 1000);
+      stutterPhase = true;
+      stutterIntervalId = setInterval(() => {
+        if (!audioCtx || !liveStutterGain) return;
+        stutterPhase = !stutterPhase;
+        liveStutterGain.gain.setValueAtTime(stutterPhase ? 1.0 : 0.02, audioCtx.currentTime);
+      }, intervalMs);
+    }
+  } else {
+    if (stutterIntervalId) {
+      clearInterval(stutterIntervalId);
+      stutterIntervalId = null;
+    }
+    if (liveStutterGain) {
+      liveStutterGain.gain.cancelScheduledValues(now);
+      liveStutterGain.gain.setValueAtTime(1.0, now);
+    }
+  }
+}
+
+function setLiveFx(fxName, isActive) {
+  if (!(fxName in liveFxState)) return;
+  if (liveFxState[fxName] === isActive) return;
+  initAudio();
+  liveFxState[fxName] = isActive;
+  updateLiveFxAudioAndUI();
 }
 
 function connectToTargetBus(node, bus, sendFx = true) {
   node.connect(bus.masterGain);
-  if (sendFx && bus.delayNode && bus.reverbNode) {
-    node.connect(bus.delayNode);
-    node.connect(bus.reverbNode);
+  if (sendFx) {
+    if (bus.delayNode) node.connect(bus.delayNode);
+    if (bus.reverbNode) node.connect(bus.reverbNode);
   }
 }
 
@@ -1622,7 +2175,7 @@ function triggerTrackSound(trkIdx, stepObj, time, stepDurSec = 0.12) {
 }
 
 // ============================================================================
-// WAV EXPORT ENGINE (48kHz / 16bit Stereo RIFF WAV)
+// WAV & MIDI EXPORT
 // ============================================================================
 function audioBufferToWav16Bit(audioBuffer) {
   const numCh = audioBuffer.numberOfChannels;
@@ -1667,30 +2220,40 @@ function audioBufferToWav16Bit(audioBuffer) {
 }
 
 function downloadBlob(blob, filename) {
+  if (!blob || blob.size === 0) {
+    throw new Error(`Empty blob generated for ${filename}`);
+  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
+  a.style.display = 'none';
   a.href = url;
   a.download = filename;
   document.body.appendChild(a);
   a.click();
   setTimeout(() => {
-    document.body.removeChild(a);
+    if (a.parentNode) document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  }, 200);
+  }, 6000);
 }
 
 async function renderWavOffline(targetTrackIndices, numBars, includeMasterFx = true, ignoreMute = false) {
-  const bpm = Number(document.getElementById('bpmInput').value) || 128;
-  const swingPct = Number(document.getElementById('swingKnob').value) / 100;
+  const bpm = Math.max(40, Math.min(300, Number(document.getElementById('bpmInput').value) || 128));
+  const swingPct = Math.max(0.5, Math.min(0.75, (Number(document.getElementById('swingKnob').value) || 54) / 100));
   const stepBaseSec = 60 / bpm / 4;
   const totalSteps = numBars * 16;
   const tailSec = includeMasterFx ? 1.8 : 0.6;
-  const totalDurSec = totalSteps * stepBaseSec + tailSec;
+  const totalDurSec = Math.max(0.5, totalSteps * stepBaseSec + tailSec);
   const sampleRate = 48000;
+  const totalFrames = Math.ceil(totalDurSec * sampleRate);
 
-  const offlineCtx = new OfflineAudioContext(2, Math.ceil(totalDurSec * sampleRate), sampleRate);
-  const delayPct = includeMasterFx ? Number(document.getElementById('delayKnob').value) : 0;
-  const reverbPct = includeMasterFx ? Number(document.getElementById('reverbKnob').value) : 0;
+  const OfflineCtxClass = window.OfflineAudioContext || window.webkitOfflineAudioContext;
+  if (!OfflineCtxClass) {
+    throw new Error('OfflineAudioContext is not supported in this browser.');
+  }
+
+  const offlineCtx = new OfflineCtxClass(2, totalFrames, sampleRate);
+  const delayPct = includeMasterFx ? (Number(document.getElementById('delayKnob').value) || 0) : 0;
+  const reverbPct = includeMasterFx ? (Number(document.getElementById('reverbKnob').value) || 0) : 0;
   const offBus = setupAudioGraph(offlineCtx, delayPct, reverbPct);
 
   const ptn = patterns[currentPtnIdx];
@@ -1703,9 +2266,9 @@ async function renderWavOffline(targetTrackIndices, numBars, includeMasterFx = t
 
       targetTrackIndices.forEach(tIdx => {
         const st = ptn.trackStates[tIdx];
-        if (!st || (!ignoreMute && !isTrackAudible(ptn, tIdx))) return;
+        if (!st || (!ignoreMute && !isTrackAudible(ptn, tIdx, false))) return;
         const vIdx = getVarIndexForBar(st, bar);
-        const stepObj = st.variations[vIdx][s];
+        const stepObj = st.variations[vIdx] && st.variations[vIdx][s];
         if (stepObj && stepObj.on) {
           scheduleStepWithSubOnCtx(offlineCtx, offBus, tIdx, stepObj, cursorSec, durSec, ignoreMute);
         }
@@ -1719,9 +2282,6 @@ async function renderWavOffline(targetTrackIndices, numBars, includeMasterFx = t
   return audioBufferToWav16Bit(renderedBuffer);
 }
 
-// ============================================================================
-// MIDI EXPORT ENGINE (SMF Format 1)
-// ============================================================================
 const KNOB_CC_NUMS = [70, 75, 74, 71, 73, 72, 7];
 const MASTER_CC_NUMS = { feel: 85, swing: 86, delay: 94, reverb: 91 };
 
@@ -1770,78 +2330,83 @@ function getBaseMidiNoteForSpec(spec, trkIdx) {
 function createMidiTrackEventsForTrack(trkIdx, numBars, ppq = 480) {
   const spec = tracks[trkIdx];
   const st = patterns[currentPtnIdx].trackStates[trkIdx];
+  if (!spec || !st) return [];
   const ch = trkIdx % 16;
   const events = [];
 
-  const nameBytes = Array.from(`${String(trkIdx + 1).padStart(2, '0')}_${spec.name}`).map(c => c.charCodeAt(0) & 0x7F);
+  const safeName = String(spec.name || `TRK${trkIdx + 1}`).replace(/[^\x20-\x7E]/g, '');
+  const nameBytes = Array.from(`${String(trkIdx + 1).padStart(2, '0')}_${safeName}`).map(c => c.charCodeAt(0) & 0x7F);
   events.push({ tick: 0, order: 0, bytes: [0xFF, 0x03, nameBytes.length, ...nameBytes] });
 
   st.params.forEach((val, kIdx) => {
     const ccNum = KNOB_CC_NUMS[kIdx];
-    const ccVal = Math.max(0, Math.min(127, Math.round((val / 100) * 127)));
+    if (ccNum === undefined) return;
+    const safeVal = Number.isFinite(val) ? val : 50;
+    const ccVal = Math.max(0, Math.min(127, Math.round((safeVal / 100) * 127)));
     events.push({ tick: 0, order: 1, bytes: [0xB0 | ch, ccNum, ccVal] });
   });
 
-  const feelVal = Math.round((Number(document.getElementById('feelKnob').value) / 100) * 127);
-  const swingVal = Math.round((Number(document.getElementById('swingKnob').value) / 100) * 127);
-  const delayVal = Math.round((Number(document.getElementById('delayKnob').value) / 100) * 127);
-  const reverbVal = Math.round((Number(document.getElementById('reverbKnob').value) / 100) * 127);
+  const feelVal = Math.max(0, Math.min(127, Math.round(((Number(document.getElementById('feelKnob').value) || 0) / 100) * 127)));
+  const swingVal = Math.max(0, Math.min(127, Math.round(((Number(document.getElementById('swingKnob').value) || 54) / 100) * 127)));
+  const delayVal = Math.max(0, Math.min(127, Math.round(((Number(document.getElementById('delayKnob').value) || 0) / 100) * 127)));
+  const reverbVal = Math.max(0, Math.min(127, Math.round(((Number(document.getElementById('reverbKnob').value) || 0) / 100) * 127)));
   events.push({ tick: 0, order: 1, bytes: [0xB0 | ch, MASTER_CC_NUMS.feel, feelVal] });
   events.push({ tick: 0, order: 1, bytes: [0xB0 | ch, MASTER_CC_NUMS.swing, swingVal] });
   events.push({ tick: 0, order: 1, bytes: [0xB0 | ch, MASTER_CC_NUMS.delay, delayVal] });
   events.push({ tick: 0, order: 1, bytes: [0xB0 | ch, MASTER_CC_NUMS.reverb, reverbVal] });
 
   const baseStepTicks = ppq / 4;
-  const swingPct = Number(document.getElementById('swingKnob').value) / 100;
+  const swingPct = Math.max(0.5, Math.min(0.75, (Number(document.getElementById('swingKnob').value) || 54) / 100));
   let cursorTick = 0;
 
   for (let bar = 0; bar < numBars; bar++) {
     const vIdx = getVarIndexForBar(st, bar);
-    events.push({ tick: cursorTick, order: 1, bytes: [0xB0 | ch, 3, vIdx] });
+    events.push({ tick: Math.round(cursorTick), order: 1, bytes: [0xB0 | ch, 3, vIdx] });
 
-    const steps = st.variations[vIdx];
+    const steps = st.variations[vIdx] || [];
     for (let s = 0; s < 16; s++) {
       const isOdd = s % 2 === 1;
       const stepTicks = isOdd ? baseStepTicks * (2 - swingPct * 2) : baseStepTicks * (swingPct * 2);
       const stepObj = steps[s];
 
-      if (stepObj && stepObj.on && isTrackAudible(patterns[currentPtnIdx], trkIdx)) {
+      if (stepObj && stepObj.on && isTrackAudible(patterns[currentPtnIdx], trkIdx, false)) {
         const baseMidi = getBaseMidiNoteForSpec(spec, trkIdx);
-        const midiNote = Math.max(0, Math.min(127, baseMidi + (stepObj.note || 0)));
+        const midiNote = Math.max(0, Math.min(127, baseMidi + (Number(stepObj.note) || 0)));
         const baseVel = stepObj.acc === 2 ? 124 : (stepObj.acc === 1 ? 76 : 100);
+        const stepStartTick = Math.round(cursorTick);
 
         if (stepObj.acc === 1) {
-          events.push({ tick: cursorTick, order: 2, bytes: [0xB0 | ch, 65, 127] });
+          events.push({ tick: stepStartTick, order: 2, bytes: [0xB0 | ch, 65, 127] });
         } else if (stepObj.acc === 2) {
-          events.push({ tick: cursorTick, order: 2, bytes: [0xB0 | ch, 65, 0] });
+          events.push({ tick: stepStartTick, order: 2, bytes: [0xB0 | ch, 65, 0] });
         }
 
         const sub = stepObj.sub || 0;
         if (sub === 0) {
           const gateTicks = Math.max(20, Math.floor(stepTicks * 0.8));
-          events.push({ tick: cursorTick, order: 3, bytes: [0x90 | ch, midiNote, baseVel] });
-          events.push({ tick: cursorTick + gateTicks, order: 2, bytes: [0x80 | ch, midiNote, 0] });
+          events.push({ tick: stepStartTick, order: 3, bytes: [0x90 | ch, midiNote, baseVel] });
+          events.push({ tick: stepStartTick + gateTicks, order: 2, bytes: [0x80 | ch, midiNote, 0] });
         } else if (sub === 2 || sub === 3 || sub === 4) {
           const subSpan = stepTicks / sub;
           const gate = Math.max(12, Math.floor(subSpan * 0.75));
           for (let i = 0; i < sub; i++) {
             const vel = Math.max(30, baseVel - i * 8);
-            const tStart = cursorTick + Math.floor(i * subSpan);
+            const tStart = Math.round(cursorTick + i * subSpan);
             events.push({ tick: tStart, order: 3, bytes: [0x90 | ch, midiNote, vel] });
             events.push({ tick: tStart + gate, order: 2, bytes: [0x80 | ch, midiNote, 0] });
           }
         } else if (sub === 5) {
-          const flamOffset = Math.floor(stepTicks * 0.25);
-          events.push({ tick: cursorTick, order: 3, bytes: [0x90 | ch, midiNote, Math.max(40, Math.floor(baseVel * 0.6))] });
-          events.push({ tick: cursorTick + flamOffset - 2, order: 2, bytes: [0x80 | ch, midiNote, 0] });
-          events.push({ tick: cursorTick + flamOffset, order: 3, bytes: [0x90 | ch, midiNote, Math.min(127, baseVel + 10)] });
-          events.push({ tick: cursorTick + Math.floor(stepTicks * 0.85), order: 2, bytes: [0x80 | ch, midiNote, 0] });
+          const flamOffset = Math.max(6, Math.floor(stepTicks * 0.25));
+          events.push({ tick: stepStartTick, order: 3, bytes: [0x90 | ch, midiNote, Math.max(40, Math.floor(baseVel * 0.6))] });
+          events.push({ tick: stepStartTick + flamOffset - 2, order: 2, bytes: [0x80 | ch, midiNote, 0] });
+          events.push({ tick: stepStartTick + flamOffset, order: 3, bytes: [0x90 | ch, midiNote, Math.min(127, baseVel + 10)] });
+          events.push({ tick: stepStartTick + Math.floor(stepTicks * 0.85), order: 2, bytes: [0x80 | ch, midiNote, 0] });
         } else if (sub === 6) {
           const subSpan = stepTicks / 3;
           const gate = Math.max(12, Math.floor(subSpan * 0.75));
           [0.5, 0.8, 1.15].forEach((mul, i) => {
             const vel = Math.max(30, Math.min(127, Math.round(baseVel * mul)));
-            const tStart = cursorTick + Math.floor(i * subSpan);
+            const tStart = Math.round(cursorTick + i * subSpan);
             events.push({ tick: tStart, order: 3, bytes: [0x90 | ch, midiNote, vel] });
             events.push({ tick: tStart + gate, order: 2, bytes: [0x80 | ch, midiNote, 0] });
           });
@@ -1855,7 +2420,7 @@ function createMidiTrackEventsForTrack(trkIdx, numBars, ppq = 480) {
 
 function generateSMFBlob(trackIndices, numBars) {
   const ppq = 480;
-  const bpm = Number(document.getElementById('bpmInput').value) || 128;
+  const bpm = Math.max(40, Math.min(300, Number(document.getElementById('bpmInput').value) || 128));
   const mpqn = Math.round(60000000 / bpm);
 
   const tempoEvents = [
@@ -1898,25 +2463,24 @@ function stepLoop() {
   if (currentStep === 0) {
     let varChanged = false;
     ptn.trackStates.forEach(st => {
-      // 裏編集モード（varClickMode === 'edit'）の時、または既に裏で別バリエーションを編集中の時は editVar を勝手に上書きしない
-      const syncEdit = (varClickMode !== 'edit') && (st.editVar === st.activeVar);
+      const followEdit = (varClickMode !== 'edit') && (st.editVar === st.activeVar);
       if (st.fillActive) {
         st.activeVar = st.preFillVar;
-        if (syncEdit) st.editVar = st.activeVar;
+        if (followEdit) st.editVar = st.activeVar;
         st.fillActive = false;
         varChanged = true;
       } else if (st.queuedVar !== null) {
         st.activeVar = st.queuedVar;
-        if (syncEdit) st.editVar = st.activeVar;
+        if (followEdit) st.editVar = st.activeVar;
         st.queuedVar = null;
         varChanged = true;
       } else if (st.chainMode === 'AB') {
         st.activeVar = st.activeVar === 0 ? 1 : 0;
-        if (syncEdit) st.editVar = st.activeVar;
+        if (followEdit) st.editVar = st.activeVar;
         varChanged = true;
       } else if (st.chainMode === 'ABCD') {
         st.activeVar = (st.activeVar + 1) % 4;
-        if (syncEdit) st.editVar = st.activeVar;
+        if (followEdit) st.editVar = st.activeVar;
         varChanged = true;
       }
     });
@@ -1991,8 +2555,7 @@ function renderPianoKeys() {
       updateInputStatus();
       renderPianoKeys();
       const subType = stepEditMode === 'sub' ? Number(document.getElementById('subStepTypeSelect').value) : 0;
-      const liveBus = { masterGain, delayNode, reverbNode };
-      scheduleStepWithSubOnCtx(audioCtx, liveBus, selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: subType }, audioCtx.currentTime, 0.14, true);
+      triggerTrackSound(selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: subType }, audioCtx.currentTime, 0.14);
     });
     container.appendChild(keyEl);
   }
@@ -2020,7 +2583,13 @@ function updateLCD() {
   const editVarName = VAR_NAMES[st.editVar];
   const queueTxt = st.queuedVar !== null ? `->${VAR_NAMES[st.queuedVar]}` : (st.fillActive ? '(FILL)' : '');
 
-  // アクティブなLIVE FXがある場合は優先表示
+  document.getElementById('selectedTrkLabel').textContent = `Track ${trkNumStr} - ${trk.name}`;
+  document.getElementById('editingVarIndicator').textContent =
+    `EDITING: VARIATION ${editVarName} (PLAYING: ${playVarName}${queueTxt})`;
+
+  const showWav = ['SMP', 'LP', 'SY', 'TT', 'RS', 'PC'].includes(trk.type) || selectedTrackIdx >= 5;
+  document.getElementById('wavUploadArea').style.display = showWav ? 'inline-block' : 'none';
+
   const activeFxKeys = Object.keys(liveFxState).filter(k => liveFxState[k]);
   if (activeFxKeys.length > 0) {
     const fxShort = {
@@ -2033,18 +2602,23 @@ function updateLCD() {
       dirt: 'DIRT'
     };
     document.getElementById('lcdMain').textContent = 'FX:' + activeFxKeys.map(k => fxShort[k]).join('+').substring(0, 8);
-  } else {
-    document.getElementById('lcdMain').textContent = p.name.substring(0, 11);
+    document.getElementById('lcdSub').textContent =
+      `${document.getElementById('bpmInput').value} BPM | TRK ${trkNumStr}:${trk.name} [VAR ${playVarName}${queueTxt}]`;
+    return;
   }
 
+  if (stickyStatus && (isExporting || Date.now() < stickyStatus.until)) {
+    document.getElementById('lcdMain').textContent = stickyStatus.main;
+    if (stickyStatus.sub) {
+      document.getElementById('lcdSub').textContent = stickyStatus.sub;
+    }
+    return;
+  }
+  stickyStatus = null;
+
+  document.getElementById('lcdMain').textContent = p.name.substring(0, 11);
   document.getElementById('lcdSub').textContent =
     `${document.getElementById('bpmInput').value} BPM | TRK ${trkNumStr}:${trk.name} [VAR ${playVarName}${queueTxt}]`;
-  document.getElementById('selectedTrkLabel').textContent = `Track ${trkNumStr} - ${trk.name}`;
-  document.getElementById('editingVarIndicator').textContent =
-    `EDITING: VARIATION ${editVarName} (PLAYING: ${playVarName}${queueTxt})`;
-
-  const showWav = ['SMP', 'LP', 'SY', 'TT', 'RS', 'PC'].includes(trk.type) || selectedTrackIdx >= 5;
-  document.getElementById('wavUploadArea').style.display = showWav ? 'inline-block' : 'none';
 }
 
 function renderTracksBar() {
@@ -2099,8 +2673,12 @@ function renderTracksBar() {
       const v = Number(e.target.value);
       st.params[6] = v;
       document.getElementById(`trkVolVal_${idx}`).textContent = v;
+      scheduleAutoSave(600);
     });
-    volSlider.addEventListener('change', (e) => e.target.blur());
+    volSlider.addEventListener('change', (e) => {
+      e.target.blur();
+      scheduleAutoSave(250);
+    });
 
     btn.addEventListener('click', (e) => {
       const msAction = e.target.dataset.ms;
@@ -2112,14 +2690,17 @@ function renderTracksBar() {
           st.solo = false;
         } else if (msAction === 'mute') {
           st.muted = !st.muted;
+          if (st.muted) st.solo = false;
         } else if (msAction === 'solo') {
           st.solo = !st.solo;
           if (st.solo) st.muted = false;
         }
         renderTracksBar();
+        scheduleAutoSave(300);
         return;
       }
       selectedTrackIdx = idx;
+      clearStickyStatusIfExpired(true);
       initAudio();
       const liveBus = { masterGain, delayNode, reverbNode };
       scheduleStepWithSubOnCtx(audioCtx, liveBus, idx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime, 0.12, true);
@@ -2128,6 +2709,7 @@ function renderTracksBar() {
       renderKnobs();
       renderSteps();
       updateLCD();
+      scheduleAutoSave(500);
     });
     bar.appendChild(btn);
   });
@@ -2181,7 +2763,6 @@ function renderVariationBar() {
           t.queuedVar = null;
         });
       } else {
-        // Chain連続再生設定(t.chainMode)を勝手に解除せず、予約または即時切替のみ行う
         targetTracks.forEach(t => {
           if (isPlaying && t.activeVar !== vIdx) {
             t.queuedVar = vIdx;
@@ -2199,6 +2780,7 @@ function renderVariationBar() {
       renderVariationBar();
       renderSteps();
       updateLCD();
+      scheduleAutoSave(400);
     });
 
     container.appendChild(btn);
@@ -2228,8 +2810,12 @@ function renderKnobs() {
       const v = Number(e.target.value);
       st.params[kIdx] = v;
       document.getElementById(`kval_${kIdx}`).textContent = v;
+      scheduleAutoSave(600);
     });
-    rangeEl.addEventListener('change', (e) => e.target.blur());
+    rangeEl.addEventListener('change', (e) => {
+      e.target.blur();
+      scheduleAutoSave(250);
+    });
     container.appendChild(div);
   });
 }
@@ -2257,6 +2843,7 @@ function renderSteps() {
     `;
 
     cell.addEventListener('click', () => {
+      clearStickyStatusIfExpired(true);
       initAudio();
       saveHistoryState();
       const subType = Number(document.getElementById('subStepTypeSelect').value);
@@ -2279,15 +2866,47 @@ function renderSteps() {
       }
 
       if (stepObj.on) {
-        const liveBus = { masterGain, delayNode, reverbNode };
-        scheduleStepWithSubOnCtx(audioCtx, liveBus, selectedTrackIdx, stepObj, audioCtx.currentTime, 0.14, true);
+        triggerTrackSound(selectedTrackIdx, stepObj, audioCtx.currentTime, 0.14);
       }
       renderSteps();
       renderVariationBar();
+      scheduleAutoSave(350);
     });
     grid.appendChild(cell);
   });
 }
+
+// --- LIVE FX パッドおよびキーボードイベント ---
+const KEY_TO_FX = {
+  z: 'sweepDown',
+  x: 'sweepUp',
+  c: 'stutter',
+  v: 'strip',
+  b: 'break',
+  n: 'delayThrow',
+  m: 'dirt'
+};
+
+document.querySelectorAll('.fx-pad').forEach(pad => {
+  const fxName = pad.dataset.fx;
+  pad.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    setLiveFx(fxName, true);
+  });
+  pad.addEventListener('mouseup', () => setLiveFx(fxName, false));
+  pad.addEventListener('mouseleave', () => {
+    if (liveFxState[fxName]) setLiveFx(fxName, false);
+  });
+  pad.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    setLiveFx(fxName, true);
+  }, { passive: false });
+  pad.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    setLiveFx(fxName, false);
+  }, { passive: false });
+  pad.addEventListener('touchcancel', () => setLiveFx(fxName, false));
+});
 
 // --- バージョンバッジの切替イベント ---
 document.getElementById('verBadge').addEventListener('click', () => {
@@ -2314,7 +2933,7 @@ document.getElementById('manualModal').addEventListener('click', (e) => {
 document.getElementById('kitSelect').addEventListener('change', (e) => {
   saveHistoryState();
   currentKitId = e.target.value;
-  e.target.blur(); // フォーカスを外してキーボードのLIVE FXをすぐ使えるようにする
+  e.target.blur();
   const kit = SOUND_KITS[currentKitId];
   if (!kit) return;
   const ptn = patterns[currentPtnIdx];
@@ -2326,156 +2945,277 @@ document.getElementById('kitSelect').addEventListener('change', (e) => {
     }
   });
   initAudio();
-  const liveBus = { masterGain, delayNode, reverbNode };
-  scheduleStepWithSubOnCtx(audioCtx, liveBus, selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime, 0.12, true);
+  triggerTrackSound(selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime);
   renderKnobs();
   renderTracksBar();
   showTempLCD(kit.name.substring(0, 11).toUpperCase());
+  scheduleAutoSave(300);
 });
 
-// --- エクスポートボタンのイベント設定 ---
+// --- スナップショット＆リセットボタンのイベント設定 ---
+document.getElementById('btnSnapSaveMode').addEventListener('click', () => {
+  snapSaveMode = !snapSaveMode;
+  renderSnapshotButtons();
+  showTempLCD(snapSaveMode ? 'SELECT SLOT' : 'CANCEL SAVE');
+});
+
+document.querySelectorAll('.btn-snap-slot').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const slotIdx = Number(btn.dataset.slot);
+    handleSnapshotSlotClick(slotIdx);
+  });
+});
+
+document.getElementById('btnFactoryReset').addEventListener('click', performFactoryReset);
+
+document.getElementById('bpmInput').addEventListener('input', (e) => {
+  const v = Math.max(60, Math.min(200, Number(e.target.value) || 128));
+  if (patterns[currentPtnIdx]) {
+    patterns[currentPtnIdx].bpm = v;
+  }
+  updateLCD();
+  scheduleAutoSave(500);
+});
+document.getElementById('bpmInput').addEventListener('change', () => {
+  scheduleAutoSave(250);
+});
+
+window.addEventListener('beforeunload', () => {
+  if (autoSaveTimerId) {
+    saveAutoSaveNow();
+  }
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden' && autoSaveTimerId) {
+    saveAutoSaveNow();
+  }
+});
+
+// --- エクスポートボタンのイベント設定（例外処理・二重クリック防止・進捗＆完了持続表示） ---
+const EXPORT_BTN_IDS = [
+  'btnExportTrackMidi',
+  'btnExportAllMidi',
+  'btnExportTrackWav',
+  'btnExportAllStemsWav',
+  'btnExportMasterWav'
+];
+
+function setExportButtonsDisabled(disabled) {
+  isExporting = disabled;
+  EXPORT_BTN_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.disabled = disabled;
+  });
+}
+
 function getSafePatternPrefix() {
   return patterns[currentPtnIdx].name.split('(')[0].trim().replace(/[^a-zA-Z0-9._-]/g, '_');
 }
 
-document.getElementById('btnExportTrackMidi').addEventListener('click', () => {
-  const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
-  const trkSpec = tracks[selectedTrackIdx];
-  const blob = generateSMFBlob([selectedTrackIdx], numBars);
-  const fname = `${getSafePatternPrefix()}_TRK${String(selectedTrackIdx + 1).padStart(2, '0')}_${trkSpec.name}.mid`;
-  downloadBlob(blob, fname);
-  showTempLCD('MIDI SAVED');
+function yieldToUI(ms = 40) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+document.getElementById('btnExportTrackMidi').addEventListener('click', async () => {
+  if (isExporting) return;
+  setExportButtonsDisabled(true);
+  try {
+    const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
+    const trkSpec = tracks[selectedTrackIdx];
+    const trkNum = String(selectedTrackIdx + 1).padStart(2, '0');
+    setExportStatus('busy', 'EXP MIDI..', `TRK ${trkNum}:${trkSpec.name} (${numBars}B)`, `MIDI EXPORTING: TRK ${trkNum} ${trkSpec.name}...`);
+    await yieldToUI(30);
+
+    const blob = generateSMFBlob([selectedTrackIdx], numBars);
+    const fname = `${getSafePatternPrefix()}_TRK${trkNum}_${trkSpec.name}.mid`;
+    downloadBlob(blob, fname);
+
+    setExportStatus('done', 'MIDI SAVED', `SAVED: ${fname}`, `MIDI OK: TRK ${trkNum} ${trkSpec.name} (1 FILE)`, 10000);
+  } catch (err) {
+    console.error('Export Track MIDI Error:', err);
+    setExportStatus('error', 'EXPORT ERR', `MIDI ERR: ${err.message || 'FAILED'}`, `ERROR: ${err.message || 'MIDI EXPORT FAILED'}`, 12000);
+  } finally {
+    setExportButtonsDisabled(false);
+  }
 });
 
-document.getElementById('btnExportAllMidi').addEventListener('click', () => {
-  const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
-  const allIndices = tracks.map((_, i) => i);
-  const blob = generateSMFBlob(allIndices, numBars);
-  const fname = `${getSafePatternPrefix()}_ALL_TRACKS.mid`;
-  downloadBlob(blob, fname);
-  showTempLCD('ALL MIDI OK');
+document.getElementById('btnExportAllMidi').addEventListener('click', async () => {
+  if (isExporting) return;
+  setExportButtonsDisabled(true);
+  try {
+    const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
+    const allIndices = tracks.map((_, i) => i);
+    setExportStatus('busy', 'ALL MIDI..', `BUILDING ${allIndices.length} TRKS (${numBars}B)`, `BUILDING ALL MIDI (${allIndices.length} TRACKS)...`);
+    await yieldToUI(40);
+
+    const blob = generateSMFBlob(allIndices, numBars);
+    const fname = `${getSafePatternPrefix()}_ALL_TRACKS.mid`;
+    downloadBlob(blob, fname);
+
+    setExportStatus('done', 'ALL MIDI OK', `SAVED: ${fname}`, `ALL MIDI DONE! (${allIndices.length} TRKS -> 1 FILE)`, 10000);
+  } catch (err) {
+    console.error('Export All MIDI Error:', err);
+    setExportStatus('error', 'EXPORT ERR', `ALL MIDI ERR: ${err.message || 'FAILED'}`, `ERROR: ${err.message || 'ALL MIDI FAILED'}`, 12000);
+  } finally {
+    setExportButtonsDisabled(false);
+  }
 });
 
 document.getElementById('btnExportTrackWav').addEventListener('click', async () => {
-  const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
-  const trkSpec = tracks[selectedTrackIdx];
-  showTempLCD('RENDER WAV.');
-  const wavBlob = await renderWavOffline([selectedTrackIdx], numBars, true, true);
-  const fname = `${getSafePatternPrefix()}_TRK${String(selectedTrackIdx + 1).padStart(2, '0')}_${trkSpec.name}.wav`;
-  downloadBlob(wavBlob, fname);
-  showTempLCD('WAV SAVED!');
+  if (isExporting) return;
+  setExportButtonsDisabled(true);
+  try {
+    const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
+    const trkSpec = tracks[selectedTrackIdx];
+    const trkNum = String(selectedTrackIdx + 1).padStart(2, '0');
+    setExportStatus('busy', 'RENDER WAV', `TRK ${trkNum}:${trkSpec.name} (${numBars}B)`, `RENDERING WAV: TRK ${trkNum} ${trkSpec.name}...`);
+    await yieldToUI(40);
+
+    const wavBlob = await renderWavOffline([selectedTrackIdx], numBars, true, true);
+    const fname = `${getSafePatternPrefix()}_TRK${trkNum}_${trkSpec.name}.wav`;
+    downloadBlob(wavBlob, fname);
+
+    setExportStatus('done', 'WAV SAVED!', `SAVED: ${fname}`, `WAV DONE: TRK ${trkNum} ${trkSpec.name} (1 FILE)`, 10000);
+  } catch (err) {
+    console.error('Export Track WAV Error:', err);
+    setExportStatus('error', 'EXPORT ERR', `WAV ERR: ${err.message || 'FAILED'}`, `ERROR: ${err.message || 'TRACK WAV FAILED'}`, 12000);
+  } finally {
+    setExportButtonsDisabled(false);
+  }
 });
 
 document.getElementById('btnExportAllStemsWav').addEventListener('click', async () => {
-  const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
-  const ptn = patterns[currentPtnIdx];
-  showTempLCD('STEMS...');
+  if (isExporting) return;
+  setExportButtonsDisabled(true);
+  try {
+    const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
+    const ptn = patterns[currentPtnIdx];
 
-  for (let tIdx = 0; tIdx < tracks.length; tIdx++) {
-    const st = ptn.trackStates[tIdx];
-    const hasAnyNote = st.variations.some(v => v.some(s => s.on));
-    if (!isTrackAudible(ptn, tIdx) || !hasAnyNote) continue;
+    const activeTargets = [];
+    const skippedNames = [];
+    for (let tIdx = 0; tIdx < tracks.length; tIdx++) {
+      const st = ptn.trackStates[tIdx];
+      const hasAnyNote = st && st.variations.some(v => v.some(s => s.on));
+      const audible = isTrackAudible(ptn, tIdx, false);
+      if (audible && hasAnyNote) {
+        activeTargets.push(tIdx);
+      } else {
+        skippedNames.push(tracks[tIdx].name);
+      }
+    }
 
-    const wavBlob = await renderWavOffline([tIdx], numBars, false, true);
-    const fname = `${getSafePatternPrefix()}_STEM_${String(tIdx + 1).padStart(2, '0')}_${tracks[tIdx].name}.wav`;
-    downloadBlob(wavBlob, fname);
-    await new Promise(r => setTimeout(r, 180));
+    if (activeTargets.length === 0) {
+      setExportStatus('error', 'NO STEMS', 'ALL TRACKS EMPTY OR MUTED', 'NO ACTIVE TRACKS TO EXPORT (0 FILES)', 10000);
+      return;
+    }
+
+    let successCount = 0;
+    const failedNames = [];
+
+    for (let i = 0; i < activeTargets.length; i++) {
+      const tIdx = activeTargets[i];
+      const trkName = tracks[tIdx].name;
+      const trkNum = String(tIdx + 1).padStart(2, '0');
+      const stepLabel = `${i + 1}/${activeTargets.length}`;
+
+      setExportStatus(
+        'busy',
+        `STEM ${stepLabel}`,
+        `RENDERING TRK ${trkNum}:${trkName}`,
+        `STEMS ${stepLabel}: TRK ${trkNum} (${trkName})...`
+      );
+      await yieldToUI(50);
+
+      try {
+        const wavBlob = await renderWavOffline([tIdx], numBars, false, true);
+        const fname = `${getSafePatternPrefix()}_STEM_${trkNum}_${trkName}.wav`;
+        downloadBlob(wavBlob, fname);
+        successCount++;
+      } catch (stemErr) {
+        console.error(`Stem export failed on Track ${trkNum} (${trkName}):`, stemErr);
+        failedNames.push(trkName);
+      }
+
+      if (i < activeTargets.length - 1) {
+        await yieldToUI(650);
+      }
+    }
+
+    if (failedNames.length > 0 && successCount === 0) {
+      setExportStatus(
+        'error',
+        'EXPORT ERR',
+        `FAILED: ${failedNames.join(',')}`,
+        `STEMS ERROR: 0 SAVED / ${failedNames.length} FAILED`,
+        12000
+      );
+    } else {
+      const skipTxt = skippedNames.length > 0 ? ` / ${skippedNames.length} SKIP` : '';
+      const failTxt = failedNames.length > 0 ? ` / ${failedNames.length} ERR(${failedNames.join(',')})` : '';
+      setExportStatus(
+        failedNames.length > 0 ? 'error' : 'done',
+        `STEMS(${successCount})`,
+        `DONE:${successCount} OK${skipTxt}${failTxt}`,
+        `STEMS DONE! (${successCount} FILES${skipTxt}${failTxt})`,
+        12000
+      );
+    }
+  } catch (err) {
+    console.error('Export All Stems WAV Error:', err);
+    setExportStatus('error', 'EXPORT ERR', `STEMS ERR: ${err.message || 'FAILED'}`, `ERROR: ${err.message || 'STEMS EXPORT FAILED'}`, 12000);
+  } finally {
+    setExportButtonsDisabled(false);
   }
-  showTempLCD('STEMS DONE!');
 });
 
 document.getElementById('btnExportMasterWav').addEventListener('click', async () => {
-  const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
-  const allIndices = tracks.map((_, i) => i);
-  showTempLCD('MIXING 2MIX');
-  const wavBlob = await renderWavOffline(allIndices, numBars, true, false);
-  const fname = `${getSafePatternPrefix()}_2MIX_MASTER.wav`;
-  downloadBlob(wavBlob, fname);
-  showTempLCD('2MIX SAVED!');
+  if (isExporting) return;
+  setExportButtonsDisabled(true);
+  try {
+    const numBars = Number(document.getElementById('exportBarsSelect').value) || 4;
+    const allIndices = tracks.map((_, i) => i);
+    setExportStatus('busy', 'MIXING 2MIX', `RENDERING ${numBars} BARS STEREO...`, `MIXING 2MIX MASTER (${numBars} BARS)...`);
+    await yieldToUI(50);
+
+    const wavBlob = await renderWavOffline(allIndices, numBars, true, false);
+    const fname = `${getSafePatternPrefix()}_2MIX_MASTER.wav`;
+    downloadBlob(wavBlob, fname);
+
+    setExportStatus('done', '2MIX SAVED!', `SAVED: ${fname}`, `2MIX MASTER DONE! (${fname})`, 10000);
+  } catch (err) {
+    console.error('Export 2MIX Master WAV Error:', err);
+    setExportStatus('error', 'EXPORT ERR', `2MIX ERR: ${err.message || 'FAILED'}`, `ERROR: ${err.message || '2MIX EXPORT FAILED'}`, 12000);
+  } finally {
+    setExportButtonsDisabled(false);
+  }
 });
 
 // --- 基本イベント設定 ---
-function togglePlay() {
+document.getElementById('btnPlay').addEventListener('click', () => {
   initAudio();
   isPlaying = !isPlaying;
   document.getElementById('btnPlay').classList.toggle('playing', isPlaying);
-  if (isPlaying) {
-    currentStep = 0;
-    stepLoop();
-  } else {
-    clearTimeout(stepTimer);
-  }
-}
-
-document.getElementById('btnPlay').addEventListener('click', (e) => {
-  togglePlay();
-  e.currentTarget.blur();
-});
-
-document.getElementById('bpmInput').addEventListener('input', () => {
-  patterns[currentPtnIdx].bpm = Number(document.getElementById('bpmInput').value) || 128;
-  if (liveFxState.stutter) startStutterTimer();
-  updateLCD();
+  if (isPlaying) { currentStep = 0; stepLoop(); } else { clearTimeout(stepTimer); }
 });
 
 document.getElementById('btnUndo').addEventListener('click', performUndo);
 document.getElementById('btnRedo').addEventListener('click', performRedo);
 
-// LIVE FX パッドのポインター（マウス＆タッチ統合）ホールドイベント設定
-document.querySelectorAll('.fx-pad').forEach(pad => {
-  const fxName = pad.dataset.fx;
-  pad.addEventListener('pointerdown', (e) => {
-    e.preventDefault();
-    if (pad.setPointerCapture) {
-      try { pad.setPointerCapture(e.pointerId); } catch (_) {}
-    }
-    setLiveFx(fxName, true);
-  });
-  pad.addEventListener('pointerup', (e) => {
-    e.preventDefault();
-    setLiveFx(fxName, false);
-  });
-  pad.addEventListener('pointercancel', () => {
-    setLiveFx(fxName, false);
-  });
-  pad.addEventListener('lostpointercapture', () => {
-    if (liveFxState[fxName]) setLiveFx(fxName, false);
-  });
-});
-
-// キーボードショートカット (文字入力欄テキストボックス以外のすべての要素上でZ/X/C/V/B/N/Mが常時動作)
-const KEY_TO_LIVE_FX = {
-  z: 'sweepDown',
-  x: 'sweepUp',
-  c: 'stutter',
-  v: 'strip',
-  b: 'break',
-  n: 'delayThrow',
-  m: 'dirt'
-};
-
-function isTypingText(el) {
+function isTypingInTextInput(el) {
   if (!el) return false;
   if (el.tagName === 'TEXTAREA' || el.isContentEditable) return true;
   if (el.tagName === 'INPUT') {
-    const type = (el.type || '').toLowerCase();
-    return type === 'text' || type === 'number' || type === 'search';
+    const t = (el.type || '').toLowerCase();
+    return t === 'text' || t === 'number' || t === 'search';
   }
   return false;
 }
 
 window.addEventListener('keydown', (e) => {
-  if (isTypingText(e.target)) return;
+  if (isTypingInTextInput(e.target)) return;
   const k = e.key.toLowerCase();
 
-  // スペースキーで再生/停止
-  if (e.code === 'Space') {
-    e.preventDefault();
-    togglePlay();
-    return;
-  }
-
-  // Undo / Redo
   if ((e.ctrlKey || e.metaKey) && k === 'z') {
     e.preventDefault();
     if (e.shiftKey) performRedo(); else performUndo();
@@ -2486,23 +3226,19 @@ window.addEventListener('keydown', (e) => {
     return;
   }
 
-  // LIVE FX (VARIATION Chain の select 等にフォーカスが残っていてもブロックせず即反応させる)
-  if (!e.ctrlKey && !e.metaKey && !e.altKey && KEY_TO_LIVE_FX[k]) {
+  if (!e.ctrlKey && !e.metaKey && !e.altKey && KEY_TO_FX[k]) {
     e.preventDefault();
-    if (e.target && e.target.tagName === 'SELECT') {
-      e.target.blur();
-    }
     if (!e.repeat) {
-      setLiveFx(KEY_TO_LIVE_FX[k], true);
+      setLiveFx(KEY_TO_FX[k], true);
     }
   }
 });
 
 window.addEventListener('keyup', (e) => {
   const k = e.key.toLowerCase();
-  if (KEY_TO_LIVE_FX[k]) {
+  if (KEY_TO_FX[k]) {
     e.preventDefault();
-    setLiveFx(KEY_TO_LIVE_FX[k], false);
+    setLiveFx(KEY_TO_FX[k], false);
   }
 });
 
@@ -2524,22 +3260,20 @@ document.getElementById('btnVarEditOnly').addEventListener('click', () => setVar
 
 document.getElementById('varChainSelect').addEventListener('change', (e) => {
   const val = e.target.value;
-  e.target.blur(); // 選択直後にフォーカスを解除し、キーボードLIVE FXが奪われないようにする
+  e.target.blur();
   const scope = document.getElementById('varScopeSelect').value;
   const ptn = patterns[currentPtnIdx];
   const targets = scope === 'all' ? ptn.trackStates : [ptn.trackStates[selectedTrackIdx]];
   targets.forEach(t => { t.chainMode = val; });
   renderVariationBar();
+  scheduleAutoSave(350);
 });
 
-document.getElementById('varScopeSelect').addEventListener('change', (e) => {
-  e.target.blur();
-  const val = document.getElementById('varChainSelect').value;
-  if (e.target.value === 'all') {
-    patterns[currentPtnIdx].trackStates.forEach(t => { t.chainMode = val; });
-  }
-  renderVariationBar();
-});
+document.getElementById('varScopeSelect').addEventListener('change', (e) => e.target.blur());
+document.getElementById('copyVarTarget').addEventListener('change', (e) => e.target.blur());
+document.getElementById('exportBarsSelect').addEventListener('change', (e) => e.target.blur());
+document.getElementById('insertPosSelect').addEventListener('change', (e) => e.target.blur());
+document.getElementById('newTrackEngine').addEventListener('change', (e) => e.target.blur());
 
 document.getElementById('btnCopyVar').addEventListener('click', () => {
   saveHistoryState();
@@ -2551,6 +3285,7 @@ document.getElementById('btnCopyVar').addEventListener('click', () => {
   renderVariationBar();
   renderSteps();
   updateLCD();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnClearVar').addEventListener('click', () => {
@@ -2559,6 +3294,7 @@ document.getElementById('btnClearVar').addEventListener('click', () => {
   st.variations[st.editVar] = createEmptySteps();
   renderVariationBar();
   renderSteps();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('patternSelect').addEventListener('change', (e) => {
@@ -2567,6 +3303,7 @@ document.getElementById('patternSelect').addEventListener('change', (e) => {
   e.target.blur();
   document.getElementById('bpmInput').value = patterns[currentPtnIdx].bpm;
   renderTracksBar(); renderVariationBar(); renderKnobs(); renderSteps(); updateLCD();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnSaveNewPtn').addEventListener('click', () => {
@@ -2580,8 +3317,8 @@ document.getElementById('btnSaveNewPtn').addEventListener('click', () => {
   patterns.push(cloned);
   currentPtnIdx = patterns.length - 1;
   input.value = '';
-  input.blur();
   renderPatternSelect(); renderTracksBar(); renderVariationBar(); renderKnobs(); renderSteps();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnAddTrack').addEventListener('click', () => {
@@ -2624,9 +3361,9 @@ document.getElementById('btnAddTrack').addEventListener('click', () => {
 
   selectedTrackIdx = insertIdx;
   initAudio();
-  const liveBus = { masterGain, delayNode, reverbNode };
-  scheduleStepWithSubOnCtx(audioCtx, liveBus, insertIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime, 0.12, true);
+  triggerTrackSound(insertIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime);
   renderTracksBar(); renderVariationBar(); renderKnobs(); renderSteps(); updateLCD();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnOctDown').addEventListener('click', () => {
@@ -2651,17 +3388,13 @@ document.getElementById('subStepTypeSelect').addEventListener('change', (e) => {
   updateInputStatus();
 });
 
-// すべてのselect要素において変更時に自動でblurさせ、キー入力の奪い合いを防止
-document.querySelectorAll('select').forEach(sel => {
-  sel.addEventListener('change', () => sel.blur());
-});
-
 document.getElementById('btnRotateLeft').addEventListener('click', () => {
   saveHistoryState();
   const st = patterns[currentPtnIdx].trackStates[selectedTrackIdx];
   const steps = getEditingSteps(st);
   steps.push(steps.shift());
   renderSteps();
+  scheduleAutoSave(300);
 });
 document.getElementById('btnRotateRight').addEventListener('click', () => {
   saveHistoryState();
@@ -2669,6 +3402,7 @@ document.getElementById('btnRotateRight').addEventListener('click', () => {
   const steps = getEditingSteps(st);
   steps.unshift(steps.pop());
   renderSteps();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnRandomTrack').addEventListener('click', () => {
@@ -2684,6 +3418,7 @@ document.getElementById('btnRandomTrack').addEventListener('click', () => {
   });
   renderVariationBar();
   renderSteps();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnClearTrack').addEventListener('click', () => {
@@ -2693,6 +3428,7 @@ document.getElementById('btnClearTrack').addEventListener('click', () => {
   steps.forEach(s => { s.on = false; s.acc = 0; s.note = 0; s.sub = 0; });
   renderVariationBar();
   renderSteps();
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnClearPtn').addEventListener('click', () => {
@@ -2702,8 +3438,10 @@ document.getElementById('btnClearPtn').addEventListener('click', () => {
   });
   renderVariationBar();
   renderSteps();
+  scheduleAutoSave(300);
 });
 
+// 一斉MUTE / 全解除ボタンのイベント
 document.getElementById('btnAllMute').addEventListener('click', () => {
   saveHistoryState();
   const ptn = patterns[currentPtnIdx];
@@ -2713,6 +3451,7 @@ document.getElementById('btnAllMute').addEventListener('click', () => {
   });
   renderTracksBar();
   showTempLCD('ALL MUTED');
+  scheduleAutoSave(300);
 });
 
 document.getElementById('btnAllUnmute').addEventListener('click', () => {
@@ -2724,6 +3463,7 @@ document.getElementById('btnAllUnmute').addEventListener('click', () => {
   });
   renderTracksBar();
   showTempLCD('ALL UNMUTED');
+  scheduleAutoSave(300);
 });
 
 document.querySelectorAll('.mode-btn').forEach(btn => {
@@ -2736,13 +3476,23 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
 
 ['feel', 'swing', 'delay', 'reverb'].forEach(id => {
   const el = document.getElementById(`${id}Knob`);
+  el.addEventListener('mousedown', () => saveHistoryState());
+  el.addEventListener('touchstart', () => saveHistoryState(), { passive: true });
   el.addEventListener('input', () => {
     const v = Number(el.value);
     document.getElementById(`${id}Val`).textContent = `${v}%`;
-    if (id === 'delay' && delayMixGain && !liveFxState.delayThrow) delayMixGain.gain.value = (v / 100) * 0.6;
-    if (id === 'reverb' && reverbMixGain) reverbMixGain.gain.value = (v / 100) * 0.6;
+    if (id === 'delay' && delayMixGain && !liveFxState.delayThrow) {
+      delayMixGain.gain.value = (v / 100) * 0.6;
+    }
+    if (id === 'reverb' && reverbMixGain) {
+      reverbMixGain.gain.value = (v / 100) * 0.6;
+    }
+    scheduleAutoSave(500);
   });
-  el.addEventListener('change', () => el.blur());
+  el.addEventListener('change', (e) => {
+    e.target.blur();
+    scheduleAutoSave(250);
+  });
 });
 
 document.getElementById('wavFileInput').addEventListener('change', async (e) => {
@@ -2758,13 +3508,16 @@ document.getElementById('wavFileInput').addEventListener('change', async (e) => 
     tracks[selectedTrackIdx].name = file.name.replace(/\.[^/.]+$/, '').substring(0, 4).toUpperCase();
     renderTracksBar();
     updateLCD();
-    const liveBus = { masterGain, delayNode, reverbNode };
-    scheduleStepWithSubOnCtx(audioCtx, liveBus, selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime, 0.12, true);
+    triggerTrackSound(selectedTrackIdx, { on: true, acc: 0, note: selectedSemitone, sub: 0 }, audioCtx.currentTime);
     showTempLCD('SAMPLE OK!');
+    scheduleAutoSave(400);
   } catch (err) {
     showTempLCD('LOAD ERROR');
   }
 });
+
+// 起動時の自動復元（Undo履歴には積まず、初期描画の前に復元）
+tryRestoreAutoSaveOnBoot();
 
 renderPatternSelect();
 renderTracksBar();
@@ -2772,6 +3525,7 @@ renderVariationBar();
 renderKnobs();
 renderSteps();
 renderPianoKeys();
+renderSnapshotButtons();
 updateInputStatus();
 updateHistoryButtons();
 </script>
