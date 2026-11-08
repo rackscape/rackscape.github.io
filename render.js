@@ -23,6 +23,7 @@ function _norm(s){ return String(s||"").normalize("NFKC").toLowerCase().replace(
 function renderShelves(elId, shelves) {
   const el = document.getElementById(elId);
   if (!el) return;
+  shelves = [...shelves].sort((a,b) => (b.globalNo||0) - (a.globalNo||0)); // 表示は新しい棚から（データ自体の並びは登録順のまま）
   const kindLabel = k => k === "gear" ? "機材棚" : "本棚";
   el.innerHTML = shelves.map(s => `
    <div class="shelf" id="${s.code}" data-kind="${s.kind}">
@@ -92,3 +93,8 @@ function renderShelves(elId, shelves) {
   }));
 }
 renderShelves("share-shelves", typeof SHARE_SHELVES !== "undefined" ? SHARE_SHELVES : []);
+// share.html 入口ページ用：最新の棚だけを #share-latest に表示（検索・チップが無いページでも renderShelves が安全に動く）
+if (document.getElementById("share-latest") && typeof SHARE_SHELVES !== "undefined" && SHARE_SHELVES.length) {
+  const latest = [...SHARE_SHELVES].sort((a,b) => (b.globalNo||0) - (a.globalNo||0))[0];
+  renderShelves("share-latest", [latest]);
+}
