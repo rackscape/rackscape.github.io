@@ -24,3 +24,36 @@ ul.news .date { color:var(--sub); margin-right:10px; font-variant-numeric:tabula
 ul.news .label { display:inline-block; font-size:11px; border:1px solid var(--line); border-radius:99px; padding:0 8px; margin-right:8px; color:var(--sub); }
 .note { color:var(--sub); font-size:13px; margin-top:40px; border-top:1px solid var(--line); padding-top:16px; }
 footer { border-top:1px solid var(--line); color:var(--sub); font-size:12px; padding:18px 24px; text-align:center; }
+
+/* ===== share 棚リスト用（2026-11-08 管理MVP対応版） ===== */
+.shelf-search { width:100%; background:var(--panel); border:1px solid var(--line); border-radius:10px; color:var(--text); padding:10px 14px; font-size:15px; margin:4px 0 10px; }
+.shelf-chips { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 6px; }
+.shelf-chip { border:1px solid var(--line); background:var(--panel); color:var(--text); border-radius:99px; padding:3px 13px; font-size:13px; cursor:pointer; font-family:inherit; }
+.shelf-chip.active { background:var(--accent); color:#101216; border-color:var(--accent); font-weight:700; }
+.shelf-hit { color:var(--sub); font-size:13px; margin:6px 0 0; }
+.shelf { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin:18px 0; }
+.shelf-head { display:flex; gap:16px; flex-wrap:wrap; }
+.shelf-ph { width:260px; max-width:100%; flex:none; border-radius:8px; overflow:hidden; background:#000; }
+.shelf-ph.portrait { aspect-ratio:3/4; }
+.shelf-ph.landscape { aspect-ratio:4/3; }
+.shelf-ph img { width:100%; height:100%; object-fit:cover; display:block; cursor:zoom-in; }
+.shelf-head .shelf-side { flex:1; min-width:220px; }
+.shelf h3 { margin:0 0 4px; font-size:17px; }
+.shelf .kind { display:inline-block; font-size:11px; color:#101216; background:var(--accent); border-radius:99px; padding:1px 9px; margin-left:8px; font-weight:700; vertical-align:middle; }
+.shelf .meta { color:var(--sub); font-size:13px; margin:0 0 8px; }
+ul.shelf-items { list-style:none; padding:0; margin:10px 0 0; }
+ul.shelf-items li { display:flex; align-items:center; gap:9px; flex-wrap:wrap; padding:7px 2px; border-bottom:1px solid var(--line); font-size:14px; }
+ul.shelf-items .iname { font-weight:700; }
+ul.shelf-items .iauthor { color:var(--sub); font-size:13px; }
+ul.shelf-items .itag { font-size:11px; border:1px solid var(--line); border-radius:99px; padding:0 8px; color:var(--sub); }
+ul.shelf-items .inote { font-size:11px; color:#e8c33d; }
+ul.shelf-items .ialso { font-size:12px; color:var(--sub); }
+ul.shelf-items .ilink { margin-left:auto; display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.buy { display:inline-block; font-size:12px; border-radius:8px; padding:3px 12px; font-weight:700; }
+.buy.amz { background:#ff9900; color:#101216; }
+.buy.rkt { background:#bf0000; color:#fff; }
+.buy:hover { text-decoration:none; opacity:.85; }
+.buy-none { font-size:12px; color:var(--sub); border:1px solid var(--line); border-radius:8px; padding:3px 12px; }
+.reflink { font-size:12px; }
+.shelf-hidden { display:none !important; }
+

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>share | rackscape</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lightbox.css">
 </head>
 <body>
 <header>
@@ -22,11 +23,26 @@
   <h2>shared rackscape</h2>
   <div class="cards" id="share-items"></div>
 
+  <h2>みんなの棚</h2>
+  <input class="shelf-search" id="shelf-q" type="search" placeholder="タイトル・著者・メーカー・タグ・棚番号で検索（例：村上春樹、シンセ、miyatake-01）">
+  <div class="shelf-chips" id="shelf-kindchips">
+    <button class="shelf-chip active" data-f="all">すべて</button>
+    <button class="shelf-chip" data-f="book">本棚</button>
+    <button class="shelf-chip" data-f="gear">機材棚</button>
+  </div>
+  <div class="shelf-chips" id="shelf-tagchips">
+    <!-- タグチップは render.js が使用中のタグだけを自動生成 -->
+  </div>
+  <p class="shelf-hit" id="shelf-hit"></p>
+  <div id="share-shelves"></div>
+  <p class="note">※ 商品リンクには広告（アフィリエイト）が含まれます。購入リンクは運営が付与したもので、投稿者本人の推薦とは限りません。リンクのないものは準備中です。</p>
+
   <h2>what's new</h2>
   <ul class="news" id="whats-new"></ul>
 </main>
 <footer>© rackscape</footer>
 <script src="data.js"></script>
 <script src="render.js"></script>
+<script src="lightbox.js"></script>
 </body>
 </html>

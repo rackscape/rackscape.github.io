@@ -1,0 +1,9 @@
+.shelf-head img{cursor:zoom-in}
+.lb{position:fixed;inset:0;background:rgba(5,6,8,.94);display:none;z-index:50}
+.lb.open{display:block}
+.lb-stage{position:absolute;inset:0;overflow:hidden;touch-action:none}
+.lb-img{position:absolute;left:50%;top:50%;max-width:94vw;max-height:92vh;transform-origin:center;cursor:grab;user-select:none;-webkit-user-drag:none}
+.lb-img:active{cursor:grabbing}
+.lb-ui{position:absolute;right:14px;top:12px;display:flex;gap:8px;z-index:2}
+.lb-ui button{background:#262b34;color:#e8eaee;border:1px solid #3a4150;border-radius:8px;width:40px;height:40px;font-size:19px;cursor:pointer}
+.lb-hint{position:absolute;left:14px;bottom:12px;color:#9aa3b2;font-size:12px;z-index:2}
