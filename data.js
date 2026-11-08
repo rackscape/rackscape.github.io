@@ -1204,6 +1204,916 @@ const SHARE_SHELVES = [
   "ownerName": "rackscape",
   "ownerShelfNo": 4,
   "code": "rackscape-04"
+ },
+ {
+  "id": "shelf-05",
+  "kind": "book",
+  "title": "rackscape-05",
+  "photo": "assets/share/shelf-05.jpg",
+  "items": [
+   {
+    "name": "WORLD HAPPINESS",
+    "author": "高橋幸宏",
+    "maker": "",
+    "tags": [
+     "音楽",
+     "CD",
+     "Blu-ray"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "背表紙: Yukihiro Takahashi / WORLD HAPPINESS、CD+Blu-ray 5枚組、COLUMBIA COZB-2177〜81",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 1,
+    "itemCode": "rackscape-05-01",
+    "globalItemNo": 65,
+    "productKey": "name:WORLD HAPPINESS",
+    "alsoOn": []
+   },
+   {
+    "name": "（題名要確認）GHIBLI COMICS SPECIAL",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "要確認",
+    "confidence": 0.3,
+    "note": "徳間書店、横置き。装丁文字が図案化されていて背表紙から題名・著者を確定できず（推測で補わない）",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 2,
+    "itemCode": "rackscape-05-02",
+    "globalItemNo": 66,
+    "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 3",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 3,
+    "itemCode": "rackscape-05-03",
+    "globalItemNo": 67,
+    "productKey": "name:BLUE GIANT SUPREME 3",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 4",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 4,
+    "itemCode": "rackscape-05-04",
+    "globalItemNo": 68,
+    "productKey": "name:BLUE GIANT SUPREME 4",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 5",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 5,
+    "itemCode": "rackscape-05-05",
+    "globalItemNo": 69,
+    "productKey": "name:BLUE GIANT SUPREME 5",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 6",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 6,
+    "itemCode": "rackscape-05-06",
+    "globalItemNo": 70,
+    "productKey": "name:BLUE GIANT SUPREME 6",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 7",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 7,
+    "itemCode": "rackscape-05-07",
+    "globalItemNo": 71,
+    "productKey": "name:BLUE GIANT SUPREME 7",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 8",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 8,
+    "itemCode": "rackscape-05-08",
+    "globalItemNo": 72,
+    "productKey": "name:BLUE GIANT SUPREME 8",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 9",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 9,
+    "itemCode": "rackscape-05-09",
+    "globalItemNo": 73,
+    "productKey": "name:BLUE GIANT SUPREME 9",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 10",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 10,
+    "itemCode": "rackscape-05-10",
+    "globalItemNo": 74,
+    "productKey": "name:BLUE GIANT SUPREME 10",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT SUPREME 11",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館 ビッグコミックススペシャル。背表紙に著者名を確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 11,
+    "itemCode": "rackscape-05-11",
+    "globalItemNo": 75,
+    "productKey": "name:BLUE GIANT SUPREME 11",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 1",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 12,
+    "itemCode": "rackscape-05-12",
+    "globalItemNo": 76,
+    "productKey": "name:BLUE GIANT EXPLORER 1",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 2",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 13,
+    "itemCode": "rackscape-05-13",
+    "globalItemNo": 77,
+    "productKey": "name:BLUE GIANT EXPLORER 2",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 3",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 14,
+    "itemCode": "rackscape-05-14",
+    "globalItemNo": 78,
+    "productKey": "name:BLUE GIANT EXPLORER 3",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 4",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 15,
+    "itemCode": "rackscape-05-15",
+    "globalItemNo": 79,
+    "productKey": "name:BLUE GIANT EXPLORER 4",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 5",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 16,
+    "itemCode": "rackscape-05-16",
+    "globalItemNo": 80,
+    "productKey": "name:BLUE GIANT EXPLORER 5",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 6",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 17,
+    "itemCode": "rackscape-05-17",
+    "globalItemNo": 81,
+    "productKey": "name:BLUE GIANT EXPLORER 6",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 7",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 18,
+    "itemCode": "rackscape-05-18",
+    "globalItemNo": 82,
+    "productKey": "name:BLUE GIANT EXPLORER 7",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 8",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 19,
+    "itemCode": "rackscape-05-19",
+    "globalItemNo": 83,
+    "productKey": "name:BLUE GIANT EXPLORER 8",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT EXPLORER 9",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。帯で題名の一部が隠れる巻あり（他巻で EXPLORER と確認）。story director: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 20,
+    "itemCode": "rackscape-05-20",
+    "globalItemNo": 84,
+    "productKey": "name:BLUE GIANT EXPLORER 9",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT MOMENTUM 1",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。story: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 21,
+    "itemCode": "rackscape-05-21",
+    "globalItemNo": 85,
+    "productKey": "name:BLUE GIANT MOMENTUM 1",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT MOMENTUM 2",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。story: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 22,
+    "itemCode": "rackscape-05-22",
+    "globalItemNo": 86,
+    "productKey": "name:BLUE GIANT MOMENTUM 2",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT MOMENTUM 3",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。story: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 23,
+    "itemCode": "rackscape-05-23",
+    "globalItemNo": 87,
+    "productKey": "name:BLUE GIANT MOMENTUM 3",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT MOMENTUM 4",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。story: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 24,
+    "itemCode": "rackscape-05-24",
+    "globalItemNo": 88,
+    "productKey": "name:BLUE GIANT MOMENTUM 4",
+    "alsoOn": []
+   },
+   {
+    "name": "BLUE GIANT MOMENTUM 5",
+    "author": "石塚真一",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "小学館。story: NUMBER 8 表記あり",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 25,
+    "itemCode": "rackscape-05-25",
+    "globalItemNo": 89,
+    "productKey": "name:BLUE GIANT MOMENTUM 5",
+    "alsoOn": []
+   },
+   {
+    "name": "ドラえもん 1",
+    "author": "藤子・F・不二雄",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定寄り",
+    "confidence": 0.9,
+    "note": "背表紙に著者名を確認。版（どの版の1巻か）は要確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 26,
+    "itemCode": "rackscape-05-26",
+    "globalItemNo": 90,
+    "productKey": "name:ドラえもん 1",
+    "alsoOn": []
+   },
+   {
+    "name": "ドラミちゃん",
+    "author": "藤子・F・不二雄",
+    "maker": "",
+    "tags": [
+     "マンガ"
+    ],
+    "status": "確定寄り",
+    "confidence": 0.9,
+    "note": "背表紙に著者名を確認。初版限定シール付き表記あり。版は要確認",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 27,
+    "itemCode": "rackscape-05-27",
+    "globalItemNo": 91,
+    "productKey": "name:ドラミちゃん",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球12球団全選手完全名鑑 2021",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "コスミック出版",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 28,
+    "itemCode": "rackscape-05-28",
+    "globalItemNo": 92,
+    "productKey": "name:プロ野球12球団全選手完全名鑑 2021",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2021",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 29,
+    "itemCode": "rackscape-05-29",
+    "globalItemNo": 93,
+    "productKey": "name:プロ野球選手データ名鑑 2021",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2022",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 30,
+    "itemCode": "rackscape-05-30",
+    "globalItemNo": 94,
+    "productKey": "name:プロ野球選手データ名鑑 2022",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2023",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 31,
+    "itemCode": "rackscape-05-31",
+    "globalItemNo": 95,
+    "productKey": "name:プロ野球選手データ名鑑 2023",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2024",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 32,
+    "itemCode": "rackscape-05-32",
+    "globalItemNo": 96,
+    "productKey": "name:プロ野球選手データ名鑑 2024",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2025",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 33,
+    "itemCode": "rackscape-05-33",
+    "globalItemNo": 97,
+    "productKey": "name:プロ野球選手データ名鑑 2025",
+    "alsoOn": []
+   },
+   {
+    "name": "プロ野球選手データ名鑑 2026",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "スポーツ",
+     "資料"
+    ],
+    "status": "確定",
+    "confidence": 0.95,
+    "note": "別冊宝島、宝島社",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 34,
+    "itemCode": "rackscape-05-34",
+    "globalItemNo": 98,
+    "productKey": "name:プロ野球選手データ名鑑 2026",
+    "alsoOn": []
+   },
+   {
+    "name": "サブロー ボブルヘッドフィギュア",
+    "author": "",
+    "maker": "",
+    "tags": [
+     "グッズ",
+     "スポーツ"
+    ],
+    "status": "確定寄り",
+    "confidence": 0.85,
+    "note": "箱表記: 86 SABURO MANAGER。千葉ロッテマリーンズ監督のフィギュアと判読。メーカー名は写真から読めず",
+    "isbn": "",
+    "url": "",
+    "rakutenUrl": "",
+    "refUrl": "",
+    "refLabel": "",
+    "ref2Url": "",
+    "ref2Label": "",
+    "publisherUrl": "",
+    "publisherLabel": "",
+    "itemNo": 35,
+    "itemCode": "rackscape-05-35",
+    "globalItemNo": 99,
+    "productKey": "name:サブロー ボブルヘッドフィギュア",
+    "alsoOn": []
+   }
+  ],
+  "unknown": [
+   "左端、ラック支柱と上段の横置き本に隠れた本（題名読み取り不可）",
+   "右奥のケース入りサインボール（サイン判読不可）",
+   "野球名鑑の上に積まれた紙・カード類（個別識別不可）"
+  ],
+  "globalNo": 5,
+  "ownerId": "rackscape",
+  "ownerName": "rackscape",
+  "ownerShelfNo": 5,
+  "code": "rackscape-05",
+  "snsConsent": false,
+  "crop": {
+   "x": 0.003204719387755102,
+   "y": 0.20341198979591837,
+   "w": 0.9917570153061224,
+   "h": 0.5975446428571429
+  }
  }
 ];
 const PRODUCTS = [
@@ -2422,6 +3332,671 @@ const PRODUCTS = [
    "rackscape-04-37"
   ],
   "shelfCount": 1
+ },
+ {
+  "productKey": "name:WORLD HAPPINESS",
+  "name": "WORLD HAPPINESS",
+  "author": "高橋幸宏",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-01"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL",
+  "name": "（題名要確認）GHIBLI COMICS SPECIAL",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-02"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 3",
+  "name": "BLUE GIANT SUPREME 3",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-03"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 4",
+  "name": "BLUE GIANT SUPREME 4",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-04"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 5",
+  "name": "BLUE GIANT SUPREME 5",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-05"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 6",
+  "name": "BLUE GIANT SUPREME 6",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-06"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 7",
+  "name": "BLUE GIANT SUPREME 7",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-07"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 8",
+  "name": "BLUE GIANT SUPREME 8",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-08"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 9",
+  "name": "BLUE GIANT SUPREME 9",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-09"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 10",
+  "name": "BLUE GIANT SUPREME 10",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-10"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT SUPREME 11",
+  "name": "BLUE GIANT SUPREME 11",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-11"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 1",
+  "name": "BLUE GIANT EXPLORER 1",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-12"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 2",
+  "name": "BLUE GIANT EXPLORER 2",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-13"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 3",
+  "name": "BLUE GIANT EXPLORER 3",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-14"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 4",
+  "name": "BLUE GIANT EXPLORER 4",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-15"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 5",
+  "name": "BLUE GIANT EXPLORER 5",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-16"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 6",
+  "name": "BLUE GIANT EXPLORER 6",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-17"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 7",
+  "name": "BLUE GIANT EXPLORER 7",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-18"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 8",
+  "name": "BLUE GIANT EXPLORER 8",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-19"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT EXPLORER 9",
+  "name": "BLUE GIANT EXPLORER 9",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-20"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT MOMENTUM 1",
+  "name": "BLUE GIANT MOMENTUM 1",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-21"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT MOMENTUM 2",
+  "name": "BLUE GIANT MOMENTUM 2",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-22"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT MOMENTUM 3",
+  "name": "BLUE GIANT MOMENTUM 3",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-23"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT MOMENTUM 4",
+  "name": "BLUE GIANT MOMENTUM 4",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-24"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:BLUE GIANT MOMENTUM 5",
+  "name": "BLUE GIANT MOMENTUM 5",
+  "author": "石塚真一",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-25"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:ドラえもん 1",
+  "name": "ドラえもん 1",
+  "author": "藤子・F・不二雄",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-26"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:ドラミちゃん",
+  "name": "ドラミちゃん",
+  "author": "藤子・F・不二雄",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-27"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球12球団全選手完全名鑑 2021",
+  "name": "プロ野球12球団全選手完全名鑑 2021",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-28"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2021",
+  "name": "プロ野球選手データ名鑑 2021",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-29"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2022",
+  "name": "プロ野球選手データ名鑑 2022",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-30"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2023",
+  "name": "プロ野球選手データ名鑑 2023",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-31"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2024",
+  "name": "プロ野球選手データ名鑑 2024",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-32"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2025",
+  "name": "プロ野球選手データ名鑑 2025",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-33"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:プロ野球選手データ名鑑 2026",
+  "name": "プロ野球選手データ名鑑 2026",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-34"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "name:サブロー ボブルヘッドフィギュア",
+  "name": "サブロー ボブルヘッドフィギュア",
+  "author": "",
+  "maker": "",
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "refUrl": "",
+  "refLabel": "",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-35"
+  ],
+  "shelfCount": 1
  }
 ];
 const ITEM_INDEX = [
@@ -3448,6 +5023,576 @@ const ITEM_INDEX = [
   "url": "https://www.amazon.co.jp/dp/4040822110?tag=rackscape-22",
   "rakutenUrl": "",
   "productKey": "isbn:9784040822112"
+ },
+ {
+  "itemCode": "rackscape-05-01",
+  "globalItemNo": 65,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "WORLD HAPPINESS",
+  "author": "高橋幸宏",
+  "maker": "",
+  "tags": [
+   "音楽",
+   "CD",
+   "Blu-ray"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:WORLD HAPPINESS"
+ },
+ {
+  "itemCode": "rackscape-05-02",
+  "globalItemNo": 66,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "（題名要確認）GHIBLI COMICS SPECIAL",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL"
+ },
+ {
+  "itemCode": "rackscape-05-03",
+  "globalItemNo": 67,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 3",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 3"
+ },
+ {
+  "itemCode": "rackscape-05-04",
+  "globalItemNo": 68,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 4",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 4"
+ },
+ {
+  "itemCode": "rackscape-05-05",
+  "globalItemNo": 69,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 5",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 5"
+ },
+ {
+  "itemCode": "rackscape-05-06",
+  "globalItemNo": 70,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 6",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 6"
+ },
+ {
+  "itemCode": "rackscape-05-07",
+  "globalItemNo": 71,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 7",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 7"
+ },
+ {
+  "itemCode": "rackscape-05-08",
+  "globalItemNo": 72,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 8",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 8"
+ },
+ {
+  "itemCode": "rackscape-05-09",
+  "globalItemNo": 73,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 9",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 9"
+ },
+ {
+  "itemCode": "rackscape-05-10",
+  "globalItemNo": 74,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 10",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 10"
+ },
+ {
+  "itemCode": "rackscape-05-11",
+  "globalItemNo": 75,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT SUPREME 11",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT SUPREME 11"
+ },
+ {
+  "itemCode": "rackscape-05-12",
+  "globalItemNo": 76,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 1",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 1"
+ },
+ {
+  "itemCode": "rackscape-05-13",
+  "globalItemNo": 77,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 2",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 2"
+ },
+ {
+  "itemCode": "rackscape-05-14",
+  "globalItemNo": 78,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 3",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 3"
+ },
+ {
+  "itemCode": "rackscape-05-15",
+  "globalItemNo": 79,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 4",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 4"
+ },
+ {
+  "itemCode": "rackscape-05-16",
+  "globalItemNo": 80,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 5",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 5"
+ },
+ {
+  "itemCode": "rackscape-05-17",
+  "globalItemNo": 81,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 6",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 6"
+ },
+ {
+  "itemCode": "rackscape-05-18",
+  "globalItemNo": 82,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 7",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 7"
+ },
+ {
+  "itemCode": "rackscape-05-19",
+  "globalItemNo": 83,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 8",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 8"
+ },
+ {
+  "itemCode": "rackscape-05-20",
+  "globalItemNo": 84,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT EXPLORER 9",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT EXPLORER 9"
+ },
+ {
+  "itemCode": "rackscape-05-21",
+  "globalItemNo": 85,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT MOMENTUM 1",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT MOMENTUM 1"
+ },
+ {
+  "itemCode": "rackscape-05-22",
+  "globalItemNo": 86,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT MOMENTUM 2",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT MOMENTUM 2"
+ },
+ {
+  "itemCode": "rackscape-05-23",
+  "globalItemNo": 87,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT MOMENTUM 3",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT MOMENTUM 3"
+ },
+ {
+  "itemCode": "rackscape-05-24",
+  "globalItemNo": 88,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT MOMENTUM 4",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT MOMENTUM 4"
+ },
+ {
+  "itemCode": "rackscape-05-25",
+  "globalItemNo": 89,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "BLUE GIANT MOMENTUM 5",
+  "author": "石塚真一",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:BLUE GIANT MOMENTUM 5"
+ },
+ {
+  "itemCode": "rackscape-05-26",
+  "globalItemNo": 90,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "ドラえもん 1",
+  "author": "藤子・F・不二雄",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:ドラえもん 1"
+ },
+ {
+  "itemCode": "rackscape-05-27",
+  "globalItemNo": 91,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "ドラミちゃん",
+  "author": "藤子・F・不二雄",
+  "maker": "",
+  "tags": [
+   "マンガ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:ドラミちゃん"
+ },
+ {
+  "itemCode": "rackscape-05-28",
+  "globalItemNo": 92,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球12球団全選手完全名鑑 2021",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球12球団全選手完全名鑑 2021"
+ },
+ {
+  "itemCode": "rackscape-05-29",
+  "globalItemNo": 93,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2021",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2021"
+ },
+ {
+  "itemCode": "rackscape-05-30",
+  "globalItemNo": 94,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2022",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2022"
+ },
+ {
+  "itemCode": "rackscape-05-31",
+  "globalItemNo": 95,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2023",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2023"
+ },
+ {
+  "itemCode": "rackscape-05-32",
+  "globalItemNo": 96,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2024",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2024"
+ },
+ {
+  "itemCode": "rackscape-05-33",
+  "globalItemNo": 97,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2025",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2025"
+ },
+ {
+  "itemCode": "rackscape-05-34",
+  "globalItemNo": 98,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "プロ野球選手データ名鑑 2026",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "スポーツ",
+   "資料"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:プロ野球選手データ名鑑 2026"
+ },
+ {
+  "itemCode": "rackscape-05-35",
+  "globalItemNo": 99,
+  "shelfCode": "rackscape-05",
+  "globalNo": 5,
+  "name": "サブロー ボブルヘッドフィギュア",
+  "author": "",
+  "maker": "",
+  "tags": [
+   "グッズ",
+   "スポーツ"
+  ],
+  "isbn": "",
+  "url": "",
+  "rakutenUrl": "",
+  "productKey": "name:サブロー ボブルヘッドフィギュア"
  }
 ];
 // [/share:auto]
