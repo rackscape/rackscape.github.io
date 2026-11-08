@@ -409,10 +409,26 @@ const SHARE_SHELVES = [
     "productKey": "asin:B0CY5DWS46",
     "alsoOn": [],
     "url": "https://www.amazon.co.jp/dp/B0CY5DWS46?tag=rackscape-22"
+   },
+   {
+    "name": "SONY MDR-CD900ST モニターヘッドホン",
+    "maker": "SONY",
+    "tags": [
+     "ヘッドフォン"
+    ],
+    "status": "確定",
+    "note": "写真右上に写っているヘッドホン。型番は所有者が特定（2026-11-08）。スタジオモニターの定番機",
+    "url": "https://www.amazon.co.jp/dp/B000UPEJCU?tag=rackscape-22",
+    "refUrl": "https://ja.wikipedia.org/wiki/MDR-CD900ST",
+    "refLabel": "Wikipedia（機種：MDR-CD900ST）",
+    "itemNo": 6,
+    "itemCode": "rackscape-02-06",
+    "globalItemNo": 20,
+    "productKey": "asin:B000UPEJCU",
+    "alsoOn": []
    }
   ],
   "unknown": [
-   "SONYヘッドホン（右上に一部のみ）",
    "ギター（左端に一部のみ）",
    "シンセ下の黒い小型機材（SUB PAD表記、型番不明）"
   ],
@@ -439,7 +455,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4296207954?tag=rackscape-22",
     "itemNo": 1,
     "itemCode": "rackscape-03-01",
-    "globalItemNo": 20,
+    "globalItemNo": 21,
     "isbn": "9784296207954",
     "productKey": "isbn:9784296207954",
     "alsoOn": []
@@ -458,7 +474,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4862763502?tag=rackscape-22",
     "itemNo": 2,
     "itemCode": "rackscape-03-02",
-    "globalItemNo": 21,
+    "globalItemNo": 22,
     "isbn": "9784862763501",
     "productKey": "isbn:9784862763501",
     "alsoOn": []
@@ -477,7 +493,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4479394206?tag=rackscape-22",
     "itemNo": 3,
     "itemCode": "rackscape-03-03",
-    "globalItemNo": 22,
+    "globalItemNo": 23,
     "isbn": "9784479394204",
     "productKey": "isbn:9784479394204",
     "alsoOn": []
@@ -493,7 +509,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4622096978?tag=rackscape-22",
     "itemNo": 4,
     "itemCode": "rackscape-03-04",
-    "globalItemNo": 23,
+    "globalItemNo": 24,
     "isbn": "9784622096979",
     "productKey": "isbn:9784622096979",
     "alsoOn": []
@@ -511,7 +527,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4480251510?tag=rackscape-22",
     "itemNo": 5,
     "itemCode": "rackscape-03-05",
-    "globalItemNo": 24,
+    "globalItemNo": 25,
     "isbn": "9784480251510",
     "productKey": "isbn:9784480251510",
     "alsoOn": []
@@ -526,7 +542,7 @@ const SHARE_SHELVES = [
     "note": "研修・ワークショップ活用の文字のみ判読",
     "itemNo": 6,
     "itemCode": "rackscape-03-06",
-    "globalItemNo": 25,
+    "globalItemNo": 26,
     "productKey": "name:ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
     "alsoOn": []
    },
@@ -540,7 +556,7 @@ const SHARE_SHELVES = [
     "note": "題名の一部のみ判読",
     "itemNo": 7,
     "itemCode": "rackscape-03-07",
-    "globalItemNo": 26,
+    "globalItemNo": 27,
     "productKey": "name:ゲームカタログ系の1冊（イラスト帯）",
     "alsoOn": []
    }
@@ -578,7 +594,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4098640546?tag=rackscape-22",
     "itemNo": 1,
     "itemCode": "rackscape-04-01",
-    "globalItemNo": 27,
+    "globalItemNo": 28,
     "isbn": "9784098640546",
     "productKey": "isbn:9784098640546",
     "alsoOn": []
@@ -598,7 +614,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4088831500?tag=rackscape-22",
     "itemNo": 2,
     "itemCode": "rackscape-04-02",
-    "globalItemNo": 28,
+    "globalItemNo": 29,
     "isbn": "9784088831503",
     "productKey": "isbn:9784088831503",
     "alsoOn": []
@@ -616,7 +632,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4197804873?tag=rackscape-22",
     "itemNo": 3,
     "itemCode": "rackscape-04-03",
-    "globalItemNo": 29,
+    "globalItemNo": 30,
     "isbn": "9784197804870",
     "productKey": "isbn:9784197804870",
     "alsoOn": []
@@ -636,7 +652,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4088913337?tag=rackscape-22",
     "itemNo": 4,
     "itemCode": "rackscape-04-04",
-    "globalItemNo": 30,
+    "globalItemNo": 31,
     "isbn": "9784088913339",
     "productKey": "isbn:9784088913339",
     "alsoOn": []
@@ -651,7 +667,7 @@ const SHARE_SHELVES = [
     "note": "雑誌のためISBNなし（雑誌コード 08479-08）。Amazonリンクなし",
     "itemNo": 5,
     "itemCode": "rackscape-04-05",
-    "globalItemNo": 31,
+    "globalItemNo": 32,
     "productKey": "name:ミュージック・マガジン2021年8月号特集：松本隆",
     "alsoOn": []
    },
@@ -665,7 +681,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4905158311?tag=rackscape-22",
     "itemNo": 6,
     "itemCode": "rackscape-04-06",
-    "globalItemNo": 32,
+    "globalItemNo": 33,
     "isbn": "9784905158318",
     "productKey": "isbn:9784905158318",
     "alsoOn": []
@@ -682,7 +698,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845636247?tag=rackscape-22",
     "itemNo": 7,
     "itemCode": "rackscape-04-07",
-    "globalItemNo": 33,
+    "globalItemNo": 34,
     "isbn": "9784845636242",
     "productKey": "isbn:9784845636242",
     "alsoOn": []
@@ -699,7 +715,7 @@ const SHARE_SHELVES = [
     "note": "会場限定のインディー誌でISBNなし。Amazonリンクなし",
     "itemNo": 8,
     "itemCode": "rackscape-04-08",
-    "globalItemNo": 34,
+    "globalItemNo": 35,
     "productKey": "name:余談スチャダラパー・シングス",
     "alsoOn": []
    },
@@ -713,7 +729,7 @@ const SHARE_SHELVES = [
     "note": "会場限定のインディー誌でISBNなし。Amazonリンクなし",
     "itemNo": 9,
     "itemCode": "rackscape-04-09",
-    "globalItemNo": 35,
+    "globalItemNo": 36,
     "productKey": "name:余談三代目J余談ブラザーズ",
     "alsoOn": []
    },
@@ -727,7 +743,7 @@ const SHARE_SHELVES = [
     "note": "インディー誌（公式通販のみ）でISBNなし。Amazonリンクなし",
     "itemNo": 10,
     "itemCode": "rackscape-04-10",
-    "globalItemNo": 36,
+    "globalItemNo": 37,
     "productKey": "name:余談シン・ヨダン",
     "alsoOn": []
    },
@@ -743,7 +759,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845629003?tag=rackscape-22",
     "itemNo": 11,
     "itemCode": "rackscape-04-11",
-    "globalItemNo": 37,
+    "globalItemNo": 38,
     "isbn": "9784845629008",
     "productKey": "isbn:9784845629008",
     "alsoOn": []
@@ -760,7 +776,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845628996?tag=rackscape-22",
     "itemNo": 12,
     "itemCode": "rackscape-04-12",
-    "globalItemNo": 38,
+    "globalItemNo": 39,
     "isbn": "9784845628995",
     "productKey": "isbn:9784845628995",
     "alsoOn": []
@@ -778,7 +794,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは単行本（マガジンハウス）。ちくま文庫版もあり版要確認",
     "itemNo": 13,
     "itemCode": "rackscape-04-13",
-    "globalItemNo": 39,
+    "globalItemNo": 40,
     "isbn": "9784838731879",
     "productKey": "isbn:9784838731879",
     "alsoOn": []
@@ -793,7 +809,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309979106?tag=rackscape-22",
     "itemNo": 14,
     "itemCode": "rackscape-04-14",
-    "globalItemNo": 40,
+    "globalItemNo": 41,
     "isbn": "9784309979106",
     "productKey": "isbn:9784309979106",
     "alsoOn": []
@@ -808,7 +824,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309978436?tag=rackscape-22",
     "itemNo": 15,
     "itemCode": "rackscape-04-15",
-    "globalItemNo": 41,
+    "globalItemNo": 42,
     "isbn": "9784309978437",
     "productKey": "isbn:9784309978437",
     "alsoOn": []
@@ -825,7 +841,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4939138933?tag=rackscape-22",
     "itemNo": 16,
     "itemCode": "rackscape-04-16",
-    "globalItemNo": 42,
+    "globalItemNo": 43,
     "isbn": "9784939138935",
     "productKey": "isbn:9784939138935",
     "alsoOn": []
@@ -842,7 +858,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4867311162?tag=rackscape-22",
     "itemNo": 17,
     "itemCode": "rackscape-04-17",
-    "globalItemNo": 43,
+    "globalItemNo": 44,
     "isbn": "9784867311165",
     "productKey": "isbn:9784867311165",
     "alsoOn": []
@@ -859,7 +875,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4867311219?tag=rackscape-22",
     "itemNo": 18,
     "itemCode": "rackscape-04-18",
-    "globalItemNo": 44,
+    "globalItemNo": 45,
     "isbn": "9784867311219",
     "productKey": "isbn:9784867311219",
     "alsoOn": []
@@ -877,7 +893,7 @@ const SHARE_SHELVES = [
     "note": "書誌確認では「11月臨時増刊号」は存在せず、ユリイカ2012年11月号（通常号）特集の可能性が高い。要確認",
     "itemNo": 19,
     "itemCode": "rackscape-04-19",
-    "globalItemNo": 45,
+    "globalItemNo": 46,
     "isbn": "9784791702459",
     "productKey": "isbn:9784791702459",
     "alsoOn": []
@@ -894,7 +910,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791702565?tag=rackscape-22",
     "itemNo": 20,
     "itemCode": "rackscape-04-20",
-    "globalItemNo": 46,
+    "globalItemNo": 47,
     "isbn": "9784791702565",
     "productKey": "isbn:9784791702565",
     "alsoOn": []
@@ -911,7 +927,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791703030?tag=rackscape-22",
     "itemNo": 21,
     "itemCode": "rackscape-04-21",
-    "globalItemNo": 47,
+    "globalItemNo": 48,
     "isbn": "9784791703036",
     "productKey": "isbn:9784791703036",
     "alsoOn": []
@@ -928,7 +944,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791703200?tag=rackscape-22",
     "itemNo": 22,
     "itemCode": "rackscape-04-22",
-    "globalItemNo": 48,
+    "globalItemNo": 49,
     "isbn": "9784791703203",
     "productKey": "isbn:9784791703203",
     "alsoOn": []
@@ -943,7 +959,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309977820?tag=rackscape-22",
     "itemNo": 23,
     "itemCode": "rackscape-04-23",
-    "globalItemNo": 49,
+    "globalItemNo": 50,
     "isbn": "9784309977829",
     "productKey": "isbn:9784309977829",
     "alsoOn": []
@@ -958,7 +974,7 @@ const SHARE_SHELVES = [
     "note": "ISBNを一次情報で確認できず、Amazonリンクなし（奥付・バーコード確認が必要）。刊行はCCCメディアハウス",
     "itemNo": 24,
     "itemCode": "rackscape-04-24",
-    "globalItemNo": 50,
+    "globalItemNo": 51,
     "productKey": "name:1冊まるごと、松之丞改め六代目神田伯山（penBOOKS）",
     "alsoOn": []
    },
@@ -974,7 +990,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4910547010?tag=rackscape-22",
     "itemNo": 25,
     "itemCode": "rackscape-04-25",
-    "globalItemNo": 51,
+    "globalItemNo": 52,
     "isbn": "9784910547015",
     "productKey": "isbn:9784910547015",
     "alsoOn": []
@@ -994,7 +1010,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは集英社文庫版。単行本版もあり版要確認",
     "itemNo": 26,
     "itemCode": "rackscape-04-26",
-    "globalItemNo": 52,
+    "globalItemNo": 53,
     "isbn": "9784087441918",
     "productKey": "isbn:9784087441918",
     "alsoOn": []
@@ -1012,7 +1028,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは単行本。文春文庫版もあり版要確認",
     "itemNo": 27,
     "itemCode": "rackscape-04-27",
-    "globalItemNo": 53,
+    "globalItemNo": 54,
     "isbn": "9784163900551",
     "productKey": "isbn:9784163900551",
     "alsoOn": []
@@ -1030,7 +1046,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは新潮文庫版。単行本版もあり版要確認",
     "itemNo": 28,
     "itemCode": "rackscape-04-28",
-    "globalItemNo": 54,
+    "globalItemNo": 55,
     "isbn": "9784101274621",
     "productKey": "isbn:9784101274621",
     "alsoOn": []
@@ -1046,7 +1062,7 @@ const SHARE_SHELVES = [
     "note": "出版社は河出書房新社ではなく筑摩書房（ちくま文庫）",
     "itemNo": 29,
     "itemCode": "rackscape-04-29",
-    "globalItemNo": 55,
+    "globalItemNo": 56,
     "isbn": "9784480422330",
     "productKey": "isbn:9784480422330",
     "alsoOn": []
@@ -1061,7 +1077,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4334787878?tag=rackscape-22",
     "itemNo": 30,
     "itemCode": "rackscape-04-30",
-    "globalItemNo": 56,
+    "globalItemNo": 57,
     "isbn": "9784334787875",
     "productKey": "isbn:9784334787875",
     "alsoOn": []
@@ -1079,7 +1095,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4167903512?tag=rackscape-22",
     "itemNo": 31,
     "itemCode": "rackscape-04-31",
-    "globalItemNo": 57,
+    "globalItemNo": 58,
     "isbn": "9784167903510",
     "productKey": "isbn:9784167903510",
     "alsoOn": []
@@ -1096,7 +1112,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4022619368?tag=rackscape-22",
     "itemNo": 32,
     "itemCode": "rackscape-04-32",
-    "globalItemNo": 58,
+    "globalItemNo": 59,
     "isbn": "9784022619365",
     "productKey": "isbn:9784022619365",
     "alsoOn": []
@@ -1111,7 +1127,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4106105276?tag=rackscape-22",
     "itemNo": 33,
     "itemCode": "rackscape-04-33",
-    "globalItemNo": 59,
+    "globalItemNo": 60,
     "isbn": "9784106105272",
     "productKey": "isbn:9784106105272",
     "alsoOn": []
@@ -1126,7 +1142,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4062883287?tag=rackscape-22",
     "itemNo": 34,
     "itemCode": "rackscape-04-34",
-    "globalItemNo": 60,
+    "globalItemNo": 61,
     "isbn": "9784062883283",
     "productKey": "isbn:9784062883283",
     "alsoOn": []
@@ -1141,7 +1157,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4166603256?tag=rackscape-22",
     "itemNo": 35,
     "itemCode": "rackscape-04-35",
-    "globalItemNo": 61,
+    "globalItemNo": 62,
     "isbn": "9784166603251",
     "productKey": "isbn:9784166603251",
     "alsoOn": []
@@ -1156,7 +1172,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/404082265X?tag=rackscape-22",
     "itemNo": 36,
     "itemCode": "rackscape-04-36",
-    "globalItemNo": 62,
+    "globalItemNo": 63,
     "isbn": "9784040822655",
     "productKey": "isbn:9784040822655",
     "alsoOn": []
@@ -1171,7 +1187,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4040822110?tag=rackscape-22",
     "itemNo": 37,
     "itemCode": "rackscape-04-37",
-    "globalItemNo": 63,
+    "globalItemNo": 64,
     "isbn": "9784040822112",
     "productKey": "isbn:9784040822112",
     "alsoOn": []
@@ -1192,6 +1208,7 @@ const SHARE_SHELVES = [
 ];
 const PRODUCTS = [
  {
+  "productKey": "name:現代落語論",
   "name": "現代落語論",
   "author": "立川談志",
   "maker": "",
@@ -1204,13 +1221,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:現代落語論",
   "appearsIn": [
    "rackscape-01-01"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784166602513",
   "name": "寝ながら学べる構造主義",
   "author": "内田樹",
   "maker": "",
@@ -1223,13 +1240,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：内田樹）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784166602513",
   "appearsIn": [
    "rackscape-01-02"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784101001784",
   "name": "街とその不確かな壁（上）",
   "author": "村上春樹",
   "maker": "",
@@ -1242,13 +1259,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：村上春樹）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784101001784",
   "appearsIn": [
    "rackscape-01-03"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784101001791",
   "name": "街とその不確かな壁（下）",
   "author": "村上春樹",
   "maker": "",
@@ -1261,13 +1278,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：村上春樹）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784101001791",
   "appearsIn": [
    "rackscape-01-04"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784911226285",
   "name": "自宅で楽しむ週末邦画劇場",
   "author": "春日太一",
   "maker": "",
@@ -1280,13 +1297,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784911226285",
   "appearsIn": [
    "rackscape-01-05"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784480022387",
   "name": "河童の三平",
   "author": "水木しげる",
   "maker": "",
@@ -1299,13 +1316,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：水木しげる）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784480022387",
   "appearsIn": [
    "rackscape-01-06"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784022650085",
   "name": "国宝（上）青春篇",
   "author": "吉田修一",
   "maker": "",
@@ -1318,13 +1335,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：吉田修一）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784022650085",
   "appearsIn": [
    "rackscape-01-07"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784022650092",
   "name": "国宝（下）花道篇",
   "author": "吉田修一",
   "maker": "",
@@ -1337,13 +1354,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：吉田修一）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784022650092",
   "appearsIn": [
    "rackscape-01-08"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784041847077",
   "name": "グミ・チョコレート・パイン グミ編",
   "author": "大槻ケンヂ",
   "maker": "",
@@ -1356,13 +1373,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：大槻ケンヂ）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784041847077",
   "appearsIn": [
    "rackscape-01-09"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784041847107",
   "name": "グミ・チョコレート・パイン チョコレート編",
   "author": "大槻ケンヂ",
   "maker": "",
@@ -1375,13 +1392,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：大槻ケンヂ）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784041847107",
   "appearsIn": [
    "rackscape-01-10"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784041847145",
   "name": "グミ・チョコレート・パイン パイン編",
   "author": "大槻ケンヂ",
   "maker": "",
@@ -1394,13 +1411,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：大槻ケンヂ）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784041847145",
   "appearsIn": [
    "rackscape-01-11"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784094064421",
   "name": "サラバ！（上）",
   "author": "西加奈子",
   "maker": "",
@@ -1413,13 +1430,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：西加奈子）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784094064421",
   "appearsIn": [
    "rackscape-01-12"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784094064438",
   "name": "サラバ！（中）",
   "author": "西加奈子",
   "maker": "",
@@ -1432,13 +1449,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：西加奈子）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784094064438",
   "appearsIn": [
    "rackscape-01-13"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784094064445",
   "name": "サラバ！（下）",
   "author": "西加奈子",
   "maker": "",
@@ -1451,13 +1468,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：西加奈子）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784094064445",
   "appearsIn": [
    "rackscape-01-14"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "asin:B0DGB6S4C9",
   "name": "KORG microKORG 2 MWH（メタリックホワイト）",
   "author": "",
   "maker": "KORG",
@@ -1470,13 +1487,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "asin:B0DGB6S4C9",
   "appearsIn": [
    "rackscape-02-01"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:SONYSMS-1Pパワードモニタースピーカー（ペア）",
   "name": "SONY SMS-1P パワードモニタースピーカー（ペア）",
   "author": "",
   "maker": "SONY",
@@ -1489,13 +1506,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:SONYSMS-1Pパワードモニタースピーカー（ペア）",
   "appearsIn": [
    "rackscape-02-02"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "asin:B08J3TMD7P",
   "name": "DOUK AUDIO P2 真空管プリアンプ",
   "author": "",
   "maker": "DOUK AUDIO",
@@ -1508,13 +1525,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "asin:B08J3TMD7P",
   "appearsIn": [
    "rackscape-02-03"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "asin:B07YFGVH5H",
   "name": "Steinberg UR44C オーディオインターフェース",
   "author": "",
   "maker": "Steinberg",
@@ -1527,13 +1544,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "asin:B07YFGVH5H",
   "appearsIn": [
    "rackscape-02-04"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "asin:B0CY5DWS46",
   "name": "ZOOM MS-70CDR+ マルチストンプ（空間系マルチエフェクター）",
   "author": "",
   "maker": "ZOOM",
@@ -1546,13 +1563,32 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "asin:B0CY5DWS46",
   "appearsIn": [
    "rackscape-02-05"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "asin:B000UPEJCU",
+  "name": "SONY MDR-CD900ST モニターヘッドホン",
+  "author": "",
+  "maker": "SONY",
+  "isbn": "",
+  "url": "https://www.amazon.co.jp/dp/B000UPEJCU?tag=rackscape-22",
+  "rakutenUrl": "",
+  "refUrl": "https://ja.wikipedia.org/wiki/MDR-CD900ST",
+  "refLabel": "Wikipedia（機種：MDR-CD900ST）",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-02-06"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "isbn:9784296207954",
   "name": "地方を救う 官民共創ビジネス",
   "author": "EYストラテジー・アンド・コンサルティング編",
   "maker": "",
@@ -1565,13 +1601,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784296207954",
   "appearsIn": [
    "rackscape-03-01"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784862763501",
   "name": "「風の谷」という希望 ―残すに値する未来をつくる",
   "author": "安宅和人",
   "maker": "",
@@ -1584,13 +1620,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784862763501",
   "appearsIn": [
    "rackscape-03-02"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784479394204",
   "name": "ガザとは何か ―パレスチナを知るための緊急講義",
   "author": "岡真理",
   "maker": "",
@@ -1603,13 +1639,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784479394204",
   "appearsIn": [
    "rackscape-03-03"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784622096979",
   "name": "核燃料サイクルという迷宮",
   "author": "山本義隆",
   "maker": "",
@@ -1622,13 +1658,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784622096979",
   "appearsIn": [
    "rackscape-03-04"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784480251510",
   "name": "人生が変わるゲームのつくりかた",
   "author": "米光一成",
   "maker": "",
@@ -1641,13 +1677,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784480251510",
   "appearsIn": [
    "rackscape-03-05"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
   "name": "ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
   "author": "安藤（名は要確認）",
   "maker": "",
@@ -1660,13 +1696,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
   "appearsIn": [
    "rackscape-03-06"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:ゲームカタログ系の1冊（イラスト帯）",
   "name": "ゲームカタログ系の1冊（イラスト帯）",
   "author": "",
   "maker": "",
@@ -1679,13 +1715,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:ゲームカタログ系の1冊（イラスト帯）",
   "appearsIn": [
    "rackscape-03-07"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784098640546",
   "name": "BLUE GIANT MOMENTUM 8",
   "author": "石塚真一",
   "maker": "",
@@ -1698,13 +1734,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：石塚真一）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784098640546",
   "appearsIn": [
    "rackscape-04-01"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784088831503",
   "name": "あかね噺",
   "author": "末永裕樹（原作）／馬上鷹将（作画）",
   "maker": "",
@@ -1717,13 +1753,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：末永裕樹）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784088831503",
   "appearsIn": [
    "rackscape-04-02"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784197804870",
   "name": "めしばな刑事タチバナ（2冊）",
   "author": "坂戸佐兵衛（原作）／旅井とり（作画）",
   "maker": "",
@@ -1736,13 +1772,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784197804870",
   "appearsIn": [
    "rackscape-04-03"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784088913339",
   "name": "DRAFT KING",
   "author": "クロマツテツロウ",
   "maker": "",
@@ -1755,13 +1791,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：クロマツテツロウ）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784088913339",
   "appearsIn": [
    "rackscape-04-04"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:ミュージック・マガジン2021年8月号特集：松本隆",
   "name": "ミュージック・マガジン 2021年8月号 特集：松本隆",
   "author": "",
   "maker": "",
@@ -1774,13 +1810,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:ミュージック・マガジン2021年8月号特集：松本隆",
   "appearsIn": [
    "rackscape-04-05"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784905158318",
   "name": "R&B馬鹿リリック大行進",
   "author": "",
   "maker": "",
@@ -1793,13 +1829,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784905158318",
   "appearsIn": [
    "rackscape-04-06"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784845636242",
   "name": "大余談",
   "author": "スチャダラパー",
   "maker": "",
@@ -1812,13 +1848,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784845636242",
   "appearsIn": [
    "rackscape-04-07"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:余談スチャダラパー・シングス",
   "name": "余談 スチャダラパー・シングス",
   "author": "スチャダラパー",
   "maker": "",
@@ -1831,13 +1867,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:余談スチャダラパー・シングス",
   "appearsIn": [
    "rackscape-04-08"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:余談三代目J余談ブラザーズ",
   "name": "余談 三代目J余談ブラザーズ",
   "author": "",
   "maker": "",
@@ -1850,13 +1886,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:余談三代目J余談ブラザーズ",
   "appearsIn": [
    "rackscape-04-09"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:余談シン・ヨダン",
   "name": "余談 シン・ヨダン",
   "author": "",
   "maker": "",
@@ -1869,13 +1905,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:余談シン・ヨダン",
   "appearsIn": [
    "rackscape-04-10"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784845629008",
   "name": "風待茶房 松本隆対談集 2005―2015",
   "author": "松本隆",
   "maker": "",
@@ -1888,13 +1924,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784845629008",
   "appearsIn": [
    "rackscape-04-11"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784845628995",
   "name": "風待茶房 松本隆対談集 1971―2004",
   "author": "松本隆",
   "maker": "",
@@ -1907,13 +1943,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784845628995",
   "appearsIn": [
    "rackscape-04-12"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784838731879",
   "name": "言葉の教室",
   "author": "松本隆／延江浩",
   "maker": "",
@@ -1926,13 +1962,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784838731879",
   "appearsIn": [
    "rackscape-04-13"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784309979106",
   "name": "文藝別冊 吉田戦車 大増補新版",
   "author": "",
   "maker": "",
@@ -1945,13 +1981,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784309979106",
   "appearsIn": [
    "rackscape-04-14"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784309978437",
   "name": "文藝別冊 安西水丸",
   "author": "",
   "maker": "",
@@ -1964,13 +2000,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784309978437",
   "appearsIn": [
    "rackscape-04-15"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784939138935",
   "name": "フリースタイル 40",
   "author": "",
   "maker": "",
@@ -1983,13 +2019,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784939138935",
   "appearsIn": [
    "rackscape-04-16"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784867311165",
   "name": "フリースタイル 62 MANGA 2025",
   "author": "",
   "maker": "",
@@ -2002,13 +2038,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784867311165",
   "appearsIn": [
    "rackscape-04-17"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784867311219",
   "name": "フリースタイル 67",
   "author": "",
   "maker": "",
@@ -2021,13 +2057,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784867311219",
   "appearsIn": [
    "rackscape-04-18"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784791702459",
   "name": "ユリイカ 横尾忠則特集（11月臨時増刊号）",
   "author": "",
   "maker": "",
@@ -2040,13 +2076,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784791702459",
   "appearsIn": [
    "rackscape-04-19"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784791702565",
   "name": "ユリイカ 岡村靖幸特集",
   "author": "",
   "maker": "",
@@ -2059,13 +2095,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784791702565",
   "appearsIn": [
    "rackscape-04-20"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784791703036",
   "name": "ユリイカ 江口寿史特集",
   "author": "",
   "maker": "",
@@ -2078,13 +2114,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784791703036",
   "appearsIn": [
    "rackscape-04-21"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784791703203",
   "name": "ユリイカ みうらじゅん SINCE 1958",
   "author": "",
   "maker": "",
@@ -2097,13 +2133,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784791703203",
   "appearsIn": [
    "rackscape-04-22"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784309977829",
   "name": "文藝別冊 ナンシー関 増補新版",
   "author": "",
   "maker": "",
@@ -2116,13 +2152,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784309977829",
   "appearsIn": [
    "rackscape-04-23"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "name:1冊まるごと、松之丞改め六代目神田伯山（penBOOKS）",
   "name": "1冊まるごと、松之丞改め六代目神田伯山（pen BOOKS）",
   "author": "",
   "maker": "",
@@ -2135,13 +2171,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "name:1冊まるごと、松之丞改め六代目神田伯山（penBOOKS）",
   "appearsIn": [
    "rackscape-04-24"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784910547015",
   "name": "藝人春秋 Diary",
   "author": "水道橋博士",
   "maker": "",
@@ -2154,13 +2190,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784910547015",
   "appearsIn": [
    "rackscape-04-25"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784087441918",
   "name": "どうして人はキスをしたくなるんだろう？",
   "author": "宮藤官九郎／みうらじゅん",
   "maker": "",
@@ -2173,13 +2209,13 @@ const PRODUCTS = [
   "ref2Label": "Wikipedia（著者：宮藤官九郎）",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784087441918",
   "appearsIn": [
    "rackscape-04-26"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784163900551",
   "name": "人生エロエロ",
   "author": "みうらじゅん",
   "maker": "",
@@ -2192,13 +2228,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784163900551",
   "appearsIn": [
    "rackscape-04-27"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784101274621",
   "name": "どうやらオレたち、いずれ死ぬっつーじゃないですか",
   "author": "みうらじゅん／リリー・フランキー",
   "maker": "",
@@ -2211,13 +2247,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784101274621",
   "appearsIn": [
    "rackscape-04-28"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784480422330",
   "name": "官能小説用語表現辞典",
   "author": "永田守弘",
   "maker": "",
@@ -2230,13 +2266,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784480422330",
   "appearsIn": [
    "rackscape-04-29"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784334787875",
   "name": "時代劇ベスト100＋50",
   "author": "春日太一",
   "maker": "",
@@ -2249,13 +2285,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784334787875",
   "appearsIn": [
    "rackscape-04-30"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784167903510",
   "name": "藝人春秋（文春文庫）",
   "author": "水道橋博士",
   "maker": "",
@@ -2268,13 +2304,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784167903510",
   "appearsIn": [
    "rackscape-04-31"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784022619365",
   "name": "天才はあきらめた",
   "author": "山里亮太",
   "maker": "",
@@ -2287,13 +2323,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784022619365",
   "appearsIn": [
    "rackscape-04-32"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784106105272",
   "name": "タモリ論",
   "author": "樋口毅宏",
   "maker": "",
@@ -2306,13 +2342,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784106105272",
   "appearsIn": [
    "rackscape-04-33"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784062883283",
   "name": "タモリと戦後ニッポン",
   "author": "近藤正高",
   "maker": "",
@@ -2325,13 +2361,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784062883283",
   "appearsIn": [
    "rackscape-04-34"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784166603251",
   "name": "スポーツマンガの身体",
   "author": "齋藤孝",
   "maker": "",
@@ -2344,13 +2380,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784166603251",
   "appearsIn": [
    "rackscape-04-35"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784040822655",
   "name": "衣笠祥雄 最後のシーズン",
   "author": "山際淳司",
   "maker": "",
@@ -2363,13 +2399,13 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784040822655",
   "appearsIn": [
    "rackscape-04-36"
   ],
   "shelfCount": 1
  },
  {
+  "productKey": "isbn:9784040822112",
   "name": "粋な男たち",
   "author": "玉袋筋太郎",
   "maker": "",
@@ -2382,7 +2418,6 @@ const PRODUCTS = [
   "ref2Label": "",
   "publisherUrl": "",
   "publisherLabel": "",
-  "productKey": "isbn:9784040822112",
   "appearsIn": [
    "rackscape-04-37"
   ],
@@ -2695,8 +2730,24 @@ const ITEM_INDEX = [
   "productKey": "asin:B0CY5DWS46"
  },
  {
-  "itemCode": "rackscape-03-01",
+  "itemCode": "rackscape-02-06",
   "globalItemNo": 20,
+  "shelfCode": "rackscape-02",
+  "globalNo": 2,
+  "name": "SONY MDR-CD900ST モニターヘッドホン",
+  "author": "",
+  "maker": "SONY",
+  "tags": [
+   "ヘッドフォン"
+  ],
+  "isbn": "",
+  "url": "https://www.amazon.co.jp/dp/B000UPEJCU?tag=rackscape-22",
+  "rakutenUrl": "",
+  "productKey": "asin:B000UPEJCU"
+ },
+ {
+  "itemCode": "rackscape-03-01",
+  "globalItemNo": 21,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "地方を救う 官民共創ビジネス",
@@ -2712,7 +2763,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-02",
-  "globalItemNo": 21,
+  "globalItemNo": 22,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "「風の谷」という希望 ―残すに値する未来をつくる",
@@ -2728,7 +2779,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-03",
-  "globalItemNo": 22,
+  "globalItemNo": 23,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ガザとは何か ―パレスチナを知るための緊急講義",
@@ -2744,7 +2795,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-04",
-  "globalItemNo": 23,
+  "globalItemNo": 24,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "核燃料サイクルという迷宮",
@@ -2760,7 +2811,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-05",
-  "globalItemNo": 24,
+  "globalItemNo": 25,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "人生が変わるゲームのつくりかた",
@@ -2776,7 +2827,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-06",
-  "globalItemNo": 25,
+  "globalItemNo": 26,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
@@ -2792,7 +2843,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-07",
-  "globalItemNo": 26,
+  "globalItemNo": 27,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ゲームカタログ系の1冊（イラスト帯）",
@@ -2808,7 +2859,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-01",
-  "globalItemNo": 27,
+  "globalItemNo": 28,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "BLUE GIANT MOMENTUM 8",
@@ -2824,7 +2875,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-02",
-  "globalItemNo": 28,
+  "globalItemNo": 29,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "あかね噺",
@@ -2840,7 +2891,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-03",
-  "globalItemNo": 29,
+  "globalItemNo": 30,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "めしばな刑事タチバナ（2冊）",
@@ -2856,7 +2907,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-04",
-  "globalItemNo": 30,
+  "globalItemNo": 31,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "DRAFT KING",
@@ -2872,7 +2923,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-05",
-  "globalItemNo": 31,
+  "globalItemNo": 32,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ミュージック・マガジン 2021年8月号 特集：松本隆",
@@ -2888,7 +2939,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-06",
-  "globalItemNo": 32,
+  "globalItemNo": 33,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "R&B馬鹿リリック大行進",
@@ -2904,7 +2955,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-07",
-  "globalItemNo": 33,
+  "globalItemNo": 34,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "大余談",
@@ -2920,7 +2971,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-08",
-  "globalItemNo": 34,
+  "globalItemNo": 35,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 スチャダラパー・シングス",
@@ -2936,7 +2987,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-09",
-  "globalItemNo": 35,
+  "globalItemNo": 36,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 三代目J余談ブラザーズ",
@@ -2952,7 +3003,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-10",
-  "globalItemNo": 36,
+  "globalItemNo": 37,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 シン・ヨダン",
@@ -2968,7 +3019,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-11",
-  "globalItemNo": 37,
+  "globalItemNo": 38,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "風待茶房 松本隆対談集 2005―2015",
@@ -2984,7 +3035,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-12",
-  "globalItemNo": 38,
+  "globalItemNo": 39,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "風待茶房 松本隆対談集 1971―2004",
@@ -3000,7 +3051,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-13",
-  "globalItemNo": 39,
+  "globalItemNo": 40,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "言葉の教室",
@@ -3016,7 +3067,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-14",
-  "globalItemNo": 40,
+  "globalItemNo": 41,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 吉田戦車 大増補新版",
@@ -3032,7 +3083,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-15",
-  "globalItemNo": 41,
+  "globalItemNo": 42,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 安西水丸",
@@ -3048,7 +3099,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-16",
-  "globalItemNo": 42,
+  "globalItemNo": 43,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 40",
@@ -3064,7 +3115,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-17",
-  "globalItemNo": 43,
+  "globalItemNo": 44,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 62 MANGA 2025",
@@ -3080,7 +3131,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-18",
-  "globalItemNo": 44,
+  "globalItemNo": 45,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 67",
@@ -3096,7 +3147,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-19",
-  "globalItemNo": 45,
+  "globalItemNo": 46,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 横尾忠則特集（11月臨時増刊号）",
@@ -3112,7 +3163,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-20",
-  "globalItemNo": 46,
+  "globalItemNo": 47,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 岡村靖幸特集",
@@ -3128,7 +3179,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-21",
-  "globalItemNo": 47,
+  "globalItemNo": 48,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 江口寿史特集",
@@ -3144,7 +3195,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-22",
-  "globalItemNo": 48,
+  "globalItemNo": 49,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ みうらじゅん SINCE 1958",
@@ -3160,7 +3211,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-23",
-  "globalItemNo": 49,
+  "globalItemNo": 50,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 ナンシー関 増補新版",
@@ -3176,7 +3227,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-24",
-  "globalItemNo": 50,
+  "globalItemNo": 51,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "1冊まるごと、松之丞改め六代目神田伯山（pen BOOKS）",
@@ -3192,7 +3243,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-25",
-  "globalItemNo": 51,
+  "globalItemNo": 52,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "藝人春秋 Diary",
@@ -3208,7 +3259,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-26",
-  "globalItemNo": 52,
+  "globalItemNo": 53,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "どうして人はキスをしたくなるんだろう？",
@@ -3224,7 +3275,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-27",
-  "globalItemNo": 53,
+  "globalItemNo": 54,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "人生エロエロ",
@@ -3240,7 +3291,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-28",
-  "globalItemNo": 54,
+  "globalItemNo": 55,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "どうやらオレたち、いずれ死ぬっつーじゃないですか",
@@ -3256,7 +3307,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-29",
-  "globalItemNo": 55,
+  "globalItemNo": 56,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "官能小説用語表現辞典",
@@ -3272,7 +3323,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-30",
-  "globalItemNo": 56,
+  "globalItemNo": 57,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "時代劇ベスト100＋50",
@@ -3288,7 +3339,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-31",
-  "globalItemNo": 57,
+  "globalItemNo": 58,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "藝人春秋（文春文庫）",
@@ -3304,7 +3355,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-32",
-  "globalItemNo": 58,
+  "globalItemNo": 59,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "天才はあきらめた",
@@ -3320,7 +3371,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-33",
-  "globalItemNo": 59,
+  "globalItemNo": 60,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "タモリ論",
@@ -3336,7 +3387,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-34",
-  "globalItemNo": 60,
+  "globalItemNo": 61,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "タモリと戦後ニッポン",
@@ -3352,7 +3403,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-35",
-  "globalItemNo": 61,
+  "globalItemNo": 62,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "スポーツマンガの身体",
@@ -3368,7 +3419,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-36",
-  "globalItemNo": 62,
+  "globalItemNo": 63,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "衣笠祥雄 最後のシーズン",
@@ -3384,7 +3435,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-37",
-  "globalItemNo": 63,
+  "globalItemNo": 64,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "粋な男たち",
