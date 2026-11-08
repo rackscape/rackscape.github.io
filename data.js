@@ -1225,7 +1225,7 @@ const SHARE_SHELVES = [
     "confidence": 0.95,
     "note": "背表紙: Yukihiro Takahashi / WORLD HAPPINESS、CD+Blu-ray 5枚組、COLUMBIA COZB-2177〜81",
     "isbn": "",
-    "url": "",
+    "url": "https://www.amazon.co.jp/dp/B0DZYKJPVK?tag=rackscape-22",
     "rakutenUrl": "",
     "refUrl": "https://ja.wikipedia.org/wiki/%E9%AB%98%E6%A9%8B%E5%B9%B8%E5%AE%8F",
     "refLabel": "Wikipedia（著者：高橋幸宏）",
@@ -1240,20 +1240,20 @@ const SHARE_SHELVES = [
     "alsoOn": []
    },
    {
-    "name": "（題名要確認）GHIBLI COMICS SPECIAL",
-    "author": "",
+    "name": "ROCA コンプリート",
+    "author": "いしいひさいち",
     "maker": "",
     "tags": [
      "マンガ"
     ],
-    "status": "要確認",
-    "confidence": 0.3,
-    "note": "徳間書店、横置き。装丁文字が図案化されていて背表紙から題名・著者を確定できず（推測で補わない）",
-    "isbn": "",
-    "url": "",
+    "status": "確定",
+    "confidence": 1.0,
+    "note": "裏表紙で題名を確認済み。背表紙はシリーズ名「ジブリCSP」の図案表記",
+    "isbn": "9784197500253",
+    "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
     "rakutenUrl": "",
-    "refUrl": "",
-    "refLabel": "",
+    "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
+    "refLabel": "Wikipedia（著者：いしいひさいち）",
     "ref2Url": "",
     "ref2Label": "",
     "publisherUrl": "",
@@ -1261,7 +1261,7 @@ const SHARE_SHELVES = [
     "itemNo": 2,
     "itemCode": "rackscape-05-02",
     "globalItemNo": 66,
-    "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL",
+    "productKey": "name:ROCA コンプリート",
     "alsoOn": []
    },
    {
@@ -3340,7 +3340,7 @@ const PRODUCTS = [
   "author": "高橋幸宏",
   "maker": "",
   "isbn": "",
-  "url": "",
+  "url": "https://www.amazon.co.jp/dp/B0DZYKJPVK?tag=rackscape-22",
   "rakutenUrl": "",
   "refUrl": "https://ja.wikipedia.org/wiki/%E9%AB%98%E6%A9%8B%E5%B9%B8%E5%AE%8F",
   "refLabel": "Wikipedia（著者：高橋幸宏）",
@@ -3350,25 +3350,6 @@ const PRODUCTS = [
   "publisherLabel": "",
   "appearsIn": [
    "rackscape-05-01"
-  ],
-  "shelfCount": 1
- },
- {
-  "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL",
-  "name": "（題名要確認）GHIBLI COMICS SPECIAL",
-  "author": "",
-  "maker": "",
-  "isbn": "",
-  "url": "",
-  "rakutenUrl": "",
-  "refUrl": "",
-  "refLabel": "",
-  "ref2Url": "",
-  "ref2Label": "",
-  "publisherUrl": "",
-  "publisherLabel": "",
-  "appearsIn": [
-   "rackscape-05-02"
   ],
   "shelfCount": 1
  },
@@ -3998,6 +3979,21 @@ const PRODUCTS = [
    "rackscape-05-35"
   ],
   "shelfCount": 1
+ },
+ {
+  "productKey": "name:ROCA コンプリート",
+  "name": "ROCA コンプリート",
+  "author": "いしいひさいち",
+  "maker": "",
+  "isbn": "9784197500253",
+  "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
+  "rakutenUrl": "",
+  "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
+  "refLabel": "Wikipedia（著者：いしいひさいち）",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": ""
  }
 ];
 const ITEM_INDEX = [
@@ -5039,7 +5035,7 @@ const ITEM_INDEX = [
    "Blu-ray"
   ],
   "isbn": "",
-  "url": "",
+  "url": "https://www.amazon.co.jp/dp/B0DZYKJPVK?tag=rackscape-22",
   "rakutenUrl": "",
   "productKey": "name:WORLD HAPPINESS"
  },
@@ -5048,16 +5044,18 @@ const ITEM_INDEX = [
   "globalItemNo": 66,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
-  "name": "（題名要確認）GHIBLI COMICS SPECIAL",
-  "author": "",
+  "name": "ROCA コンプリート",
+  "author": "いしいひさいち",
   "maker": "",
   "tags": [
    "マンガ"
   ],
-  "isbn": "",
-  "url": "",
+  "isbn": "9784197500253",
+  "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
   "rakutenUrl": "",
-  "productKey": "name:（題名要確認）GHIBLI COMICS SPECIAL"
+  "productKey": "name:ROCA コンプリート",
+  "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
+  "refLabel": "Wikipedia（著者：いしいひさいち）"
  },
  {
   "itemCode": "rackscape-05-03",
