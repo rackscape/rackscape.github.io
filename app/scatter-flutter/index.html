@@ -544,11 +544,20 @@
         <li><strong>スナップショット（SNAPSHOT 1〜4）</strong>: 左上「PATTERN &amp; TRANSPORT」内の <strong>📸 SAVE</strong> ボタンを押して点灯させた状態でスロット <code>1</code>〜<code>4</code> を押すと、気に入った状態を最大4つまで手動キープできます（通常時に <code>1</code>〜<code>4</code> を押すと即座に呼び出します）。</li>
         <li><strong>初期化（RESET）</strong>: <strong>🔄 RESET</strong> ボタンを押して確認ダイアログで実行すると、自動保存データを消去して工場出荷時のデモパターン状態へ戻します（※あなたが保存したスナップショット1〜4の作品データは消えずにそのまま残ります）。</li>
       </ul>
+      <h3>8. ランダマイズ（RND）</h3>
+      <ul>
+        <li><strong>🎲 SONG RND</strong>（PATTERN &amp; TRANSPORT内）: 現在のパターン全体（KIT・BPM・マスターFX・全トラックの音色・全バリエーションA〜Dのフレーズ）を一括でランダム生成します（確認ダイアログあり）。</li>
+        <li><strong>🎲 SOUND RND</strong>（SOUND CONTROL内・左）: 選択中トラックの音色パラメーター（SOUND〜DECAYの6項目）のみをランダム生成します。</li>
+        <li><strong>🎲 KIT RND</strong>（SOUND CONTROL内・右）: 全トラックの音色パラメーター（各6項目）を一括でランダム生成します（KIT選択表示は変更されません）。</li>
+        <li><strong>🎲 FX RND</strong>（ANALOG FEEL &amp; MASTER FX内）: マスターFX 4項目（DRIFT / SWING / DELAY MIX / REVERB）をランダム生成します。</li>
+        <li><strong>🎲 PTN RND</strong>（PHRASE ROTATE横）: 選択中トラックの現在編集中のバリエーション（A〜Dのいずれか1つ）のフレーズのみをランダム生成します。</li>
+        <li>※ 音色ランダマイズ（SONG / SOUND / KIT RND）では各トラックの <strong>Level（VOLスライダーの音量）は変更されません</strong>。また、どのRND操作も <strong>↩ UNDO で1回で元の状態に戻せます</strong>。</li>
+      </ul>
     </div>
   </div>
 </div>
 
-<!-- CONFIRMATION MODAL (for Snapshot Overwrite & Factory Reset) -->
+<!-- CONFIRMATION MODAL (for Snapshot Overwrite & Factory Reset & SONG RND) -->
 <div class="modal-overlay" id="confirmModal">
   <div class="confirm-modal-box">
     <div class="confirm-title" id="confirmModalTitle">⚠️ 確認</div>
@@ -565,7 +574,7 @@
   <div class="header">
     <div class="brand">
       <h1>scatter flutter</h1>
-      <div class="ver-badge" id="verBadge" title="クリックでビルド表示を切替">BUILD v1.6.0</div>
+      <div class="ver-badge" id="verBadge" title="クリックでビルド表示を切替">BUILD v1.7.0</div>
       <span class="sub-tag">WEB SYNTHESIS GROOVEBOX</span>
     </div>
     <div class="header-right">
@@ -632,6 +641,10 @@
           <button id="btnClearPtn" class="btn-danger" title="現在のパターンを白紙にします">CLR</button>
         </div>
 
+        <div style="display:flex; gap:6px; align-items:center;">
+          <button id="btnSongRnd" class="btn-accent" style="width:100%;" title="現在のパターンを1曲丸ごとランダム生成">🎲 SONG RND</button>
+        </div>
+
         <div class="inline-form">
           <input type="text" id="newPtnName" placeholder="新規パターン名 (例: MY.LOOP)" style="flex:1; min-width:105px;">
           <button id="btnSaveNewPtn" class="btn-accent">＋ パターン追加</button>
@@ -677,6 +690,10 @@
         </div>
       </div>
       <div class="knobs-grid" id="knobsContainer"></div>
+      <div style="display:flex; gap:6px; margin-top:8px;">
+        <button id="btnSoundRnd" class="btn-accent" style="flex:1;" title="選択中トラックの音色パラメーターをランダム生成">🎲 SOUND RND</button>
+        <button id="btnKitRnd" class="btn-accent" style="flex:1;" title="全トラックの音色パラメーターをランダム生成">🎲 KIT RND</button>
+      </div>
     </div>
 
     <!-- GROOVE & FX -->
@@ -707,6 +724,9 @@
           <input type="range" id="reverbKnob" min="0" max="100" value="18">
           <div class="knob-val" id="reverbVal">18%</div>
         </div>
+      </div>
+      <div style="display:flex; margin-top:8px;">
+        <button id="btnFxRnd" class="btn-accent" style="width:100%;" title="マスターFX（DRIFT/SWING/DELAY/REVERB）をランダム生成">🎲 FX RND</button>
       </div>
     </div>
   </div>
@@ -858,7 +878,7 @@
         <span style="font-size:11px; color:var(--text-dim);">PHRASE ROTATE (Step Shift):</span>
         <button id="btnRotateLeft">◀ -1</button>
         <button id="btnRotateRight">+1 ▶</button>
-        <button id="btnRandomTrack">🎲 生成</button>
+        <button id="btnRandomTrack" title="選択中トラックの編集中バリエーションをランダム生成">🎲 PTN RND</button>
         <button id="btnClearTrack" class="btn-danger">CLR TRK</button>
       </div>
     </div>
@@ -884,7 +904,7 @@
 const VAR_NAMES = ['A', 'B', 'C', 'D'];
 
 const VERSION_LIST = [
-  { badge: 'BUILD v1.6.0', lcd: 'VER 1.6.0', desc: 'APP BUILD VERSION' },
+  { badge: 'BUILD v1.7.0', lcd: 'VER 1.7.0', desc: 'APP BUILD VERSION' },
   { badge: 'SYNTH v2.0',   lcd: 'ENG 2.0.0', desc: 'WEB AUDIO ENGINE' },
   { badge: 'BANKS v1.1',   lcd: 'BNK 1.1.0', desc: 'FACTORY SOUND BANK' }
 ];
@@ -1305,6 +1325,102 @@ function applyMasterKnobValues(masterObj) {
   if (reverbMixGain) {
     reverbMixGain.gain.value = (reverb / 100) * 0.6;
   }
+}
+
+// --- ランダマイズ共通補助関数 ---
+function randInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomizeSoundParams(st) {
+  if (!st || !Array.isArray(st.params)) return;
+  st.params[0] = randInt(0, 100);
+  st.params[1] = randInt(32, 68);
+  st.params[2] = randInt(15, 95);
+  st.params[3] = randInt(0, 90);
+  st.params[4] = randInt(0, 60);
+  st.params[5] = randInt(18, 92);
+  // st.params[6] (Level) は変更しない
+}
+
+function randomizeMasterFxValues() {
+  return {
+    feel: randInt(0, 80),
+    swing: randInt(50, 70),
+    delay: randInt(0, 65),
+    reverb: randInt(0, 65)
+  };
+}
+
+function fillRandomSteps(spec, steps) {
+  if (!Array.isArray(steps)) return;
+  const subChoices = [0, 0, 0, 2, 3, 5, 6];
+  const bassScale = [0, 0, 0, -2, 3, 5, 7, 10, 12];
+  const type = spec ? spec.type : '';
+  const id = spec ? spec.id : '';
+
+  steps.forEach((s, idx) => {
+    s.on = false;
+    s.acc = 0;
+    s.note = 0;
+    s.sub = 0;
+
+    let prob = 0;
+    let noteMode = 'zero';
+
+    if (id === 'BD1') {
+      prob = (idx % 4 === 0) ? 0.9 : 0.07;
+      noteMode = 'zero';
+    } else if (type === 'BD') {
+      prob = (idx % 4 === 0) ? 0.35 : 0.08;
+      noteMode = 'zero';
+    } else if (type === 'SD') {
+      prob = (idx === 4 || idx === 12) ? 0.95 : (idx === 14 ? 0.2 : 0.06);
+      noteMode = 'zero';
+    } else if (type === 'CP') {
+      prob = (idx === 4 || idx === 12) ? 0.85 : 0.04;
+      noteMode = 'zero';
+    } else if (type === 'HH' && id === 'CH') {
+      prob = (idx % 2 === 0) ? 0.7 : 0.35;
+      noteMode = 'zero';
+    } else if (type === 'OH' || (type === 'HH' && id !== 'CH')) {
+      prob = (idx === 2 || idx === 6 || idx === 10 || idx === 14) ? 0.85 : 0.08;
+      noteMode = 'zero';
+    } else if (['TT', 'RS', 'PC', 'LP'].includes(type)) {
+      prob = (idx % 4 === 0) ? 0.3 : 0.22;
+      noteMode = 'perc';
+    } else if (type === 'BASS') {
+      prob = 0.5;
+      noteMode = 'bass';
+    } else if (['SY', 'SMP'].includes(type)) {
+      prob = 0.4;
+      noteMode = 'scale';
+    } else if (spec && spec.type) {
+      prob = 0.4;
+      noteMode = 'scale';
+    } else {
+      prob = (idx % 4 === 0) ? 0.65 : 0.32;
+      noteMode = 'fallback';
+    }
+
+    if (Math.random() < prob) {
+      s.on = true;
+      s.acc = Math.random() < 0.25 ? 2 : 0;
+      s.sub = Math.random() < 0.22 ? subChoices[randInt(0, subChoices.length - 1)] : 0;
+
+      if (noteMode === 'zero') {
+        s.note = 0;
+      } else if (noteMode === 'perc') {
+        s.note = randInt(-4, 7);
+      } else if (noteMode === 'bass') {
+        s.note = (idx % 4 === 0 && Math.random() < 0.7) ? 0 : bassScale[randInt(0, bassScale.length - 1)];
+      } else if (noteMode === 'scale') {
+        s.note = bassScale[randInt(0, bassScale.length - 1)];
+      } else {
+        s.note = randInt(-4, 12);
+      }
+    }
+  });
 }
 
 function createExtendedStateObject(sanitizeSampleNames = false) {
@@ -3438,6 +3554,130 @@ document.getElementById('btnClearPtn').addEventListener('click', () => {
   });
   renderVariationBar();
   renderSteps();
+  scheduleAutoSave(300);
+});
+
+// --- 新設 RND ボタン4種 (SONG / SOUND / KIT / FX) ---
+document.getElementById('btnSongRnd').addEventListener('click', () => {
+  askUserConfirm(
+    '🎲 SONG RND',
+    '現在のパターンの全トラック・全バリエーションのフレーズと\n音色をランダム生成します。よろしいですか？（UNDOで戻せます）',
+    () => {
+      // (a) saveHistoryState() を1回呼ぶ
+      saveHistoryState();
+
+      const ptn = patterns[currentPtnIdx];
+
+      // (b) KITのランダム選択と適用 (params[6] Level は保持)
+      const kitKeys = ['8x8', '9x9', 'lmd', 'dxm', 'ragga', 'modular', 'dub'];
+      currentKitId = kitKeys[randInt(0, kitKeys.length - 1)];
+      document.getElementById('kitSelect').value = currentKitId;
+      const kit = SOUND_KITS[currentKitId];
+      if (kit) {
+        tracks.forEach((spec, idx) => {
+          const presetParams = kit.params[spec.id];
+          if (presetParams && ptn.trackStates[idx]) {
+            const curVol = ptn.trackStates[idx].params[6];
+            ptn.trackStates[idx].params = [...presetParams.slice(0, 6), curVol];
+          }
+        });
+      }
+
+      // (c) 全トラックの音色ランダム化 (params[6] Level は保持)
+      ptn.trackStates.forEach(st => randomizeSoundParams(st));
+
+      // (d) BPMのランダム化 (122〜135)
+      const newBpm = randInt(122, 135);
+      document.getElementById('bpmInput').value = newBpm;
+      ptn.bpm = newBpm;
+
+      // (e) マスターFXのランダム化
+      applyMasterKnobValues(randomizeMasterFxValues());
+
+      // (f) 全トラック × 全バリエーション (A〜D) のフレーズ生成
+      const bassScale = [0, 0, 0, -2, 3, 5, 7, 10, 12];
+      const fillSubs = [2, 3, 5, 6];
+      tracks.forEach((spec, tIdx) => {
+        const st = ptn.trackStates[tIdx];
+        if (!st) return;
+
+        // A: fillRandomSteps() で新規生成
+        fillRandomSteps(spec, st.variations[0]);
+
+        // B: Aのコピーから各ステップを約15%の確率で on/off 反転
+        st.variations[1] = JSON.parse(JSON.stringify(st.variations[0]));
+        st.variations[1].forEach(s => {
+          if (Math.random() < 0.15) {
+            s.on = !s.on;
+            if (s.on && ['BASS', 'SY', 'SMP'].includes(spec.type)) {
+              s.note = bassScale[randInt(0, bassScale.length - 1)];
+            }
+          } else if (s.on && spec.type === 'BASS' && Math.random() < 0.25) {
+            s.note = bassScale[randInt(0, bassScale.length - 1)];
+          }
+        });
+
+        // C: Aのコピーを1ステップ分ローテート（先頭を末尾へ移動）
+        st.variations[2] = JSON.parse(JSON.stringify(st.variations[0]));
+        st.variations[2].push(st.variations[2].shift());
+
+        // D: Aのコピーにステップ12〜15を高密度化したフィルイン
+        st.variations[3] = JSON.parse(JSON.stringify(st.variations[0]));
+        for (let i = 12; i < 16; i++) {
+          const s = st.variations[3][i];
+          if (Math.random() < 0.8) {
+            s.on = true;
+            s.acc = Math.random() < 0.55 ? 2 : 0;
+            s.sub = Math.random() < 0.5 ? fillSubs[randInt(0, fillSubs.length - 1)] : 0;
+            if (['BASS', 'SY', 'SMP'].includes(spec.type)) {
+              s.note = bassScale[randInt(0, bassScale.length - 1)];
+            } else if (['TT', 'RS', 'PC', 'LP'].includes(spec.type)) {
+              s.note = randInt(-4, 7);
+            } else {
+              s.note = 0;
+            }
+          } else {
+            s.on = false;
+            s.acc = 0;
+            s.sub = 0;
+          }
+        }
+      });
+
+      // (g) 再描画・LCD表示・自動保存予約
+      renderTracksBar();
+      renderVariationBar();
+      renderKnobs();
+      renderSteps();
+      showTempLCD('SONG RND!');
+      scheduleAutoSave(300);
+    }
+  );
+});
+
+document.getElementById('btnSoundRnd').addEventListener('click', () => {
+  saveHistoryState();
+  const st = patterns[currentPtnIdx].trackStates[selectedTrackIdx];
+  randomizeSoundParams(st);
+  renderKnobs();
+  showTempLCD('SOUND RND!');
+  scheduleAutoSave(300);
+});
+
+document.getElementById('btnKitRnd').addEventListener('click', () => {
+  saveHistoryState();
+  const ptn = patterns[currentPtnIdx];
+  ptn.trackStates.forEach(st => randomizeSoundParams(st));
+  renderKnobs();
+  renderTracksBar();
+  showTempLCD('KIT RND!');
+  scheduleAutoSave(300);
+});
+
+document.getElementById('btnFxRnd').addEventListener('click', () => {
+  saveHistoryState();
+  applyMasterKnobValues(randomizeMasterFxValues());
+  showTempLCD('FX RND!');
   scheduleAutoSave(300);
 });
 
