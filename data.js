@@ -317,7 +317,7 @@ const SHARE_SHELVES = [
   ],
   "globalNo": 1,
   "ownerId": "miyatake",
-  "ownerName": "Miyatake",
+  "ownerName": "rackscape",
   "ownerShelfNo": 1,
   "code": "miyatake-01"
  },
@@ -418,7 +418,7 @@ const SHARE_SHELVES = [
   ],
   "globalNo": 2,
   "ownerId": "miyatake",
-  "ownerName": "Miyatake",
+  "ownerName": "rackscape",
   "ownerShelfNo": 2,
   "code": "miyatake-02"
  },
@@ -552,7 +552,7 @@ const SHARE_SHELVES = [
   ],
   "globalNo": 3,
   "ownerId": "miyatake",
-  "ownerName": "Miyatake",
+  "ownerName": "rackscape",
   "ownerShelfNo": 3,
   "code": "miyatake-03"
  },
@@ -1185,7 +1185,7 @@ const SHARE_SHELVES = [
   ],
   "globalNo": 4,
   "ownerId": "miyatake",
-  "ownerName": "Miyatake",
+  "ownerName": "rackscape",
   "ownerShelfNo": 4,
   "code": "miyatake-04"
  }
