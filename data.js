@@ -41,7 +41,7 @@ const SHARE_SHELVES = [
  {
   "id": "shelf-01",
   "kind": "book",
-  "title": "本棚（サンプル1）",
+  "title": "rackscape-01",
   "photo": "assets/share/shelf-01.jpg",
   "items": [
    {
@@ -313,7 +313,7 @@ const SHARE_SHELVES = [
    }
   ],
   "unknown": [
-   "帯で隠れた本など5点（サンプル1実施時に要確認として記録）"
+   "帯で隠れた本など5点（棚テスト実施時に要確認として記録）"
   ],
   "globalNo": 1,
   "ownerId": "rackscape",
@@ -324,7 +324,7 @@ const SHARE_SHELVES = [
  {
   "id": "shelf-02",
   "kind": "gear",
-  "title": "機材棚（デスク周り）",
+  "title": "rackscape-02",
   "photo": "assets/share/shelf-02.jpg",
   "items": [
    {
@@ -441,7 +441,7 @@ const SHARE_SHELVES = [
  {
   "id": "shelf-03",
   "kind": "book",
-  "title": "本棚（平積み）",
+  "title": "rackscape-03",
   "photo": "assets/share/shelf-03.jpg",
   "items": [
    {
@@ -575,7 +575,7 @@ const SHARE_SHELVES = [
  {
   "id": "shelf-04",
   "kind": "book",
-  "title": "本棚（縦置き＋平積み）",
+  "title": "rackscape-04",
   "photo": "assets/share/shelf-04.jpg",
   "items": [
    {
