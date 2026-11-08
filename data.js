@@ -4,6 +4,7 @@
 
 // What's New（トップページと各ページ下部に表示）
 const WHATS_NEW = [
+ { date: "2026-11-08", label: "web app", text: "「scatter flutter」をv1.7.0に更新。ランダマイズを5種に拡張（SONG／SOUND／KIT／FX／PTN RND）" },
  { date: "2026-11-05", label: "web app", text: "「scatter flutter」をv1.6.0に更新しました。自動保存とスナップショット保存（4つ）、初期状態へのリセット機能を追加しました。作ったパターンがリロードしても消えません。MIDI／WAVの一括書き出しで、処理中と完了の表示が分かるよう改善しました。", url: "app/scatter-flutter/"},
  { date: "2026-11-03", label: "note", text: "開発日誌「生成AIでグルーヴボックスのWebアプリができちゃった！」を公開しました。", url: "https://note.com/rich_pipit1325/n/n57a539feefe2" },
  { date: "2026-11-03", label: "web app", text: "グルーヴボックスのWebアプリ「scatter flutter」を公開しました。", url: "studio.html" }
