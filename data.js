@@ -311,10 +311,28 @@ const SHARE_SHELVES = [
     "refUrl": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%A9%E3%83%90!",
     "ref2Label": "Wikipedia（著者：西加奈子）",
     "ref2Url": "https://ja.wikipedia.org/wiki/%E8%A5%BF%E5%8A%A0%E5%A5%88%E5%AD%90"
+   },
+   {
+    "name": "ヤラセと情熱 ―水曜スペシャル川口浩探検隊の「真実」―",
+    "author": "プチ鹿島",
+    "tags": [
+     "エッセイ"
+    ],
+    "status": "確定",
+    "note": "帯で隠れていて要確認だった本。2026-11-10に所有者が実物で確認",
+    "url": "https://www.amazon.co.jp/dp/4575715212?tag=rackscape-22",
+    "itemNo": 15,
+    "itemCode": "rackscape-01-15",
+    "globalItemNo": 15,
+    "isbn": "9784575715217",
+    "productKey": "isbn:9784575715217",
+    "alsoOn": [],
+    "refLabel": "Wikipedia（著者：プチ鹿島）",
+    "refUrl": "https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%81%E9%B9%BF%E5%B3%B6"
    }
   ],
   "unknown": [
-   "帯で隠れた本など5点（棚テスト実施時に要確認として記録）"
+   "帯で隠れた本など4点（棚テスト実施時に要確認として記録）"
   ],
   "globalNo": 1,
   "ownerId": "rackscape",
@@ -342,7 +360,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/B0DGB6S4C9?tag=rackscape-22",
     "itemNo": 1,
     "itemCode": "rackscape-02-01",
-    "globalItemNo": 15,
+    "globalItemNo": 16,
     "productKey": "asin:B0DGB6S4C9",
     "alsoOn": []
    },
@@ -358,7 +376,7 @@ const SHARE_SHELVES = [
     "refLabel": "Wikipedia（メーカー：ソニー）",
     "itemNo": 2,
     "itemCode": "rackscape-02-02",
-    "globalItemNo": 16,
+    "globalItemNo": 17,
     "productKey": "name:SONYSMS-1Pパワードモニタースピーカー（ペア）",
     "alsoOn": []
    },
@@ -372,7 +390,7 @@ const SHARE_SHELVES = [
     "note": "型番は所有者が撮影した天面写真で確定（円形ロゴにP2表記、HiFi TUBE PREAMP／REMOTE／TONE CONTROLの印刷、入力はRCA／BT／USB／TF）。Amazonの商品ページ（ASIN B08J3TMD7P）でも型番P2・真空管6K4×2本が一致。Amazonでは姉妹ブランドNobsound名義で販売。Wikipediaの単独記事は確認できず、リンクなし",
     "itemNo": 3,
     "itemCode": "rackscape-02-03",
-    "globalItemNo": 17,
+    "globalItemNo": 18,
     "productKey": "asin:B08J3TMD7P",
     "alsoOn": [],
     "url": "https://www.amazon.co.jp/dp/B08J3TMD7P?tag=rackscape-22"
@@ -389,7 +407,7 @@ const SHARE_SHELVES = [
     "refLabel": "Wikipedia（メーカー：スタインバーグ）",
     "itemNo": 4,
     "itemCode": "rackscape-02-04",
-    "globalItemNo": 18,
+    "globalItemNo": 19,
     "productKey": "asin:B07YFGVH5H",
     "alsoOn": [],
     "url": "https://www.amazon.co.jp/dp/B07YFGVH5H?tag=rackscape-22"
@@ -406,7 +424,7 @@ const SHARE_SHELVES = [
     "refLabel": "Wikipedia（メーカー：ズーム／ZOOM）",
     "itemNo": 5,
     "itemCode": "rackscape-02-05",
-    "globalItemNo": 19,
+    "globalItemNo": 20,
     "productKey": "asin:B0CY5DWS46",
     "alsoOn": [],
     "url": "https://www.amazon.co.jp/dp/B0CY5DWS46?tag=rackscape-22"
@@ -424,7 +442,7 @@ const SHARE_SHELVES = [
     "refLabel": "Wikipedia（機種：MDR-CD900ST）",
     "itemNo": 6,
     "itemCode": "rackscape-02-06",
-    "globalItemNo": 20,
+    "globalItemNo": 21,
     "productKey": "asin:B000UPEJCU",
     "alsoOn": []
    }
@@ -456,7 +474,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4296207954?tag=rackscape-22",
     "itemNo": 1,
     "itemCode": "rackscape-03-01",
-    "globalItemNo": 21,
+    "globalItemNo": 22,
     "isbn": "9784296207954",
     "productKey": "isbn:9784296207954",
     "alsoOn": []
@@ -475,7 +493,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4862763502?tag=rackscape-22",
     "itemNo": 2,
     "itemCode": "rackscape-03-02",
-    "globalItemNo": 22,
+    "globalItemNo": 23,
     "isbn": "9784862763501",
     "productKey": "isbn:9784862763501",
     "alsoOn": []
@@ -494,7 +512,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4479394206?tag=rackscape-22",
     "itemNo": 3,
     "itemCode": "rackscape-03-03",
-    "globalItemNo": 23,
+    "globalItemNo": 24,
     "isbn": "9784479394204",
     "productKey": "isbn:9784479394204",
     "alsoOn": []
@@ -510,7 +528,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4622096978?tag=rackscape-22",
     "itemNo": 4,
     "itemCode": "rackscape-03-04",
-    "globalItemNo": 24,
+    "globalItemNo": 25,
     "isbn": "9784622096979",
     "productKey": "isbn:9784622096979",
     "alsoOn": []
@@ -528,7 +546,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4480251510?tag=rackscape-22",
     "itemNo": 5,
     "itemCode": "rackscape-03-05",
-    "globalItemNo": 25,
+    "globalItemNo": 26,
     "isbn": "9784480251510",
     "productKey": "isbn:9784480251510",
     "alsoOn": []
@@ -543,7 +561,7 @@ const SHARE_SHELVES = [
     "note": "研修・ワークショップ活用の文字のみ判読",
     "itemNo": 6,
     "itemCode": "rackscape-03-06",
-    "globalItemNo": 26,
+    "globalItemNo": 27,
     "productKey": "name:ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
     "alsoOn": []
    },
@@ -557,7 +575,7 @@ const SHARE_SHELVES = [
     "note": "題名の一部のみ判読",
     "itemNo": 7,
     "itemCode": "rackscape-03-07",
-    "globalItemNo": 27,
+    "globalItemNo": 28,
     "productKey": "name:ゲームカタログ系の1冊（イラスト帯）",
     "alsoOn": []
    }
@@ -595,7 +613,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4098640546?tag=rackscape-22",
     "itemNo": 1,
     "itemCode": "rackscape-04-01",
-    "globalItemNo": 28,
+    "globalItemNo": 29,
     "isbn": "9784098640546",
     "productKey": "isbn:9784098640546",
     "alsoOn": []
@@ -615,7 +633,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4088831500?tag=rackscape-22",
     "itemNo": 2,
     "itemCode": "rackscape-04-02",
-    "globalItemNo": 29,
+    "globalItemNo": 30,
     "isbn": "9784088831503",
     "productKey": "isbn:9784088831503",
     "alsoOn": []
@@ -633,7 +651,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4197804873?tag=rackscape-22",
     "itemNo": 3,
     "itemCode": "rackscape-04-03",
-    "globalItemNo": 30,
+    "globalItemNo": 31,
     "isbn": "9784197804870",
     "productKey": "isbn:9784197804870",
     "alsoOn": []
@@ -653,7 +671,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4088913337?tag=rackscape-22",
     "itemNo": 4,
     "itemCode": "rackscape-04-04",
-    "globalItemNo": 31,
+    "globalItemNo": 32,
     "isbn": "9784088913339",
     "productKey": "isbn:9784088913339",
     "alsoOn": []
@@ -668,7 +686,7 @@ const SHARE_SHELVES = [
     "note": "雑誌のためISBNなし（雑誌コード 08479-08）。Amazonリンクなし",
     "itemNo": 5,
     "itemCode": "rackscape-04-05",
-    "globalItemNo": 32,
+    "globalItemNo": 33,
     "productKey": "name:ミュージック・マガジン2021年8月号特集：松本隆",
     "alsoOn": []
    },
@@ -682,7 +700,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4905158311?tag=rackscape-22",
     "itemNo": 6,
     "itemCode": "rackscape-04-06",
-    "globalItemNo": 33,
+    "globalItemNo": 34,
     "isbn": "9784905158318",
     "productKey": "isbn:9784905158318",
     "alsoOn": []
@@ -699,7 +717,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845636247?tag=rackscape-22",
     "itemNo": 7,
     "itemCode": "rackscape-04-07",
-    "globalItemNo": 34,
+    "globalItemNo": 35,
     "isbn": "9784845636242",
     "productKey": "isbn:9784845636242",
     "alsoOn": []
@@ -716,7 +734,7 @@ const SHARE_SHELVES = [
     "note": "会場限定のインディー誌でISBNなし。Amazonリンクなし",
     "itemNo": 8,
     "itemCode": "rackscape-04-08",
-    "globalItemNo": 35,
+    "globalItemNo": 36,
     "productKey": "name:余談スチャダラパー・シングス",
     "alsoOn": []
    },
@@ -730,7 +748,7 @@ const SHARE_SHELVES = [
     "note": "会場限定のインディー誌でISBNなし。Amazonリンクなし",
     "itemNo": 9,
     "itemCode": "rackscape-04-09",
-    "globalItemNo": 36,
+    "globalItemNo": 37,
     "productKey": "name:余談三代目J余談ブラザーズ",
     "alsoOn": []
    },
@@ -744,7 +762,7 @@ const SHARE_SHELVES = [
     "note": "インディー誌（公式通販のみ）でISBNなし。Amazonリンクなし",
     "itemNo": 10,
     "itemCode": "rackscape-04-10",
-    "globalItemNo": 37,
+    "globalItemNo": 38,
     "productKey": "name:余談シン・ヨダン",
     "alsoOn": []
    },
@@ -760,7 +778,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845629003?tag=rackscape-22",
     "itemNo": 11,
     "itemCode": "rackscape-04-11",
-    "globalItemNo": 38,
+    "globalItemNo": 39,
     "isbn": "9784845629008",
     "productKey": "isbn:9784845629008",
     "alsoOn": []
@@ -777,7 +795,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4845628996?tag=rackscape-22",
     "itemNo": 12,
     "itemCode": "rackscape-04-12",
-    "globalItemNo": 39,
+    "globalItemNo": 40,
     "isbn": "9784845628995",
     "productKey": "isbn:9784845628995",
     "alsoOn": []
@@ -795,7 +813,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは単行本（マガジンハウス）。ちくま文庫版もあり版要確認",
     "itemNo": 13,
     "itemCode": "rackscape-04-13",
-    "globalItemNo": 40,
+    "globalItemNo": 41,
     "isbn": "9784838731879",
     "productKey": "isbn:9784838731879",
     "alsoOn": []
@@ -810,7 +828,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309979106?tag=rackscape-22",
     "itemNo": 14,
     "itemCode": "rackscape-04-14",
-    "globalItemNo": 41,
+    "globalItemNo": 42,
     "isbn": "9784309979106",
     "productKey": "isbn:9784309979106",
     "alsoOn": []
@@ -825,7 +843,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309978436?tag=rackscape-22",
     "itemNo": 15,
     "itemCode": "rackscape-04-15",
-    "globalItemNo": 42,
+    "globalItemNo": 43,
     "isbn": "9784309978437",
     "productKey": "isbn:9784309978437",
     "alsoOn": []
@@ -842,7 +860,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4939138933?tag=rackscape-22",
     "itemNo": 16,
     "itemCode": "rackscape-04-16",
-    "globalItemNo": 43,
+    "globalItemNo": 44,
     "isbn": "9784939138935",
     "productKey": "isbn:9784939138935",
     "alsoOn": []
@@ -859,7 +877,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4867311162?tag=rackscape-22",
     "itemNo": 17,
     "itemCode": "rackscape-04-17",
-    "globalItemNo": 44,
+    "globalItemNo": 45,
     "isbn": "9784867311165",
     "productKey": "isbn:9784867311165",
     "alsoOn": []
@@ -876,7 +894,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4867311219?tag=rackscape-22",
     "itemNo": 18,
     "itemCode": "rackscape-04-18",
-    "globalItemNo": 45,
+    "globalItemNo": 46,
     "isbn": "9784867311219",
     "productKey": "isbn:9784867311219",
     "alsoOn": []
@@ -894,7 +912,7 @@ const SHARE_SHELVES = [
     "note": "書誌確認では「11月臨時増刊号」は存在せず、ユリイカ2012年11月号（通常号）特集の可能性が高い。要確認",
     "itemNo": 19,
     "itemCode": "rackscape-04-19",
-    "globalItemNo": 46,
+    "globalItemNo": 47,
     "isbn": "9784791702459",
     "productKey": "isbn:9784791702459",
     "alsoOn": []
@@ -911,7 +929,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791702565?tag=rackscape-22",
     "itemNo": 20,
     "itemCode": "rackscape-04-20",
-    "globalItemNo": 47,
+    "globalItemNo": 48,
     "isbn": "9784791702565",
     "productKey": "isbn:9784791702565",
     "alsoOn": []
@@ -928,7 +946,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791703030?tag=rackscape-22",
     "itemNo": 21,
     "itemCode": "rackscape-04-21",
-    "globalItemNo": 48,
+    "globalItemNo": 49,
     "isbn": "9784791703036",
     "productKey": "isbn:9784791703036",
     "alsoOn": []
@@ -945,7 +963,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4791703200?tag=rackscape-22",
     "itemNo": 22,
     "itemCode": "rackscape-04-22",
-    "globalItemNo": 49,
+    "globalItemNo": 50,
     "isbn": "9784791703203",
     "productKey": "isbn:9784791703203",
     "alsoOn": []
@@ -960,7 +978,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4309977820?tag=rackscape-22",
     "itemNo": 23,
     "itemCode": "rackscape-04-23",
-    "globalItemNo": 50,
+    "globalItemNo": 51,
     "isbn": "9784309977829",
     "productKey": "isbn:9784309977829",
     "alsoOn": []
@@ -975,7 +993,7 @@ const SHARE_SHELVES = [
     "note": "ISBNを一次情報で確認できず、Amazonリンクなし（奥付・バーコード確認が必要）。刊行はCCCメディアハウス",
     "itemNo": 24,
     "itemCode": "rackscape-04-24",
-    "globalItemNo": 51,
+    "globalItemNo": 52,
     "productKey": "name:1冊まるごと、松之丞改め六代目神田伯山（penBOOKS）",
     "alsoOn": []
    },
@@ -991,7 +1009,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4910547010?tag=rackscape-22",
     "itemNo": 25,
     "itemCode": "rackscape-04-25",
-    "globalItemNo": 52,
+    "globalItemNo": 53,
     "isbn": "9784910547015",
     "productKey": "isbn:9784910547015",
     "alsoOn": []
@@ -1011,7 +1029,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは集英社文庫版。単行本版もあり版要確認",
     "itemNo": 26,
     "itemCode": "rackscape-04-26",
-    "globalItemNo": 53,
+    "globalItemNo": 54,
     "isbn": "9784087441918",
     "productKey": "isbn:9784087441918",
     "alsoOn": []
@@ -1029,7 +1047,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは単行本。文春文庫版もあり版要確認",
     "itemNo": 27,
     "itemCode": "rackscape-04-27",
-    "globalItemNo": 54,
+    "globalItemNo": 55,
     "isbn": "9784163900551",
     "productKey": "isbn:9784163900551",
     "alsoOn": []
@@ -1047,7 +1065,7 @@ const SHARE_SHELVES = [
     "note": "Amazonリンクは新潮文庫版。単行本版もあり版要確認",
     "itemNo": 28,
     "itemCode": "rackscape-04-28",
-    "globalItemNo": 55,
+    "globalItemNo": 56,
     "isbn": "9784101274621",
     "productKey": "isbn:9784101274621",
     "alsoOn": []
@@ -1063,7 +1081,7 @@ const SHARE_SHELVES = [
     "note": "出版社は河出書房新社ではなく筑摩書房（ちくま文庫）",
     "itemNo": 29,
     "itemCode": "rackscape-04-29",
-    "globalItemNo": 56,
+    "globalItemNo": 57,
     "isbn": "9784480422330",
     "productKey": "isbn:9784480422330",
     "alsoOn": []
@@ -1078,7 +1096,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4334787878?tag=rackscape-22",
     "itemNo": 30,
     "itemCode": "rackscape-04-30",
-    "globalItemNo": 57,
+    "globalItemNo": 58,
     "isbn": "9784334787875",
     "productKey": "isbn:9784334787875",
     "alsoOn": []
@@ -1096,7 +1114,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4167903512?tag=rackscape-22",
     "itemNo": 31,
     "itemCode": "rackscape-04-31",
-    "globalItemNo": 58,
+    "globalItemNo": 59,
     "isbn": "9784167903510",
     "productKey": "isbn:9784167903510",
     "alsoOn": []
@@ -1113,7 +1131,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4022619368?tag=rackscape-22",
     "itemNo": 32,
     "itemCode": "rackscape-04-32",
-    "globalItemNo": 59,
+    "globalItemNo": 60,
     "isbn": "9784022619365",
     "productKey": "isbn:9784022619365",
     "alsoOn": []
@@ -1128,7 +1146,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4106105276?tag=rackscape-22",
     "itemNo": 33,
     "itemCode": "rackscape-04-33",
-    "globalItemNo": 60,
+    "globalItemNo": 61,
     "isbn": "9784106105272",
     "productKey": "isbn:9784106105272",
     "alsoOn": []
@@ -1143,7 +1161,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4062883287?tag=rackscape-22",
     "itemNo": 34,
     "itemCode": "rackscape-04-34",
-    "globalItemNo": 61,
+    "globalItemNo": 62,
     "isbn": "9784062883283",
     "productKey": "isbn:9784062883283",
     "alsoOn": []
@@ -1158,7 +1176,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4166603256?tag=rackscape-22",
     "itemNo": 35,
     "itemCode": "rackscape-04-35",
-    "globalItemNo": 62,
+    "globalItemNo": 63,
     "isbn": "9784166603251",
     "productKey": "isbn:9784166603251",
     "alsoOn": []
@@ -1173,7 +1191,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/404082265X?tag=rackscape-22",
     "itemNo": 36,
     "itemCode": "rackscape-04-36",
-    "globalItemNo": 63,
+    "globalItemNo": 64,
     "isbn": "9784040822655",
     "productKey": "isbn:9784040822655",
     "alsoOn": []
@@ -1188,7 +1206,7 @@ const SHARE_SHELVES = [
     "url": "https://www.amazon.co.jp/dp/4040822110?tag=rackscape-22",
     "itemNo": 37,
     "itemCode": "rackscape-04-37",
-    "globalItemNo": 64,
+    "globalItemNo": 65,
     "isbn": "9784040822112",
     "productKey": "isbn:9784040822112",
     "alsoOn": []
@@ -1235,7 +1253,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 1,
     "itemCode": "rackscape-05-01",
-    "globalItemNo": 65,
+    "globalItemNo": 66,
     "productKey": "name:WORLD HAPPINESS",
     "alsoOn": []
    },
@@ -1260,7 +1278,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 2,
     "itemCode": "rackscape-05-02",
-    "globalItemNo": 66,
+    "globalItemNo": 67,
     "productKey": "name:ROCA コンプリート",
     "alsoOn": []
    },
@@ -1285,7 +1303,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 3,
     "itemCode": "rackscape-05-03",
-    "globalItemNo": 67,
+    "globalItemNo": 68,
     "productKey": "name:BLUE GIANT SUPREME 3",
     "alsoOn": []
    },
@@ -1310,7 +1328,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 4,
     "itemCode": "rackscape-05-04",
-    "globalItemNo": 68,
+    "globalItemNo": 69,
     "productKey": "name:BLUE GIANT SUPREME 4",
     "alsoOn": []
    },
@@ -1335,7 +1353,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 5,
     "itemCode": "rackscape-05-05",
-    "globalItemNo": 69,
+    "globalItemNo": 70,
     "productKey": "name:BLUE GIANT SUPREME 5",
     "alsoOn": []
    },
@@ -1360,7 +1378,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 6,
     "itemCode": "rackscape-05-06",
-    "globalItemNo": 70,
+    "globalItemNo": 71,
     "productKey": "name:BLUE GIANT SUPREME 6",
     "alsoOn": []
    },
@@ -1385,7 +1403,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 7,
     "itemCode": "rackscape-05-07",
-    "globalItemNo": 71,
+    "globalItemNo": 72,
     "productKey": "name:BLUE GIANT SUPREME 7",
     "alsoOn": []
    },
@@ -1410,7 +1428,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 8,
     "itemCode": "rackscape-05-08",
-    "globalItemNo": 72,
+    "globalItemNo": 73,
     "productKey": "name:BLUE GIANT SUPREME 8",
     "alsoOn": []
    },
@@ -1435,7 +1453,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 9,
     "itemCode": "rackscape-05-09",
-    "globalItemNo": 73,
+    "globalItemNo": 74,
     "productKey": "name:BLUE GIANT SUPREME 9",
     "alsoOn": []
    },
@@ -1460,7 +1478,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 10,
     "itemCode": "rackscape-05-10",
-    "globalItemNo": 74,
+    "globalItemNo": 75,
     "productKey": "name:BLUE GIANT SUPREME 10",
     "alsoOn": []
    },
@@ -1485,7 +1503,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 11,
     "itemCode": "rackscape-05-11",
-    "globalItemNo": 75,
+    "globalItemNo": 76,
     "productKey": "name:BLUE GIANT SUPREME 11",
     "alsoOn": []
    },
@@ -1510,7 +1528,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 12,
     "itemCode": "rackscape-05-12",
-    "globalItemNo": 76,
+    "globalItemNo": 77,
     "productKey": "name:BLUE GIANT EXPLORER 1",
     "alsoOn": []
    },
@@ -1535,7 +1553,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 13,
     "itemCode": "rackscape-05-13",
-    "globalItemNo": 77,
+    "globalItemNo": 78,
     "productKey": "name:BLUE GIANT EXPLORER 2",
     "alsoOn": []
    },
@@ -1560,7 +1578,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 14,
     "itemCode": "rackscape-05-14",
-    "globalItemNo": 78,
+    "globalItemNo": 79,
     "productKey": "name:BLUE GIANT EXPLORER 3",
     "alsoOn": []
    },
@@ -1585,7 +1603,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 15,
     "itemCode": "rackscape-05-15",
-    "globalItemNo": 79,
+    "globalItemNo": 80,
     "productKey": "name:BLUE GIANT EXPLORER 4",
     "alsoOn": []
    },
@@ -1610,7 +1628,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 16,
     "itemCode": "rackscape-05-16",
-    "globalItemNo": 80,
+    "globalItemNo": 81,
     "productKey": "name:BLUE GIANT EXPLORER 5",
     "alsoOn": []
    },
@@ -1635,7 +1653,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 17,
     "itemCode": "rackscape-05-17",
-    "globalItemNo": 81,
+    "globalItemNo": 82,
     "productKey": "name:BLUE GIANT EXPLORER 6",
     "alsoOn": []
    },
@@ -1660,7 +1678,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 18,
     "itemCode": "rackscape-05-18",
-    "globalItemNo": 82,
+    "globalItemNo": 83,
     "productKey": "name:BLUE GIANT EXPLORER 7",
     "alsoOn": []
    },
@@ -1685,7 +1703,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 19,
     "itemCode": "rackscape-05-19",
-    "globalItemNo": 83,
+    "globalItemNo": 84,
     "productKey": "name:BLUE GIANT EXPLORER 8",
     "alsoOn": []
    },
@@ -1710,7 +1728,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 20,
     "itemCode": "rackscape-05-20",
-    "globalItemNo": 84,
+    "globalItemNo": 85,
     "productKey": "name:BLUE GIANT EXPLORER 9",
     "alsoOn": []
    },
@@ -1735,7 +1753,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 21,
     "itemCode": "rackscape-05-21",
-    "globalItemNo": 85,
+    "globalItemNo": 86,
     "productKey": "name:BLUE GIANT MOMENTUM 1",
     "alsoOn": []
    },
@@ -1760,7 +1778,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 22,
     "itemCode": "rackscape-05-22",
-    "globalItemNo": 86,
+    "globalItemNo": 87,
     "productKey": "name:BLUE GIANT MOMENTUM 2",
     "alsoOn": []
    },
@@ -1785,7 +1803,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 23,
     "itemCode": "rackscape-05-23",
-    "globalItemNo": 87,
+    "globalItemNo": 88,
     "productKey": "name:BLUE GIANT MOMENTUM 3",
     "alsoOn": []
    },
@@ -1810,7 +1828,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 24,
     "itemCode": "rackscape-05-24",
-    "globalItemNo": 88,
+    "globalItemNo": 89,
     "productKey": "name:BLUE GIANT MOMENTUM 4",
     "alsoOn": []
    },
@@ -1835,7 +1853,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 25,
     "itemCode": "rackscape-05-25",
-    "globalItemNo": 89,
+    "globalItemNo": 90,
     "productKey": "name:BLUE GIANT MOMENTUM 5",
     "alsoOn": []
    },
@@ -1860,7 +1878,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 26,
     "itemCode": "rackscape-05-26",
-    "globalItemNo": 90,
+    "globalItemNo": 91,
     "productKey": "name:ドラえもん 1",
     "alsoOn": []
    },
@@ -1885,7 +1903,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 27,
     "itemCode": "rackscape-05-27",
-    "globalItemNo": 91,
+    "globalItemNo": 92,
     "productKey": "name:ドラミちゃん",
     "alsoOn": []
    },
@@ -1911,7 +1929,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 28,
     "itemCode": "rackscape-05-28",
-    "globalItemNo": 92,
+    "globalItemNo": 93,
     "productKey": "name:プロ野球12球団全選手完全名鑑 2021",
     "alsoOn": []
    },
@@ -1937,7 +1955,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 29,
     "itemCode": "rackscape-05-29",
-    "globalItemNo": 93,
+    "globalItemNo": 94,
     "productKey": "name:プロ野球選手データ名鑑 2021",
     "alsoOn": []
    },
@@ -1963,7 +1981,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 30,
     "itemCode": "rackscape-05-30",
-    "globalItemNo": 94,
+    "globalItemNo": 95,
     "productKey": "name:プロ野球選手データ名鑑 2022",
     "alsoOn": []
    },
@@ -1989,7 +2007,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 31,
     "itemCode": "rackscape-05-31",
-    "globalItemNo": 95,
+    "globalItemNo": 96,
     "productKey": "name:プロ野球選手データ名鑑 2023",
     "alsoOn": []
    },
@@ -2015,7 +2033,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 32,
     "itemCode": "rackscape-05-32",
-    "globalItemNo": 96,
+    "globalItemNo": 97,
     "productKey": "name:プロ野球選手データ名鑑 2024",
     "alsoOn": []
    },
@@ -2041,7 +2059,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 33,
     "itemCode": "rackscape-05-33",
-    "globalItemNo": 97,
+    "globalItemNo": 98,
     "productKey": "name:プロ野球選手データ名鑑 2025",
     "alsoOn": []
    },
@@ -2067,7 +2085,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 34,
     "itemCode": "rackscape-05-34",
-    "globalItemNo": 98,
+    "globalItemNo": 99,
     "productKey": "name:プロ野球選手データ名鑑 2026",
     "alsoOn": []
    },
@@ -2093,7 +2111,7 @@ const SHARE_SHELVES = [
     "publisherLabel": "",
     "itemNo": 35,
     "itemCode": "rackscape-05-35",
-    "globalItemNo": 99,
+    "globalItemNo": 100,
     "productKey": "name:サブロー ボブルヘッドフィギュア",
     "alsoOn": []
    }
@@ -2381,6 +2399,25 @@ const PRODUCTS = [
   "publisherLabel": "",
   "appearsIn": [
    "rackscape-01-14"
+  ],
+  "shelfCount": 1
+ },
+ {
+  "productKey": "isbn:9784575715217",
+  "name": "ヤラセと情熱 ―水曜スペシャル川口浩探検隊の「真実」―",
+  "author": "プチ鹿島",
+  "maker": "",
+  "isbn": "9784575715217",
+  "url": "https://www.amazon.co.jp/dp/4575715212?tag=rackscape-22",
+  "rakutenUrl": "",
+  "refUrl": "https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%81%E9%B9%BF%E5%B3%B6",
+  "refLabel": "Wikipedia（著者：プチ鹿島）",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-01-15"
   ],
   "shelfCount": 1
  },
@@ -4222,8 +4259,24 @@ const ITEM_INDEX = [
   "productKey": "isbn:9784094064445"
  },
  {
-  "itemCode": "rackscape-02-01",
+  "itemCode": "rackscape-01-15",
   "globalItemNo": 15,
+  "shelfCode": "rackscape-01",
+  "globalNo": 1,
+  "name": "ヤラセと情熱 ―水曜スペシャル川口浩探検隊の「真実」―",
+  "author": "プチ鹿島",
+  "maker": "",
+  "tags": [
+   "エッセイ"
+  ],
+  "isbn": "9784575715217",
+  "url": "https://www.amazon.co.jp/dp/4575715212?tag=rackscape-22",
+  "rakutenUrl": "",
+  "productKey": "isbn:9784575715217"
+ },
+ {
+  "itemCode": "rackscape-02-01",
+  "globalItemNo": 16,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "KORG microKORG 2 MWH（メタリックホワイト）",
@@ -4239,7 +4292,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-02-02",
-  "globalItemNo": 16,
+  "globalItemNo": 17,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "SONY SMS-1P パワードモニタースピーカー（ペア）",
@@ -4255,7 +4308,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-02-03",
-  "globalItemNo": 17,
+  "globalItemNo": 18,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "DOUK AUDIO P2 真空管プリアンプ",
@@ -4271,7 +4324,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-02-04",
-  "globalItemNo": 18,
+  "globalItemNo": 19,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "Steinberg UR44C オーディオインターフェース",
@@ -4287,7 +4340,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-02-05",
-  "globalItemNo": 19,
+  "globalItemNo": 20,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "ZOOM MS-70CDR+ マルチストンプ（空間系マルチエフェクター）",
@@ -4303,7 +4356,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-02-06",
-  "globalItemNo": 20,
+  "globalItemNo": 21,
   "shelfCode": "rackscape-02",
   "globalNo": 2,
   "name": "SONY MDR-CD900ST モニターヘッドホン",
@@ -4319,7 +4372,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-01",
-  "globalItemNo": 21,
+  "globalItemNo": 22,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "地方を救う 官民共創ビジネス",
@@ -4335,7 +4388,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-02",
-  "globalItemNo": 22,
+  "globalItemNo": 23,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "「風の谷」という希望 ―残すに値する未来をつくる",
@@ -4351,7 +4404,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-03",
-  "globalItemNo": 23,
+  "globalItemNo": 24,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ガザとは何か ―パレスチナを知るための緊急講義",
@@ -4367,7 +4420,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-04",
-  "globalItemNo": 24,
+  "globalItemNo": 25,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "核燃料サイクルという迷宮",
@@ -4383,7 +4436,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-05",
-  "globalItemNo": 25,
+  "globalItemNo": 26,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "人生が変わるゲームのつくりかた",
@@ -4399,7 +4452,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-06",
-  "globalItemNo": 26,
+  "globalItemNo": 27,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ボードゲーム／アナログゲーム関連書（黄色い背表紙）",
@@ -4415,7 +4468,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-03-07",
-  "globalItemNo": 27,
+  "globalItemNo": 28,
   "shelfCode": "rackscape-03",
   "globalNo": 3,
   "name": "ゲームカタログ系の1冊（イラスト帯）",
@@ -4431,7 +4484,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-01",
-  "globalItemNo": 28,
+  "globalItemNo": 29,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "BLUE GIANT MOMENTUM 8",
@@ -4447,7 +4500,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-02",
-  "globalItemNo": 29,
+  "globalItemNo": 30,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "あかね噺",
@@ -4463,7 +4516,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-03",
-  "globalItemNo": 30,
+  "globalItemNo": 31,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "めしばな刑事タチバナ（2冊）",
@@ -4479,7 +4532,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-04",
-  "globalItemNo": 31,
+  "globalItemNo": 32,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "DRAFT KING",
@@ -4495,7 +4548,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-05",
-  "globalItemNo": 32,
+  "globalItemNo": 33,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ミュージック・マガジン 2021年8月号 特集：松本隆",
@@ -4511,7 +4564,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-06",
-  "globalItemNo": 33,
+  "globalItemNo": 34,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "R&B馬鹿リリック大行進",
@@ -4527,7 +4580,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-07",
-  "globalItemNo": 34,
+  "globalItemNo": 35,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "大余談",
@@ -4543,7 +4596,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-08",
-  "globalItemNo": 35,
+  "globalItemNo": 36,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 スチャダラパー・シングス",
@@ -4559,7 +4612,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-09",
-  "globalItemNo": 36,
+  "globalItemNo": 37,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 三代目J余談ブラザーズ",
@@ -4575,7 +4628,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-10",
-  "globalItemNo": 37,
+  "globalItemNo": 38,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "余談 シン・ヨダン",
@@ -4591,7 +4644,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-11",
-  "globalItemNo": 38,
+  "globalItemNo": 39,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "風待茶房 松本隆対談集 2005―2015",
@@ -4607,7 +4660,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-12",
-  "globalItemNo": 39,
+  "globalItemNo": 40,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "風待茶房 松本隆対談集 1971―2004",
@@ -4623,7 +4676,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-13",
-  "globalItemNo": 40,
+  "globalItemNo": 41,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "言葉の教室",
@@ -4639,7 +4692,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-14",
-  "globalItemNo": 41,
+  "globalItemNo": 42,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 吉田戦車 大増補新版",
@@ -4655,7 +4708,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-15",
-  "globalItemNo": 42,
+  "globalItemNo": 43,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 安西水丸",
@@ -4671,7 +4724,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-16",
-  "globalItemNo": 43,
+  "globalItemNo": 44,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 40",
@@ -4687,7 +4740,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-17",
-  "globalItemNo": 44,
+  "globalItemNo": 45,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 62 MANGA 2025",
@@ -4703,7 +4756,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-18",
-  "globalItemNo": 45,
+  "globalItemNo": 46,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "フリースタイル 67",
@@ -4719,7 +4772,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-19",
-  "globalItemNo": 46,
+  "globalItemNo": 47,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 横尾忠則特集（11月臨時増刊号）",
@@ -4735,7 +4788,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-20",
-  "globalItemNo": 47,
+  "globalItemNo": 48,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 岡村靖幸特集",
@@ -4751,7 +4804,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-21",
-  "globalItemNo": 48,
+  "globalItemNo": 49,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ 江口寿史特集",
@@ -4767,7 +4820,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-22",
-  "globalItemNo": 49,
+  "globalItemNo": 50,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "ユリイカ みうらじゅん SINCE 1958",
@@ -4783,7 +4836,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-23",
-  "globalItemNo": 50,
+  "globalItemNo": 51,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "文藝別冊 ナンシー関 増補新版",
@@ -4799,7 +4852,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-24",
-  "globalItemNo": 51,
+  "globalItemNo": 52,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "1冊まるごと、松之丞改め六代目神田伯山（pen BOOKS）",
@@ -4815,7 +4868,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-25",
-  "globalItemNo": 52,
+  "globalItemNo": 53,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "藝人春秋 Diary",
@@ -4831,7 +4884,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-26",
-  "globalItemNo": 53,
+  "globalItemNo": 54,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "どうして人はキスをしたくなるんだろう？",
@@ -4847,7 +4900,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-27",
-  "globalItemNo": 54,
+  "globalItemNo": 55,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "人生エロエロ",
@@ -4863,7 +4916,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-28",
-  "globalItemNo": 55,
+  "globalItemNo": 56,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "どうやらオレたち、いずれ死ぬっつーじゃないですか",
@@ -4879,7 +4932,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-29",
-  "globalItemNo": 56,
+  "globalItemNo": 57,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "官能小説用語表現辞典",
@@ -4895,7 +4948,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-30",
-  "globalItemNo": 57,
+  "globalItemNo": 58,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "時代劇ベスト100＋50",
@@ -4911,7 +4964,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-31",
-  "globalItemNo": 58,
+  "globalItemNo": 59,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "藝人春秋（文春文庫）",
@@ -4927,7 +4980,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-32",
-  "globalItemNo": 59,
+  "globalItemNo": 60,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "天才はあきらめた",
@@ -4943,7 +4996,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-33",
-  "globalItemNo": 60,
+  "globalItemNo": 61,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "タモリ論",
@@ -4959,7 +5012,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-34",
-  "globalItemNo": 61,
+  "globalItemNo": 62,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "タモリと戦後ニッポン",
@@ -4975,7 +5028,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-35",
-  "globalItemNo": 62,
+  "globalItemNo": 63,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "スポーツマンガの身体",
@@ -4991,7 +5044,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-36",
-  "globalItemNo": 63,
+  "globalItemNo": 64,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "衣笠祥雄 最後のシーズン",
@@ -5007,7 +5060,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-04-37",
-  "globalItemNo": 64,
+  "globalItemNo": 65,
   "shelfCode": "rackscape-04",
   "globalNo": 4,
   "name": "粋な男たち",
@@ -5023,7 +5076,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-01",
-  "globalItemNo": 65,
+  "globalItemNo": 66,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "WORLD HAPPINESS",
@@ -5041,7 +5094,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-02",
-  "globalItemNo": 66,
+  "globalItemNo": 67,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "ROCA コンプリート",
@@ -5059,7 +5112,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-03",
-  "globalItemNo": 67,
+  "globalItemNo": 68,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 3",
@@ -5075,7 +5128,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-04",
-  "globalItemNo": 68,
+  "globalItemNo": 69,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 4",
@@ -5091,7 +5144,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-05",
-  "globalItemNo": 69,
+  "globalItemNo": 70,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 5",
@@ -5107,7 +5160,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-06",
-  "globalItemNo": 70,
+  "globalItemNo": 71,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 6",
@@ -5123,7 +5176,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-07",
-  "globalItemNo": 71,
+  "globalItemNo": 72,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 7",
@@ -5139,7 +5192,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-08",
-  "globalItemNo": 72,
+  "globalItemNo": 73,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 8",
@@ -5155,7 +5208,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-09",
-  "globalItemNo": 73,
+  "globalItemNo": 74,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 9",
@@ -5171,7 +5224,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-10",
-  "globalItemNo": 74,
+  "globalItemNo": 75,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 10",
@@ -5187,7 +5240,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-11",
-  "globalItemNo": 75,
+  "globalItemNo": 76,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT SUPREME 11",
@@ -5203,7 +5256,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-12",
-  "globalItemNo": 76,
+  "globalItemNo": 77,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 1",
@@ -5219,7 +5272,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-13",
-  "globalItemNo": 77,
+  "globalItemNo": 78,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 2",
@@ -5235,7 +5288,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-14",
-  "globalItemNo": 78,
+  "globalItemNo": 79,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 3",
@@ -5251,7 +5304,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-15",
-  "globalItemNo": 79,
+  "globalItemNo": 80,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 4",
@@ -5267,7 +5320,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-16",
-  "globalItemNo": 80,
+  "globalItemNo": 81,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 5",
@@ -5283,7 +5336,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-17",
-  "globalItemNo": 81,
+  "globalItemNo": 82,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 6",
@@ -5299,7 +5352,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-18",
-  "globalItemNo": 82,
+  "globalItemNo": 83,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 7",
@@ -5315,7 +5368,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-19",
-  "globalItemNo": 83,
+  "globalItemNo": 84,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 8",
@@ -5331,7 +5384,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-20",
-  "globalItemNo": 84,
+  "globalItemNo": 85,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT EXPLORER 9",
@@ -5347,7 +5400,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-21",
-  "globalItemNo": 85,
+  "globalItemNo": 86,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT MOMENTUM 1",
@@ -5363,7 +5416,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-22",
-  "globalItemNo": 86,
+  "globalItemNo": 87,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT MOMENTUM 2",
@@ -5379,7 +5432,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-23",
-  "globalItemNo": 87,
+  "globalItemNo": 88,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT MOMENTUM 3",
@@ -5395,7 +5448,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-24",
-  "globalItemNo": 88,
+  "globalItemNo": 89,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT MOMENTUM 4",
@@ -5411,7 +5464,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-25",
-  "globalItemNo": 89,
+  "globalItemNo": 90,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "BLUE GIANT MOMENTUM 5",
@@ -5427,7 +5480,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-26",
-  "globalItemNo": 90,
+  "globalItemNo": 91,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "ドラえもん 1",
@@ -5443,7 +5496,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-27",
-  "globalItemNo": 91,
+  "globalItemNo": 92,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "ドラミちゃん",
@@ -5459,7 +5512,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-28",
-  "globalItemNo": 92,
+  "globalItemNo": 93,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球12球団全選手完全名鑑 2021",
@@ -5476,7 +5529,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-29",
-  "globalItemNo": 93,
+  "globalItemNo": 94,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2021",
@@ -5493,7 +5546,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-30",
-  "globalItemNo": 94,
+  "globalItemNo": 95,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2022",
@@ -5510,7 +5563,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-31",
-  "globalItemNo": 95,
+  "globalItemNo": 96,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2023",
@@ -5527,7 +5580,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-32",
-  "globalItemNo": 96,
+  "globalItemNo": 97,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2024",
@@ -5544,7 +5597,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-33",
-  "globalItemNo": 97,
+  "globalItemNo": 98,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2025",
@@ -5561,7 +5614,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-34",
-  "globalItemNo": 98,
+  "globalItemNo": 99,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "プロ野球選手データ名鑑 2026",
@@ -5578,7 +5631,7 @@ const ITEM_INDEX = [
  },
  {
   "itemCode": "rackscape-05-35",
-  "globalItemNo": 99,
+  "globalItemNo": 100,
   "shelfCode": "rackscape-05",
   "globalNo": 5,
   "name": "サブロー ボブルヘッドフィギュア",
