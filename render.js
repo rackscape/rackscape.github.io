@@ -32,8 +32,8 @@ function renderShelves(elId, shelves) {
      <div class="shelf-side">
       <h3>${s.title}<span class="kind">${kindLabel(s.kind)}</span></h3>
       <p class="meta">投稿者：${s.ownerName} ／ #${String(s.globalNo).padStart(4,"0")} ／ ${s.items.length}点</p>
-      ${s.story ? `<p class="story">${s.story}</p>` : ``}
-      ${(s.snsLinksPublic && s.snsLinks && (s.snsLinks.x || s.snsLinks.instagram)) ? `<p class="meta">投稿者のSNS：${s.snsLinks.x ? `<a href="${s.snsLinks.x}" target="_blank" rel="noopener">X</a>` : ``}${s.snsLinks.x && s.snsLinks.instagram ? ` ／ ` : ``}${s.snsLinks.instagram ? `<a href="${s.snsLinks.instagram}" target="_blank" rel="noopener">Instagram</a>` : ``}</p>` : ``}
+      ${s.story ? `<p class="story" style="margin:0 0 8px;padding:7px 11px;border-left:3px solid #8b7cf6;background:rgba(139,124,246,.08);border-radius:4px;line-height:1.6">${s.story}</p>` : ``}
+      ${(s.snsLinksPublic && s.snsLinks && (s.snsLinks.x || s.snsLinks.instagram)) ? `<p class="sns-icons" style="margin:0 0 8px;display:flex;gap:12px;align-items:center">${s.snsLinks.x ? `<a href="${s.snsLinks.x}" target="_blank" rel="noopener" title="投稿者のX" aria-label="投稿者のX" style="color:inherit;display:inline-flex"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true" style="display:block"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>` : ``}${s.snsLinks.instagram ? `<a href="${s.snsLinks.instagram}" target="_blank" rel="noopener" title="投稿者のInstagram" aria-label="投稿者のInstagram" style="color:inherit;display:inline-flex"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="display:block"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.6"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.7" cy="6.3" r="1.25" fill="currentColor" stroke="none"/></svg></a>` : ``}</p>` : ``}
       <p class="meta">写真をクリックすると全体表示（拡大・移動できます）。</p>
      </div>
     </div>
