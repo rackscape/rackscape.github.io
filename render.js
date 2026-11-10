@@ -32,6 +32,8 @@ function renderShelves(elId, shelves) {
      <div class="shelf-side">
       <h3>${s.title}<span class="kind">${kindLabel(s.kind)}</span></h3>
       <p class="meta">投稿者：${s.ownerName} ／ #${String(s.globalNo).padStart(4,"0")} ／ ${s.items.length}点</p>
+      ${s.story ? `<p class="story">${s.story}</p>` : ``}
+      ${(s.snsLinksPublic && s.snsLinks && (s.snsLinks.x || s.snsLinks.instagram)) ? `<p class="meta">投稿者のSNS：${s.snsLinks.x ? `<a href="${s.snsLinks.x}" target="_blank" rel="noopener">X</a>` : ``}${s.snsLinks.x && s.snsLinks.instagram ? ` ／ ` : ``}${s.snsLinks.instagram ? `<a href="${s.snsLinks.instagram}" target="_blank" rel="noopener">Instagram</a>` : ``}</p>` : ``}
       <p class="meta">写真をクリックすると全体表示（拡大・移動できます）。</p>
      </div>
     </div>
