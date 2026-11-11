@@ -338,7 +338,20 @@ const SHARE_SHELVES = [
   "ownerId": "rackscape",
   "ownerName": "rackscape",
   "ownerShelfNo": 1,
-  "code": "rackscape-01"
+  "code": "rackscape-01",
+  "snsConsent": true,
+  "story": "ベッドサイドに積んでる本たちです",
+  "snsLinks": {
+   "x": "https://x.com/rackscape_jp",
+   "instagram": "https://www.instagram.com/rackscape.studio/"
+  },
+  "snsLinksPublic": true,
+  "crop": {
+   "x": 0,
+   "y": 0.0635,
+   "w": 0.8682,
+   "h": 0.8544
+  }
  },
  {
   "id": "shelf-02",
@@ -455,7 +468,15 @@ const SHARE_SHELVES = [
   "ownerId": "rackscape",
   "ownerName": "rackscape",
   "ownerShelfNo": 2,
-  "code": "rackscape-02"
+  "code": "rackscape-02",
+  "snsConsent": true,
+  "story": "DTMコーナーの最上段です",
+  "snsLinks": {
+   "x": "https://x.com/rackscape_jp",
+   "instagram": "https://www.instagram.com/rackscape.studio/"
+  },
+  "snsLinksPublic": true,
+  "crop": null
  },
  {
   "id": "shelf-03",
@@ -589,7 +610,20 @@ const SHARE_SHELVES = [
   "ownerId": "rackscape",
   "ownerName": "rackscape",
   "ownerShelfNo": 3,
-  "code": "rackscape-03"
+  "code": "rackscape-03",
+  "snsConsent": true,
+  "story": "最新のビジネス書棚だと思います",
+  "snsLinks": {
+   "x": "https://x.com/rackscape_jp",
+   "instagram": "https://www.instagram.com/rackscape.studio/"
+  },
+  "snsLinksPublic": true,
+  "crop": {
+   "x": 0,
+   "y": 0,
+   "w": 0.9798478370221329,
+   "h": 0.9953289488973066
+  }
  },
  {
   "id": "shelf-04",
@@ -1222,7 +1256,15 @@ const SHARE_SHELVES = [
   "ownerId": "rackscape",
   "ownerName": "rackscape",
   "ownerShelfNo": 4,
-  "code": "rackscape-04"
+  "code": "rackscape-04",
+  "snsConsent": true,
+  "story": "地震のたびにドキドキしてる棚の一番上です",
+  "snsLinks": {
+   "x": "https://x.com/rackscape_jp",
+   "instagram": "https://www.instagram.com/rackscape.studio/"
+  },
+  "snsLinksPublic": true,
+  "crop": null
  },
  {
   "id": "shelf-05",
@@ -1265,7 +1307,7 @@ const SHARE_SHELVES = [
      "マンガ"
     ],
     "status": "確定",
-    "confidence": 1.0,
+    "confidence": 1,
     "note": "裏表紙で題名を確認済み。背表紙はシリーズ名「ジブリCSP」の図案表記",
     "isbn": "9784197500253",
     "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
@@ -2126,7 +2168,13 @@ const SHARE_SHELVES = [
   "ownerName": "rackscape",
   "ownerShelfNo": 5,
   "code": "rackscape-05",
-  "snsConsent": false,
+  "snsConsent": true,
+  "story": "選手名鑑はもっと昔のやつもどっかにあるはず",
+  "snsLinks": {
+   "x": "https://x.com/rackscape_jp",
+   "instagram": "https://www.instagram.com/rackscape.studio/"
+  },
+  "snsLinksPublic": true,
   "crop": {
    "x": 0.003204719387755102,
    "y": 0.20341198979591837,
@@ -3391,6 +3439,25 @@ const PRODUCTS = [
   "shelfCount": 1
  },
  {
+  "productKey": "name:ROCA コンプリート",
+  "name": "ROCA コンプリート",
+  "author": "いしいひさいち",
+  "maker": "",
+  "isbn": "9784197500253",
+  "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
+  "rakutenUrl": "",
+  "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
+  "refLabel": "Wikipedia（著者：いしいひさいち）",
+  "ref2Url": "",
+  "ref2Label": "",
+  "publisherUrl": "",
+  "publisherLabel": "",
+  "appearsIn": [
+   "rackscape-05-02"
+  ],
+  "shelfCount": 1
+ },
+ {
   "productKey": "name:BLUE GIANT SUPREME 3",
   "name": "BLUE GIANT SUPREME 3",
   "author": "石塚真一",
@@ -4016,21 +4083,6 @@ const PRODUCTS = [
    "rackscape-05-35"
   ],
   "shelfCount": 1
- },
- {
-  "productKey": "name:ROCA コンプリート",
-  "name": "ROCA コンプリート",
-  "author": "いしいひさいち",
-  "maker": "",
-  "isbn": "9784197500253",
-  "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
-  "rakutenUrl": "",
-  "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
-  "refLabel": "Wikipedia（著者：いしいひさいち）",
-  "ref2Url": "",
-  "ref2Label": "",
-  "publisherUrl": "",
-  "publisherLabel": ""
  }
 ];
 const ITEM_INDEX = [
@@ -5106,9 +5158,7 @@ const ITEM_INDEX = [
   "isbn": "9784197500253",
   "url": "https://www.amazon.co.jp/dp/4197500254?tag=rackscape-22",
   "rakutenUrl": "",
-  "productKey": "name:ROCA コンプリート",
-  "refUrl": "https://ja.wikipedia.org/wiki/%E3%81%84%E3%81%97%E3%81%84%E3%81%B2%E3%81%95%E3%81%84%E3%81%A1",
-  "refLabel": "Wikipedia（著者：いしいひさいち）"
+  "productKey": "name:ROCA コンプリート"
  },
  {
   "itemCode": "rackscape-05-03",
